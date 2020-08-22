@@ -1,140 +1,204 @@
 package main
-import (    
-	"bytes"
-    "fmt"
-    "io"
+
+import (
 	"log"
-    "net"
-    "net/url"
+	"net"
+	"net/http"
+	"net/url"
+	"runtime/debug"
+	"bytes"
 	"strings"
-	"errors"
+	"fmt"
+	"bufio"
+	"time"
+	"io"
+	"io/ioutil"
 	"JCRandomProxy/Conf"
 	"JCRandomProxy/Proxy"
 )
-var EOF = errors.New("EOF")
-var ErrShortWrite = errors.New("short write")
-func main() {
-	Conf.InitConfig()
+
+func init(){
 	log.SetFlags(log.LstdFlags|log.Lshortfile)
-	
-	l, err := net.Listen("tcp", ":8081")    
+	Conf.InitConfig()
+}
+
+func main(){
+	l,err := net.Listen("tcp",":8888")
 	if err != nil {
-        log.Panic(err)
-	}    
-	
-	for {
-		client, err := l.Accept()        
-		if err != nil {
-            log.Panic(err)
-		}        
-		go handleClientRequest(client)
+		log.Panic(err)
 	}
 
+	for {
+		client,err := l.Accept()
+		if err != nil {
+			log.Panic(err)
+		}
+		go handle(client)
+	}
 }
-func handleClientRequest(client net.Conn) {    
-	if client == nil {        
-		log.Printf("没有client接入")
+
+func handle(client net.Conn){
+	defer func(){
+		if err := recover(); err != nil {
+			log.Panic(err)
+			debug.PrintStack()
+		}
+	}()
+	if client == nil {
 		return
-	}    
-	defer client.Close()    
+	}
+
+	log.Println("JCTLog: client tcp tunnel connection: ",client.LocalAddr().String(),"->",client.RemoteAddr().String())
+	defer client.Close()
+
 	var b [1024]byte
-	n, err := client.Read(b[:])  
-	// log.Println("JCTLog ALL: \n",string(b[:n]))  
-	if err != nil {
-		log.Println(err)       
+	// 读取应用层的所有数据
+	n,err := client.Read(b[:])
+	if err != nil || bytes.IndexByte(b[:],'\n') == -1 {
+		// 传输层的连接没有应用层的内容，如net.Dial()
+		log.Println(err)
 		return
-	}    
-	// 获取一个随机代理，代理类型
-	
-	proxy,ptype,_ := Proxy.GetAProxy()
-	// proxy,ptype := "1113.100.209.65:3128","http"
-	log.Printf("JCTLog ALL: 获取一个随机代理: %s %s",ptype,proxy)
-	var method, host, address string
-	// 以空格分割，读取client请求的第一行的方法与主机
-	fmt.Sscanf(string(b[:bytes.IndexByte(b[:], '\n')]), "%s%s", &method, &host)
-	log.Println("JCTLog ALL: Method Host ",method,host)
-	log.Println("JCTLog ALL: Request :\n",string(b[:n]))
-	hostPortURL, err := url.Parse(host)    
-	if err != nil {
-		log.Println(err)        
-		return
-	}    
-	log.Println("JCTLog ALL: 目标主机:端口  ",hostPortURL)
-	if hostPortURL.Opaque == "443" { //https访问
-        address = hostPortURL.Scheme + ":443"
-    } else { //http访问
-        if strings.Index(hostPortURL.Host, ":") == -1 { //host不带端口， 默认80
-            address = hostPortURL.Host + ":80"
-        } else {
-            address = hostPortURL.Host
-        }
-	}    
-	address = proxy
-	// address = "113.100.209.65:3128"
-	log.Printf("JCTLog ALL: 建立到上级代理%s的TCP连接",address)   
-	server,err :=net.Dial("tcp",address)
+	}
+	var method,host,address string
+	fmt.Sscanf(string(b[:bytes.IndexByte(b[:],'\n')]),"%s%s",&method,&host)
+	log.Println(method,host)
+	hostPortURL,err := url.Parse(host)
 	if err != nil {
 		log.Println(err)
-		log.Println("JCTLog ALL: 建立TCP连接失败！")        
 		return
-	}    
-	log.Printf("JCTLog ALL: 到上级代理%s的TCP连接建立成功",address)
+	}
+	// https
+	if hostPortURL.Opaque == "443" {
+		address = hostPortURL.Scheme + ":443"
+	}else{
+		// http
+		if strings.Index(hostPortURL.Host,":") == -1{
+			address = hostPortURL.Host + ":80"
+		}else{
+			address = hostPortURL.Host
+		}
+	}
+	log.Println("JCTLog: hostPortURL",address)
+	server,err := Dial("tcp",address)
+	if err != nil {
+		log.Println("JCTLog: ",err)
+		return
+	}
+	// 在应用层完成数据转发后，关闭传输层的通道
+	defer server.Close()
+	log.Println("JCTLog: server tcp tunnel connection: ",server.LocalAddr().String(),"->",server.RemoteAddr().String())
+	
 	if method == "CONNECT" {
-		// https请求
-		log.Println("JCTLog HTTPS: 这是一个HTTPS请求")
-		fmt.Fprint(client, "HTTP/1.1 200 Connection established\r\n\r\n")
-		go func(){
-			/**
-			* ??? io.Copy(server,client)返回的值是498
-			*    而io.Copy(&buf,client)返回的值是195
-			*    为何会有不同?
-			*
-			*/
-			log.Printf("JCTLog HTTPS: HTTPS请求内容为：\n%s",string(b[:n]))
-			// 将client直接转发给server
-			n,err := io.Copy(server,client)
-			// n,err :=  (server).(*net.TCPConn).ReadFrom(client)
-			fmt.Println("JCTLog client.Read Length ",n)
-			if err != nil {
-				if err != io.EOF {
-					fmt.Println("client.Read error:", err)
-				}
-			}
-		}()
-   		io.Copy(client, server)
-    } else {
-		// // http请求
-		// log.Printf("JCTLog HTTP: 向上级代理发送HTTP请求")
-		// server.Write(b[:n])
-		// fmt.Printf("%d",n)
-		// log.Printf("JCTLog HTTP: HTTP请求内容为：\n%s",string(b[:n]))
-		// log.Printf("JCTLog HTTP: 将上级代理的响应内容转发到client端")
-		// n, err = server.Read(b[:]) 
-		// log.Printf("JCTLog HTTP: 上级代理的响应内容为：\n%s",string(b[:n]))
-		// io.Copy(client, bytes.NewReader(b[:]))
-		// // n, err = server.Read(b[:]) 
-		// // log.Printf("JCTLog: 上级代理的响应内容如为2：%s",string(b[:n]))
-		// log.Printf("JCTLog HTTP: 完毕")
-
-
-
-		go func(){
-			log.Printf("JCTLog HTTP: HTTP请求内容为：\n%s",string(b[:n]))
-			// 将client直接转发给server
-			n,err := io.Copy(server,client)
-			// n,err :=  (server).(*net.TCPConn).ReadFrom(client)
-			fmt.Println("JCTLog client.Read Length ",n)
-			if err != nil {
-				if err != io.EOF {
-					fmt.Println("client.Read error:", err)
-				}
-			}
-		}()
-   		io.Copy(client, server)
-
-	}    
-    
+		fmt.Fprint(client,"HTTP/1.1 200 Connection established\r\n\r\n")
+	}else{
+		log.Println("JCTLog: ","server write ",method)
+		server.Write(b[:n])
+	}
+	// 进行转发
+	go func(){
+		io.Copy(server,client)
+	}()
+	// io.Copy(client,server) // 
+	var tt []byte
+	// var sssss int64
+	// sssss,err = io.Copy(bufio.NewWriter(tt[:]),server)
+	tt,err = ioutil.ReadAll(server)
+	fmt.Println("ddddd",string(tt))
+	io.Copy(client,bytes.NewReader(tt[:]))
+	// io.Copy(client,bytes.NewReader(b[:n]))
+	// fmt.Println()
 }
 
+// 建立一个传输通道
+// network : 网络类型，tcp
+// addr: 最终目标服务器地址
+func Dial(network,addr string) (net.Conn,error){
+	var proxyAddr string
+	proxyAddr = "http://10.103.90.8:10080"
+	proxyAddr = "http://49.4.123.243:8080"
+	// 随机取出一个代理
+	paddr,ptype,_ := Proxy.GetAProxy()
+	proxyAddr = ptype + "://" + paddr
 
+	// 建立到代理服务器的传输层通道
+	c,err := func() (net.Conn,error){
+		prox,_ := url.Parse(proxyAddr)
+		log.Println("JCTLog: 代理地址: ",prox.Host)
+		// Dial and create client connection
+		proxc,err := net.DialTimeout("tcp",prox.Host,time.Second * 5)
+		if err != nil {
+			return nil,err
+		}
+		// 在这里返回c可以正常使用
+		if CheckProxy(proxyAddr,addr) {
+			return proxc,err
+		}
+		return nil,err
+		
+	}()
+	if c == nil || err != nil {
+		log.Println("JCTLog: 代理异常: ",c,err)
+		log.Println("JCTLog: 本地直接转发: ")
+		return net.Dial(network,addr)
+	}
+	log.Println("JCTLog: 代理正常，tunnel信息 ",c.LocalAddr().String(),"->",c.RemoteAddr().String())
+	return c,err
+}
 
+// 验证代理服务器是否可用
+func CheckProxy(proxyAddr,addr string) bool{
+		prox,_ := url.Parse(proxyAddr)
+		log.Println("JCTLog: 代理地址: ",prox.Host)
+		// Dial and create client connection
+		proxc,err := net.DialTimeout("tcp",prox.Host,time.Second * 5)
+		if err != nil {
+			return false
+		}
+		// 解析最终目标url
+		reqURL ,err := url.Parse("http://"+addr)
+		if err != nil {
+			return false
+		}
+		log.Println("JCTLog: reqURL: " ,reqURL.String())
+		req,err := http.NewRequest(http.MethodGet,reqURL.String(),nil)
+		if err != nil {
+			log.Println("JCTLog: http.NewRequest: ",err)
+			return false
+		}
+
+		req.Close = false
+		req.Header.Set("User-Agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.3")
+		err = req.Write(proxc)
+		fmt.Println(req)
+		if err != nil {
+			log.Println("JCTLog: req.Write: ",err)
+			return false
+		}
+		resp,err := http.ReadResponse(bufio.NewReader(proxc),req)
+		if err != nil {
+			log.Println("JCTLog: http.ReadResponse: ",err)
+			return false
+		}
+		fmt.Println("===================sss")
+		fmt.Println(resp.Body)
+		fmt.Println(resp.StatusCode)
+		fmt.Println(resp.Status)
+		fmt.Println(resp.Proto)
+		fmt.Println(resp.Header)
+
+		body, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
+			fmt.Println(err)
+			return false
+		}
+
+		fmt.Println(string(body))
+		fmt.Println("===================eee")
+		defer resp.Body.Close()		
+		if resp.StatusCode != 200 {
+			err = fmt.Errorf("Connect server using proxy error,StatusCode [%d]",resp.StatusCode)
+			return false
+		}
+		return true
+
+}
