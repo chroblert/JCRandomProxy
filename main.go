@@ -81,7 +81,7 @@ func handle(client net.Conn){
 	log.Println("JCTLog: hostPortURL",address)
 	server,err := Dial("tcp",address)
 	if err != nil {
-		log.Println("JCTLog: ",err)
+		log.Println("JCTLog: Dial: ",err)
 		return
 	}
 	// 在应用层完成数据转发后，关闭传输层的通道
@@ -96,17 +96,17 @@ func handle(client net.Conn){
 	}
 	// 进行转发
 	go func(){
+		log.Println("JCTLog: go转发前：")
 		io.Copy(server,client)
+		log.Println("JCTLog: go转发后：")
 	}()
-	// io.Copy(client,server) // 
-	var tt []byte
-	// var sssss int64
-	// sssss,err = io.Copy(bufio.NewWriter(tt[:]),server)
-	tt,err = ioutil.ReadAll(server)
-	fmt.Println("ddddd",string(tt))
-	io.Copy(client,bytes.NewReader(tt[:]))
-	// io.Copy(client,bytes.NewReader(b[:n]))
-	// fmt.Println()
+	log.Println("JCTLog: 开始转发：")
+	io.Copy(client,server) // 
+	// var tt []byte
+	// tt,err = ioutil.ReadAll(server)
+	// log.Println("ddddd",string(tt))
+	// io.Copy(client,bytes.NewReader(tt[:]))
+	log.Println("JCTLog: 结束： ")
 }
 
 // 建立一个传输通道
@@ -138,7 +138,7 @@ func Dial(network,addr string) (net.Conn,error){
 	}()
 	if c == nil || err != nil {
 		log.Println("JCTLog: 代理异常: ",c,err)
-		log.Println("JCTLog: 本地直接转发: ")
+		// log.Println("JCTLog: 本地直接转发: ")
 		return net.Dial(network,addr)
 	}
 	log.Println("JCTLog: 代理正常，tunnel信息 ",c.LocalAddr().String(),"->",c.RemoteAddr().String())
@@ -174,7 +174,9 @@ func CheckProxy(proxyAddr,addr string) bool{
 			log.Println("JCTLog: req.Write: ",err)
 			return false
 		}
+		
 		resp,err := http.ReadResponse(bufio.NewReader(proxc),req)
+		defer resp.Body.Close()	
 		if err != nil {
 			log.Println("JCTLog: http.ReadResponse: ",err)
 			return false
