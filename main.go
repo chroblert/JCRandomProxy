@@ -31,7 +31,7 @@ func main(){
 	for {
 		client,err := l.Accept()
 		if err != nil {
-			log.Panic(err)
+			log.Panic("Panic",err)
 		}
 		go handle(client)
 	}
@@ -176,11 +176,11 @@ func CheckProxy(proxyAddr,addr string) bool{
 		}
 		
 		resp,err := http.ReadResponse(bufio.NewReader(proxc),req)
-		defer resp.Body.Close()	
 		if err != nil {
 			log.Println("JCTLog: http.ReadResponse: ",err)
 			return false
 		}
+		defer resp.Body.Close()	
 		fmt.Println("===================sss")
 		fmt.Println(resp.Body)
 		fmt.Println(resp.StatusCode)
