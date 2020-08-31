@@ -261,7 +261,7 @@ func proxyRequest(r net.Conn, w net.Conn) {
             fmt.Printf("Unable to read from input, error: %s\n", err.Error())
             break
         }
-		fmt.Println(string(buffer[:n]))
+		// fmt.Println(string(buffer[:n]))
         n, err = w.Write(buffer[:n])
         if err != nil {
             fmt.Printf("Unable to write to output, error: %s\n", err.Error())
