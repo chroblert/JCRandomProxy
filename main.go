@@ -27,6 +27,8 @@ import (
 func init() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	Conf.InitConfig()
+	log.Println(Conf.UseHttpsProxy)
+
 }
 
 func main() {
@@ -115,10 +117,6 @@ func handle(client net.Conn) {
 	}()
 	log.Println("JCTLog: 开始转发：")
 	io.Copy(client, server) //
-	// var tt []byte
-	// tt,err = ioutil.ReadAll(server)
-	// log.Println("ddddd",string(tt))
-	// io.Copy(client,bytes.NewReader(tt[:]))
 	log.Println("JCTLog: 结束： ")
 }
 
@@ -142,11 +140,14 @@ func Dial(network, addr string) (net.Conn, error) {
 		if err != nil {
 			return nil, err
 		}
+		
 		// 在这里返回c可以正常使用
 		checkaddr := "http://myip.ipip.net"
 		if CheckProxy(proxyAddr, checkaddr) {
+			// return nil, err
 			return proxc, err
 		}
+		// return proxc, err
 		return nil, err
 
 	}()
@@ -164,6 +165,10 @@ func CheckProxy(proxyAddr, checkaddr string) bool {
 	if !Conf.UseProxyPool {
 		return true
 	}
+	// 是否使用随机代理代理https流量
+	// if !Conf.UseHttpsProxy {
+	// 	return false
+	// }
 	prox, _ := url.Parse(proxyAddr)
 	log.Println("JCTLog: 代理地址: ", prox.Host)
 	// Dial and create client connection

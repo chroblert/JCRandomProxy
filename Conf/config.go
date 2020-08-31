@@ -12,6 +12,7 @@ var (
     CustomProxyFile string
 	Port string
 	UseProxy bool
+	UseHttpsProxy bool
  )
 
  func InitConfig() {
@@ -24,6 +25,7 @@ var (
      UseProxyPool,_ = cfg.Section("main").Key("UseProxypool").Bool()
 	 Port = cfg.Section("main").Key("Port").String()
 	 UseProxy,_ = cfg.Section("main").Key("UseProxy").Bool()
+	 UseHttpsProxy,_ = cfg.Section("main").Key("UseHttpsProxy").Bool()
      PPIP  = cfg.Section("proxypool").Key("PPIP").String()
 	 PPPort = cfg.Section("proxypool").Key("PPPort").String()
 	 CustomProxyFile,_ = filepath.Abs(cfg.Section("customproxy").Key("CustomProxyFile").String())
