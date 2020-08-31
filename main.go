@@ -6,7 +6,7 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"io"
+	// "io"
 	"io/ioutil"
 	"log"
 	"net"
@@ -112,11 +112,13 @@ func handle(client net.Conn) {
 	// 进行转发
 	go func() {
 		log.Println("JCTLog: go转发前：")
-		io.Copy(server, client)
+		// io.Copy(server, client)
+		proxyRequest(client,server)
 		log.Println("JCTLog: go转发后：")
 	}()
 	log.Println("JCTLog: 开始转发：")
-	io.Copy(client, server) //
+	// io.Copy(client, server) //
+	proxyRequest(server,client)
 	log.Println("JCTLog: 结束： ")
 }
 
@@ -245,4 +247,25 @@ func CheckProxy(proxyAddr, checkaddr string) bool {
 	return false
 	// }
 
+}
+
+// Forward all requests from r to w
+func proxyRequest(r net.Conn, w net.Conn) {
+    defer r.Close()
+    defer w.Close()
+
+    var buffer = make([]byte, 4096000)
+    for {
+        n, err := r.Read(buffer)
+        if err != nil {
+            fmt.Printf("Unable to read from input, error: %s\n", err.Error())
+            break
+        }
+		fmt.Println(string(buffer[:n]))
+        n, err = w.Write(buffer[:n])
+        if err != nil {
+            fmt.Printf("Unable to write to output, error: %s\n", err.Error())
+            break
+        }
+    }
 }
