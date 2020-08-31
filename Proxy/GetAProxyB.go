@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
-	"JCRandomProxy-v1.0/Conf"
+	"JCRandomProxy/Conf"
 	"log"
 	"bufio"
 )

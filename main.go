@@ -1,8 +1,8 @@
 package main
 
 import (
-	"JCRandomProxy-v1.0/Conf"
-	"JCRandomProxy-v1.0/Proxy"
+	"JCRandomProxy/Conf"
+	"JCRandomProxy/Proxy"
 	"bufio"
 	"bytes"
 	"fmt"

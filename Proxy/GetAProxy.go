@@ -1,6 +1,6 @@
 package Proxy
 import (
-	"JCRandomProxy-v1.0/Conf"
+	"JCRandomProxy/Conf"
 )
 
 // 定义接收返回的代理的结构体
