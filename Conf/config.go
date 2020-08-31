@@ -29,6 +29,8 @@ var (
      PPIP  = cfg.Section("proxypool").Key("PPIP").String()
 	 PPPort = cfg.Section("proxypool").Key("PPPort").String()
 	 CustomProxyFile,_ = filepath.Abs(cfg.Section("customproxy").Key("CustomProxyFile").String())
+	// log.Println(UseHttpsProxy)
+
  }
 
 

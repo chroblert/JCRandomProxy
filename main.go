@@ -1,8 +1,8 @@
 package main
 
 import (
-	"JCRandomProxy/Conf"
-	"JCRandomProxy/Proxy"
+	"JCRandomProxy-v1.0/Conf"
+	"JCRandomProxy-v1.0/Proxy"
 	"bufio"
 	"bytes"
 	"fmt"
@@ -27,7 +27,7 @@ import (
 func init() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	Conf.InitConfig()
-	log.Println(Conf.UseHttpsProxy)
+	// log.Println(Conf.UseHttpsProxy)
 
 }
 
@@ -151,6 +151,12 @@ func Dial(network, addr string) (net.Conn, error) {
 		return nil, err
 
 	}()
+	if strings.Contains(addr,":443") {
+		// 是否使用随机代理代理https流量
+		if !Conf.UseHttpsProxy {
+			c = nil
+		}
+	}
 	if c == nil || err != nil {
 		log.Println("JCTLog: 代理异常: ", c, err)
 		// log.Println("JCTLog: 本地直接转发: ")
@@ -165,10 +171,7 @@ func CheckProxy(proxyAddr, checkaddr string) bool {
 	if !Conf.UseProxyPool {
 		return true
 	}
-	// 是否使用随机代理代理https流量
-	// if !Conf.UseHttpsProxy {
-	// 	return false
-	// }
+
 	prox, _ := url.Parse(proxyAddr)
 	log.Println("JCTLog: 代理地址: ", prox.Host)
 	// Dial and create client connection

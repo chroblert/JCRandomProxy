@@ -1,7 +1,7 @@
 package Proxy
 import (
 	"log"
-	"JCRandomProxy/Conf"
+	"JCRandomProxy-v1.0/Conf"
 	"net/http"
 	"io/ioutil"
 	"encoding/json"
