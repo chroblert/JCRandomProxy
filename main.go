@@ -3,18 +3,9 @@ package main
 import (
 	"JCRandomProxy/Conf"
 	"JCRandomProxy/Proxy"
-	"bufio"
-	"bytes"
-	"fmt"
-	// "io"
-	"io/ioutil"
 	"log"
 	"net"
-	"net/http"
-	"net/url"
 	"runtime/debug"
-	"strings"
-	"time"
 )
 
 /**
@@ -27,8 +18,6 @@ import (
 func init() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	Conf.InitConfig()
-	// log.Println(Conf.UseHttpsProxy)
-
 }
 
 func main() {
@@ -62,210 +51,19 @@ func handle(client net.Conn) {
 
 	log.Println("JCTLog: client tcp tunnel connection: ", client.LocalAddr().String(), "->", client.RemoteAddr().String())
 	defer client.Close()
-
-	var b [1024]byte
-	// 读取应用层的所有数据
-	n, err := client.Read(b[:])
-	if err != nil || bytes.IndexByte(b[:], '\n') == -1 {
-		// 传输层的连接没有应用层的内容，如net.Dial()
-		log.Println(err)
-		return
-	}
-	var method, host, address string
-	fmt.Sscanf(string(b[:bytes.IndexByte(b[:], '\n')]), "%s%s", &method, &host)
-	log.Println(method, host)
-	hostPortURL, err := url.Parse(host)
-	if err != nil {
-		log.Println(err)
-		return
-	}
-	// https
-	if hostPortURL.Opaque == "443" {
-		address = hostPortURL.Scheme + ":443"
-	} else {
-		// http
-		if strings.Index(hostPortURL.Host, ":") == -1 {
-			address = hostPortURL.Host + ":80"
-		} else {
-			address = hostPortURL.Host
-		}
-	}
-	log.Println("JCTLog: hostPortURL", address)
-	// 建立一个到代理服务器的传输通道
-	server, err := Dial("tcp", address)
-	if err != nil {
-		log.Println("JCTLog: Dial: ", err)
-		return
-	}
-	// 在应用层完成数据转发后，关闭传输层的通道
-	defer server.Close()
-	log.Println("JCTLog: server tcp tunnel connection: ", server.LocalAddr().String(), "->", server.RemoteAddr().String())
-
-	if method == "CONNECT" {
-		// https
-		fmt.Fprint(client, "HTTP/1.1 200 Connection Established\r\n\r\n")
-	} else {
-		// http
-		log.Println("JCTLog: ", "server write ", method)
-		server.Write(b[:n])
-	}
-	// 进行转发
-	go func() {
-		log.Println("JCTLog: go转发前：")
-		// io.Copy(server, client)
-		proxyRequest(client,server)
-		log.Println("JCTLog: go转发后：")
-	}()
-	log.Println("JCTLog: 开始转发：")
-	// io.Copy(client, server) //
-	proxyRequest(server,client)
-	log.Println("JCTLog: 结束： ")
-}
-
-// 建立一个传输通道
-// network : 网络类型，tcp
-// addr: 最终目标服务器地址
-func Dial(network, addr string) (net.Conn, error) {
-	var proxyAddr string
-	proxyAddr = "http://10.103.90.8:10080"
-	proxyAddr = "http://49.4.123.243:8080"
 	// 随机取出一个代理
 	paddr, ptype, _ := Proxy.GetAProxy()
-	proxyAddr = ptype + "://" + paddr
-
-	// 建立到代理服务器的传输层通道
-	c, err := func() (net.Conn, error) {
-		prox, _ := url.Parse(proxyAddr)
-		log.Println("JCTLog: 代理地址: ", prox.Host)
-		// Dial and create client connection
-		proxc, err := net.DialTimeout("tcp", prox.Host, time.Second*5)
-		if err != nil {
-			return nil, err
-		}
-		
-		// 在这里返回c可以正常使用
-		checkaddr := "http://myip.ipip.net"
-		if CheckProxy(proxyAddr, checkaddr) {
-			// return nil, err
-			return proxc, err
-		}
-		// return proxc, err
-		return nil, err
-
-	}()
-	if strings.Contains(addr,":443") {
-		// 是否使用随机代理代理https流量
-		if !Conf.UseHttpsProxy {
-			c = nil
-		}
+	proxyAddr := ptype + "://" + paddr
+	// 验证代理是否有效
+	checkaddr := "http://myip.ipip.net"
+	if Proxy.CheckProxy(proxyAddr, checkaddr) {
+		log.Println(" 代理有效 ",proxyAddr)
+		// 有效，使用端口转发
+		PortForward(client,paddr)
+	}else{
+		log.Println(" 代理无效 ",proxyAddr)
+		// 无效，使用自身代理
+		lproxy(client)
 	}
-	if c == nil || err != nil {
-		log.Println("JCTLog: 代理异常: ", c, err)
-		// log.Println("JCTLog: 本地直接转发: ")
-		return net.Dial(network, addr)
-	}
-	log.Println("JCTLog: 代理正常，tunnel信息 ", c.LocalAddr().String(), "->", c.RemoteAddr().String())
-	return c, err
 }
 
-// 验证代理服务器是否可用
-func CheckProxy(proxyAddr, checkaddr string) bool {
-	if !Conf.UseProxyPool {
-		return true
-	}
-
-	prox, _ := url.Parse(proxyAddr)
-	log.Println("JCTLog: 代理地址: ", prox.Host)
-	// Dial and create client connection
-	proxc, err := net.DialTimeout("tcp", prox.Host, time.Second*5)
-	if err != nil {
-		return false
-	}
-	// 解析最终目标url
-	reqURL, err := url.Parse(checkaddr)
-	if err != nil {
-		return false
-	}
-	log.Println("JCTLog: reqURL: ", reqURL.String())
-	req, err := http.NewRequest(http.MethodGet, reqURL.String(), nil)
-	if err != nil {
-		log.Println("JCTLog: http.NewRequest: ", err)
-		return false
-	}
-
-	req.Close = false
-	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.3")
-	err = req.Write(proxc)
-	fmt.Println(req)
-	if err != nil {
-		log.Println("JCTLog: req.Write: ", err)
-		return false
-	}
-
-	resp, err := http.ReadResponse(bufio.NewReader(proxc), req)
-	if err != nil {
-		log.Println("JCTLog: http.ReadResponse: ", err)
-		return false
-	}
-	defer resp.Body.Close()
-	fmt.Println("===================sss")
-	// fmt.Println(resp.Body)
-	// fmt.Println(resp.StatusCode)
-	fmt.Println(resp.Status)
-	// fmt.Println(resp.Proto)
-	// fmt.Println(resp.Header)
-
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Println(err)
-		return false
-	}
-
-	// fmt.Println(string(body))
-	fmt.Println("===================eee")
-	defer resp.Body.Close()
-	// fmt.Println(strings.Split(prox.Host,":")[1])
-	if strings.Contains(string(body), strings.Split(prox.Host, ":")[0]) {
-		fmt.Println("包含", prox.Host)
-		return true
-	}
-	// 删除无效代理
-	if Conf.UseProxyPool {
-		_, err := http.Get(Conf.PPIP + ":" + Conf.PPPort + "/delete/?proxy=" + prox.Host)
-		if err != nil {
-			log.Println(err)
-		}
-		// body, err := ioutil.ReadAll(resp.Body)
-		// if err != nil {
-		// 	fmt.Println(err)
-		// 	return false
-		// }
-		log.Println("JCTLog: 删除代理: ", prox.Host)
-	}
-	// if (resp.StatusCode != 200) {
-	err = fmt.Errorf("Connect server using proxy error,StatusCode [%d]", resp.StatusCode)
-	return false
-	// }
-
-}
-
-// Forward all requests from r to w
-func proxyRequest(r net.Conn, w net.Conn) {
-    defer r.Close()
-    defer w.Close()
-
-    var buffer = make([]byte, 4096000)
-    for {
-        n, err := r.Read(buffer)
-        if err != nil {
-            fmt.Printf("Unable to read from input, error: %s\n", err.Error())
-            break
-        }
-		// fmt.Println(string(buffer[:n]))
-        n, err = w.Write(buffer[:n])
-        if err != nil {
-            fmt.Printf("Unable to write to output, error: %s\n", err.Error())
-            break
-        }
-    }
-}
