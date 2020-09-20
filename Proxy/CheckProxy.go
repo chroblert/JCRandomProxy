@@ -1,19 +1,38 @@
 package Proxy
+
 import (
-	"net"
-	"net/url"
-	"net/http"
 	"JCRandomProxy/Conf"
-	"log"
-	"fmt"
-	"time"
 	"bufio"
+	"crypto/md5"
+	"fmt"
 	"io/ioutil"
+	"log"
+	"net"
+	"net/http"
+	"net/url"
 	"strings"
+	"time"
 )
 
 // 验证代理服务器是否可用
 func CheckProxy(proxyAddr, checkaddr string) bool {
+	proxymd5 := fmt.Sprintf("%x", md5.Sum([]byte(proxyAddr)))
+	// 代理服务器可用，则添加至map中
+	if CheckProxyA(proxyAddr, checkaddr) {
+		protocol := strings.Split(proxyAddr, ":")[0]
+		ip := strings.Split(strings.Split(proxyAddr, "/")[2], ":")[0]
+		port := strings.Split(proxyAddr, ":")[2]
+		tmpproxy := aproxy{protocol, ip, port}
+		// proxylist = append(proxylist, tmpproxy)
+		proxymap[proxymd5] = tmpproxy
+		log.Println(proxymap)
+		return true
+	}
+	// 代理服务器不可用，则删除
+	delete(proxymap, proxymd5)
+	return false
+}
+func CheckProxyA(proxyAddr, checkaddr string) bool {
 	if !Conf.UseProxyPool {
 		return true
 	}

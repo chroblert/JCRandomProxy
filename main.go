@@ -57,13 +57,13 @@ func handle(client net.Conn) {
 	// 验证代理是否有效
 	checkaddr := "http://myip.ipip.net"
 	if Proxy.CheckProxy(proxyAddr, checkaddr) {
-		log.Println(" 代理有效 ",proxyAddr)
+		log.Println(" 代理有效 ", proxyAddr)
 		// 有效，使用端口转发
-		PortForward(client,paddr)
-	}else{
-		log.Println(" 代理无效 ",proxyAddr)
+		PortForward(client, paddr)
+	} else {
+		log.Println(" 代理无效 ", proxyAddr)
+		// 判断该代理是否在可用代理池，若在，则删除
 		// 无效，使用自身代理
 		lproxy(client)
 	}
 }
-
