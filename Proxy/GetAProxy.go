@@ -32,7 +32,11 @@ var minProxyNum int = 10
 var maxProxyNum int = 30
 
 // var proxylist []aproxy
+// 经过验证的可用代理池
 var proxymap = make(map[string]aproxy)
+
+// 从文件中读取的代理
+var metaproxymap = make(map[string]aproxy)
 
 func GetAProxy() (string, string, error) {
 	// 先判断可用代理池中的可用代理数量是否大于等于10

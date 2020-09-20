@@ -30,12 +30,13 @@ func CheckProxy(proxyAddr, checkaddr string) bool {
 	}
 	// 代理服务器不可用，则删除
 	delete(proxymap, proxymd5)
+	delete(metaproxymap, proxymd5)
 	return false
 }
 func CheckProxyA(proxyAddr, checkaddr string) bool {
-	if !Conf.UseProxyPool {
-		return true
-	}
+	// if !Conf.UseProxyPool {
+	// 	return true
+	// }
 
 	prox, _ := url.Parse(proxyAddr)
 	log.Println("JCTLog: 代理地址: ", prox.Host)
