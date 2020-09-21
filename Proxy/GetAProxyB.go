@@ -13,6 +13,7 @@ import (
 )
 
 func GetAProxyB() (string, string, error) {
+	log.Println(MetaProxymap)
 	if len(MetaProxymap) != 0 {
 		tmp := GetAvailableProxy(MetaProxymap)
 		delete(MetaProxymap, fmt.Sprintf("%x", md5.Sum([]byte(tmp.Protocol+"://"+tmp.Ip+":"+tmp.Port))))

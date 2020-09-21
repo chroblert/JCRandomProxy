@@ -64,6 +64,6 @@ func GetAvailableProxy(tmp map[string]aproxy) aproxy {
 	for k := range tmp {
 		keys = append(keys, k)
 	}
-	log.Println("keys: ", keys)
+	// log.Println("keys: ", keys)
 	return tmp[keys[rand.Intn(len(keys))]]
 }

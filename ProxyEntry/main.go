@@ -28,7 +28,7 @@ import (
 // Conf.InitConfig()
 // }
 
-func Proxymain() {
+func Proxymain(stop chan int) {
 	// 监听TCP连接
 	l, err := net.Listen("tcp", ":"+Conf.Port)
 	log.Println("监听在：", Conf.Port)
@@ -37,11 +37,24 @@ func Proxymain() {
 	}
 
 	for {
+
+		// 接收停止信号
+		select {
+		case <-stop:
+			log.Println("收到停止信号")
+			// client.Close()
+			l.Close()
+			stop <- 1
+			return
+		default:
+		}
 		// 接收TCP连接，返回一个net.Conn
+		// log.Println("test start")
 		client, err := l.Accept()
 		if err != nil {
 			log.Panic("Panic", err)
 		}
+		// log.Println("test end")
 		// 收到请求后，调用handle进行处理
 		go handle(client)
 	}

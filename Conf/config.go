@@ -13,6 +13,7 @@ var (
 	PPPort          string
 	UseProxyPool    bool
 	CustomProxyFile string
+	SaveProxyFile   string = "proxy.lst"
 	Port            string
 	UseProxy        bool
 	UseHttpsProxy   bool
