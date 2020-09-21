@@ -701,3 +701,492 @@
 2020/09/21 17:27:46 Form1Impl.go:189: 追加结束
 2020/09/21 17:28:13 Form1Impl.go:84: 导入文件
 2020/09/21 17:28:13 Form1Impl.go:85: C:\Data\JCRP\code\proxy.lst
+2020/09/21 19:42:40 config.go:38: 5
+2020/09/21 19:42:40 main.go:34: 监听在： 8081
+2020/09/21 19:43:08 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55605
+2020/09/21 19:43:08 GetAProxyB.go:16: map[]
+2020/09/21 19:43:08 GetAProxyB.go:33: <nil>
+2020/09/21 19:43:08 GetAProxyB.go:34: open : The system cannot find the file specified.
+2020/09/21 20:35:54 config.go:38: 5
+2020/09/21 20:35:54 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 20:37:14 config.go:38: 5
+2020/09/21 20:37:14 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 20:37:15 config.go:38: 5
+2020/09/21 20:37:15 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 20:37:17 config.go:38: 5
+2020/09/21 20:37:17 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 20:38:46 Form1Impl.go:74: 导入文件
+2020/09/21 20:38:46 Form1Impl.go:75: C:\Data\JCRP\code\proxy.lst
+2020/09/21 20:55:10 main.go:34: 监听在： 8081
+2020/09/21 20:55:18 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55767
+2020/09/21 20:55:18 CheckProxy.go:20: http://61.135.185.153:80
+2020/09/21 20:55:18 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.153:80
+2020/09/21 20:55:18 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:18 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.153:80
+2020/09/21 20:55:18 main.go:86:  代理无效  http://61.135.185.153:80
+2020/09/21 20:55:18 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:19 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55772 -> 117.23.61.188:80
+2020/09/21 20:55:19 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:20 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55773
+2020/09/21 20:55:20 CheckProxy.go:20: http://115.223.7.110:80
+2020/09/21 20:55:20 CheckProxy.go:44: JCTLog: 代理地址:  115.223.7.110:80
+2020/09/21 20:55:20 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:20 CheckProxy.go:95: 包含 115.223.7.110:80
+2020/09/21 20:55:20 CheckProxy.go:30: 当前可用代理池:  map[bc997bf36e0a81b76cb482395093a9cc:{http 115.223.7.110 80}]
+2020/09/21 20:55:20 main.go:82:  代理有效  http://115.223.7.110:80
+2020/09/21 20:55:23 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55778
+2020/09/21 20:55:23 CheckProxy.go:20: http://183.232.232.69:80
+2020/09/21 20:55:23 CheckProxy.go:44: JCTLog: 代理地址:  183.232.232.69:80
+2020/09/21 20:55:23 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:23 CheckProxy.go:109: JCTLog: 删除代理:  183.232.232.69:80
+2020/09/21 20:55:23 main.go:86:  代理无效  http://183.232.232.69:80
+2020/09/21 20:55:23 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:23 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55783 -> 117.23.61.188:80
+2020/09/21 20:55:23 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:25 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55784
+2020/09/21 20:55:25 CheckProxy.go:20: http://61.135.185.156:80
+2020/09/21 20:55:25 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.156:80
+2020/09/21 20:55:25 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:25 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.156:80
+2020/09/21 20:55:25 main.go:86:  代理无效  http://61.135.185.156:80
+2020/09/21 20:55:25 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:25 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55789 -> 117.23.61.188:80
+2020/09/21 20:55:25 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:32 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55790
+2020/09/21 20:55:32 CheckProxy.go:20: http://222.193.28.4:80
+2020/09/21 20:55:32 CheckProxy.go:44: JCTLog: 代理地址:  222.193.28.4:80
+2020/09/21 20:55:32 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:32 CheckProxy.go:109: JCTLog: 删除代理:  222.193.28.4:80
+2020/09/21 20:55:32 main.go:86:  代理无效  http://222.193.28.4:80
+2020/09/21 20:55:32 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:32 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55795 -> 117.23.61.188:80
+2020/09/21 20:55:32 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:33 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55796
+2020/09/21 20:55:33 CheckProxy.go:20: http://180.149.144.199:80
+2020/09/21 20:55:33 CheckProxy.go:44: JCTLog: 代理地址:  180.149.144.199:80
+2020/09/21 20:55:33 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:33 CheckProxy.go:73: JCTLog: http.ReadResponse:  unexpected EOF
+2020/09/21 20:55:33 main.go:86:  代理无效  http://180.149.144.199:80
+2020/09/21 20:55:33 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:33 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55800 -> 117.23.61.188:80
+2020/09/21 20:55:33 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:34 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55801
+2020/09/21 20:55:34 CheckProxy.go:20: http://111.206.37.68:80
+2020/09/21 20:55:34 CheckProxy.go:44: JCTLog: 代理地址:  111.206.37.68:80
+2020/09/21 20:55:34 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:34 CheckProxy.go:109: JCTLog: 删除代理:  111.206.37.68:80
+2020/09/21 20:55:34 main.go:86:  代理无效  http://111.206.37.68:80
+2020/09/21 20:55:34 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:35 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55806 -> 117.23.61.188:80
+2020/09/21 20:55:35 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:36 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55807
+2020/09/21 20:55:36 CheckProxy.go:20: http://150.138.253.71:808
+2020/09/21 20:55:36 CheckProxy.go:44: JCTLog: 代理地址:  150.138.253.71:808
+2020/09/21 20:55:36 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:36 CheckProxy.go:109: JCTLog: 删除代理:  150.138.253.71:808
+2020/09/21 20:55:36 main.go:86:  代理无效  http://150.138.253.71:808
+2020/09/21 20:55:36 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:36 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55812 -> 117.23.61.188:80
+2020/09/21 20:55:36 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:37 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55813
+2020/09/21 20:55:37 CheckProxy.go:20: http://61.135.185.68:80
+2020/09/21 20:55:37 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.68:80
+2020/09/21 20:55:37 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:37 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.68:80
+2020/09/21 20:55:37 main.go:86:  代理无效  http://61.135.185.68:80
+2020/09/21 20:55:37 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:37 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55818 -> 117.23.61.188:80
+2020/09/21 20:55:37 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:38 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55819
+2020/09/21 20:55:38 CheckProxy.go:20: http://123.125.115.183:80
+2020/09/21 20:55:38 CheckProxy.go:44: JCTLog: 代理地址:  123.125.115.183:80
+2020/09/21 20:55:38 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:38 CheckProxy.go:109: JCTLog: 删除代理:  123.125.115.183:80
+2020/09/21 20:55:38 main.go:86:  代理无效  http://123.125.115.183:80
+2020/09/21 20:55:38 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:38 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55824 -> 117.23.61.188:80
+2020/09/21 20:55:38 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:39 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55825
+2020/09/21 20:55:39 CheckProxy.go:20: http://105.27.237.28:80
+2020/09/21 20:55:39 CheckProxy.go:44: JCTLog: 代理地址:  105.27.237.28:80
+2020/09/21 20:55:44 main.go:86:  代理无效  http://105.27.237.28:80
+2020/09/21 20:55:44 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:44 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55829 -> 117.23.61.188:80
+2020/09/21 20:55:44 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:45 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55830
+2020/09/21 20:55:45 CheckProxy.go:20: http://61.135.185.90:80
+2020/09/21 20:55:45 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.90:80
+2020/09/21 20:55:45 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:45 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.90:80
+2020/09/21 20:55:45 main.go:86:  代理无效  http://61.135.185.90:80
+2020/09/21 20:55:45 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:45 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55835 -> 117.23.61.188:80
+2020/09/21 20:55:45 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:47 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55836
+2020/09/21 20:55:48 CheckProxy.go:20: http://134.209.104.73:80
+2020/09/21 20:55:48 CheckProxy.go:44: JCTLog: 代理地址:  134.209.104.73:80
+2020/09/21 20:55:48 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:49 CheckProxy.go:109: JCTLog: 删除代理:  134.209.104.73:80
+2020/09/21 20:55:49 main.go:86:  代理无效  http://134.209.104.73:80
+2020/09/21 20:55:49 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:49 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55842 -> 117.23.61.188:80
+2020/09/21 20:55:49 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:50 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55844
+2020/09/21 20:55:50 CheckProxy.go:20: http://61.135.185.160:80
+2020/09/21 20:55:50 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.160:80
+2020/09/21 20:55:50 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:50 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.160:80
+2020/09/21 20:55:50 main.go:86:  代理无效  http://61.135.185.160:80
+2020/09/21 20:55:50 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:50 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55849 -> 117.23.61.188:80
+2020/09/21 20:55:50 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:51 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55850
+2020/09/21 20:55:51 CheckProxy.go:20: http://61.160.210.223:808
+2020/09/21 20:55:51 CheckProxy.go:44: JCTLog: 代理地址:  61.160.210.223:808
+2020/09/21 20:55:51 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:51 CheckProxy.go:109: JCTLog: 删除代理:  61.160.210.223:808
+2020/09/21 20:55:51 main.go:86:  代理无效  http://61.160.210.223:808
+2020/09/21 20:55:51 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:51 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55855 -> 117.23.61.188:80
+2020/09/21 20:55:51 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:54 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55856
+2020/09/21 20:55:54 CheckProxy.go:20: http://61.135.185.20:80
+2020/09/21 20:55:54 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.20:80
+2020/09/21 20:55:54 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:54 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.20:80
+2020/09/21 20:55:54 main.go:86:  代理无效  http://61.135.185.20:80
+2020/09/21 20:55:54 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:54 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55861 -> 117.23.61.188:80
+2020/09/21 20:55:54 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:55 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55862
+2020/09/21 20:55:55 CheckProxy.go:20: http://61.135.185.92:80
+2020/09/21 20:55:55 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.92:80
+2020/09/21 20:55:55 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:55 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.92:80
+2020/09/21 20:55:55 main.go:86:  代理无效  http://61.135.185.92:80
+2020/09/21 20:55:55 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:55 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55867 -> 117.23.61.188:80
+2020/09/21 20:55:55 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:56 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55868
+2020/09/21 20:55:56 CheckProxy.go:20: http://61.135.186.243:80
+2020/09/21 20:55:56 CheckProxy.go:44: JCTLog: 代理地址:  61.135.186.243:80
+2020/09/21 20:55:56 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:56 CheckProxy.go:109: JCTLog: 删除代理:  61.135.186.243:80
+2020/09/21 20:55:56 main.go:86:  代理无效  http://61.135.186.243:80
+2020/09/21 20:55:56 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:56 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55873 -> 117.23.61.188:80
+2020/09/21 20:55:56 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:57 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55874
+2020/09/21 20:55:57 CheckProxy.go:20: http://61.160.210.234:808
+2020/09/21 20:55:57 CheckProxy.go:44: JCTLog: 代理地址:  61.160.210.234:808
+2020/09/21 20:55:57 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:55:57 CheckProxy.go:109: JCTLog: 删除代理:  61.160.210.234:808
+2020/09/21 20:55:57 main.go:86:  代理无效  http://61.160.210.234:808
+2020/09/21 20:55:57 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:55:57 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55879 -> 117.23.61.188:80
+2020/09/21 20:55:57 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:55:59 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55880
+2020/09/21 20:55:59 CheckProxy.go:20: http://218.27.136.169:8086
+2020/09/21 20:55:59 CheckProxy.go:44: JCTLog: 代理地址:  218.27.136.169:8086
+2020/09/21 20:55:59 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:56:02 CheckProxy.go:73: JCTLog: http.ReadResponse:  read tcp 192.168.14.109:55883->218.27.136.169:8086: wsarecv: An existing connection was forcibly closed by the remote host.
+2020/09/21 20:56:02 main.go:86:  代理无效  http://218.27.136.169:8086
+2020/09/21 20:56:02 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:02 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55885 -> 117.23.61.188:80
+2020/09/21 20:56:17 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:17 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55886
+2020/09/21 20:56:17 CheckProxy.go:20: http://180.149.144.199:80
+2020/09/21 20:56:17 CheckProxy.go:44: JCTLog: 代理地址:  180.149.144.199:80
+2020/09/21 20:56:17 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:56:18 CheckProxy.go:73: JCTLog: http.ReadResponse:  unexpected EOF
+2020/09/21 20:56:18 main.go:86:  代理无效  http://180.149.144.199:80
+2020/09/21 20:56:18 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:18 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55890 -> 117.23.61.188:80
+2020/09/21 20:56:20 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:27 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55892
+2020/09/21 20:56:27 CheckProxy.go:20: http://218.14.108.53:8060
+2020/09/21 20:56:27 CheckProxy.go:44: JCTLog: 代理地址:  218.14.108.53:8060
+2020/09/21 20:56:27 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:56:27 CheckProxy.go:73: JCTLog: http.ReadResponse:  read tcp 192.168.14.109:55895->218.14.108.53:8060: wsarecv: An existing connection was forcibly closed by the remote host.
+2020/09/21 20:56:27 main.go:86:  代理无效  http://218.14.108.53:8060
+2020/09/21 20:56:27 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:27 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55896 -> 117.23.61.188:80
+2020/09/21 20:56:28 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:28 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55897
+2020/09/21 20:56:28 CheckProxy.go:20: http://61.135.186.80:80
+2020/09/21 20:56:28 CheckProxy.go:44: JCTLog: 代理地址:  61.135.186.80:80
+2020/09/21 20:56:29 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:56:29 CheckProxy.go:109: JCTLog: 删除代理:  61.135.186.80:80
+2020/09/21 20:56:29 main.go:86:  代理无效  http://61.135.186.80:80
+2020/09/21 20:56:29 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:29 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55902 -> 117.23.61.188:80
+2020/09/21 20:56:29 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:30 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55904
+2020/09/21 20:56:30 CheckProxy.go:20: http://61.135.186.222:80
+2020/09/21 20:56:30 CheckProxy.go:44: JCTLog: 代理地址:  61.135.186.222:80
+2020/09/21 20:56:30 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:56:30 CheckProxy.go:109: JCTLog: 删除代理:  61.135.186.222:80
+2020/09/21 20:56:30 main.go:86:  代理无效  http://61.135.186.222:80
+2020/09/21 20:56:30 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:30 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55909 -> 117.23.61.188:80
+2020/09/21 20:56:30 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:31 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55911
+2020/09/21 20:56:31 CheckProxy.go:20: http://14.139.62.246:80
+2020/09/21 20:56:31 CheckProxy.go:44: JCTLog: 代理地址:  14.139.62.246:80
+2020/09/21 20:56:31 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:56:36 CheckProxy.go:109: JCTLog: 删除代理:  14.139.62.246:80
+2020/09/21 20:56:36 main.go:86:  代理无效  http://14.139.62.246:80
+2020/09/21 20:56:36 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:36 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55920 -> 117.23.61.188:80
+2020/09/21 20:56:36 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:38 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55922
+2020/09/21 20:56:38 CheckProxy.go:20: http://120.9.143.190:8888
+2020/09/21 20:56:38 CheckProxy.go:44: JCTLog: 代理地址:  120.9.143.190:8888
+2020/09/21 20:56:43 main.go:86:  代理无效  http://120.9.143.190:8888
+2020/09/21 20:56:43 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:43 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55926 -> 117.23.61.188:80
+2020/09/21 20:56:43 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:44 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55927
+2020/09/21 20:56:44 CheckProxy.go:20: http://61.135.185.118:80
+2020/09/21 20:56:44 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.118:80
+2020/09/21 20:56:44 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:56:44 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.118:80
+2020/09/21 20:56:44 main.go:86:  代理无效  http://61.135.185.118:80
+2020/09/21 20:56:45 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:45 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55932 -> 117.23.61.188:80
+2020/09/21 20:56:45 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:46 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55933
+2020/09/21 20:56:46 CheckProxy.go:20: http://61.135.185.112:80
+2020/09/21 20:56:46 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.112:80
+2020/09/21 20:56:46 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:56:46 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.112:80
+2020/09/21 20:56:46 main.go:86:  代理无效  http://61.135.185.112:80
+2020/09/21 20:56:46 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:46 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55938 -> 117.23.61.188:80
+2020/09/21 20:56:46 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:47 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55939
+2020/09/21 20:56:47 CheckProxy.go:20: http://61.135.185.152:80
+2020/09/21 20:56:47 CheckProxy.go:44: JCTLog: 代理地址:  61.135.185.152:80
+2020/09/21 20:56:47 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 20:56:47 CheckProxy.go:109: JCTLog: 删除代理:  61.135.185.152:80
+2020/09/21 20:56:47 main.go:86:  代理无效  http://61.135.185.152:80
+2020/09/21 20:56:47 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:56:47 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55944 -> 117.23.61.188:80
+2020/09/21 20:56:47 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:56:56 main.go:44: 收到停止信号
+2020/09/21 20:56:56 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55946
+2020/09/21 20:56:56 Form1Impl.go:65: 停止代理
+2020/09/21 20:56:56 CheckProxy.go:20: http://58.250.21.56:3128
+2020/09/21 20:56:56 CheckProxy.go:44: JCTLog: 代理地址:  58.250.21.56:3128
+2020/09/21 20:57:01 main.go:86:  代理无效  http://58.250.21.56:3128
+2020/09/21 20:57:01 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 20:57:01 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:55951 -> 117.23.61.188:80
+2020/09/21 20:57:02 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 20:57:08 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 20:57:13 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 20:57:16 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 20:57:17 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:18:02 main.go:34: 监听在： 8081
+2020/09/21 21:18:11 main.go:44: 收到停止信号
+2020/09/21 21:18:11 Form1Impl.go:65: 停止代理
+2020/09/21 21:18:11 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55988
+2020/09/21 21:18:11 CheckProxy.go:20: http://51.159.24.146:3128
+2020/09/21 21:18:11 CheckProxy.go:44: JCTLog: 代理地址:  51.159.24.146:3128
+2020/09/21 21:18:14 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:18:14 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 21:18:15 CheckProxy.go:95: 包含 51.159.24.146:3128
+2020/09/21 21:18:15 CheckProxy.go:30: 当前可用代理池:  map[9609c81195986b903896e56d6216bede:{http 51.159.24.146 3128}]
+2020/09/21 21:18:15 main.go:82:  代理有效  http://51.159.24.146:3128
+2020/09/21 21:19:37 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:19:45 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:19:46 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:19:47 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:23:27 main.go:34: 监听在： 8081
+2020/09/21 21:23:46 main.go:44: 收到停止信号
+2020/09/21 21:23:46 Form1Impl.go:66: 停止代理
+2020/09/21 21:23:46 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:55997
+2020/09/21 21:23:46 CheckProxy.go:20: http://106.4.60.91:9000
+2020/09/21 21:23:46 CheckProxy.go:44: JCTLog: 代理地址:  106.4.60.91:9000
+2020/09/21 21:23:46 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 21:23:46 CheckProxy.go:95: 包含 106.4.60.91:9000
+2020/09/21 21:23:46 CheckProxy.go:30: 当前可用代理池:  map[b0008ddcc009ff77e4aa4c01bff32edf:{http 106.4.60.91 9000}]
+2020/09/21 21:23:46 main.go:82:  代理有效  http://106.4.60.91:9000
+2020/09/21 21:23:49 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:23:50 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:23:51 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:23:51 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:23:51 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 21:23:52 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 22:02:24 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 22:02:25 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 22:02:26 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 22:04:03 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 22:04:11 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 22:04:14 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 22:14:24 main.go:34: 监听在： 8081
+2020/09/21 22:14:31 main.go:44: 收到停止信号
+2020/09/21 22:14:31 Form1Impl.go:66: 停止代理
+2020/09/21 22:14:31 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56118
+2020/09/21 22:14:31 CheckProxy.go:20: http://5.196.23.219:80
+2020/09/21 22:14:31 CheckProxy.go:44: JCTLog: 代理地址:  5.196.23.219:80
+2020/09/21 22:14:31 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 22:14:31 CheckProxy.go:109: JCTLog: 删除代理:  5.196.23.219:80
+2020/09/21 22:14:31 main.go:86:  代理无效  http://5.196.23.219:80
+2020/09/21 22:14:31 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 22:14:35 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 22:14:35 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:56123 -> 117.23.61.238:80
+2020/09/21 22:14:35 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 22:14:41 main.go:34: 监听在： 8081
+2020/09/21 22:14:51 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56124
+2020/09/21 22:14:51 GetAProxyB.go:16: map[842895ca2aca17f6ee36ddb2f621194d:{http 127.0.0.1 80}]
+2020/09/21 22:14:51 CheckProxy.go:20: http://127.0.0.1:80
+2020/09/21 22:14:51 CheckProxy.go:44: JCTLog: 代理地址:  127.0.0.1:80
+2020/09/21 22:14:52 main.go:86:  代理无效  http://127.0.0.1:80
+2020/09/21 22:14:52 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 22:14:52 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:56126 -> 117.23.61.238:80
+2020/09/21 22:14:52 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 22:15:19 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56127
+2020/09/21 22:15:19 GetAProxyB.go:16: map[]
+2020/09/21 22:15:19 GetAProxyB.go:33: <nil>
+2020/09/21 22:15:19 GetAProxyB.go:34: open : The system cannot find the file specified.
+2020/09/21 23:01:25 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 23:01:38 main.go:34: 监听在： 8081
+2020/09/21 23:01:42 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56187
+2020/09/21 23:01:42 GetAProxyB.go:16: map[842895ca2aca17f6ee36ddb2f621194d:{http 127.0.0.1 80}]
+2020/09/21 23:01:42 CheckProxy.go:20: http://127.0.0.1:80
+2020/09/21 23:01:42 CheckProxy.go:44: JCTLog: 代理地址:  127.0.0.1:80
+2020/09/21 23:01:43 main.go:86:  代理无效  http://127.0.0.1:80
+2020/09/21 23:01:43 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 23:01:44 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:56189 -> 116.211.155.164:80
+2020/09/21 23:01:44 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 23:17:55 Form1Impl.go:134: 没有选中item，或代理池为空
+2020/09/21 23:17:57 Form1Impl.go:134: 没有选中item，或代理池为空
+2020/09/21 23:17:57 Form1Impl.go:134: 没有选中item，或代理池为空
+2020/09/21 23:18:04 Form1Impl.go:142: map[]
+2020/09/21 23:18:08 Form1Impl.go:134: 没有选中item，或代理池为空
+2020/09/21 23:18:09 Form1Impl.go:134: 没有选中item，或代理池为空
+2020/09/21 23:18:13 Form1Impl.go:134: 没有选中item，或代理池为空
+2020/09/21 23:54:57 Form1Impl.go:79: 导入文件
+2020/09/21 23:54:57 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/21 23:55:12 Form1Impl.go:79: 导入文件
+2020/09/21 23:55:12 Form1Impl.go:80: C:\Data\JCRP\code\新建文本文档.txt
+2020/09/21 23:56:33 main.go:34: 监听在： 8081
+2020/09/21 23:56:55 main.go:44: 收到停止信号
+2020/09/21 23:56:55 Form1Impl.go:66: 停止代理
+2020/09/21 23:56:55 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56342
+2020/09/21 23:56:55 CheckProxy.go:20: http://194.110.192.142:3128
+2020/09/21 23:56:55 CheckProxy.go:44: JCTLog: 代理地址:  194.110.192.142:3128
+2020/09/21 23:56:55 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 23:56:56 CheckProxy.go:109: JCTLog: 删除代理:  194.110.192.142:3128
+2020/09/21 23:56:56 main.go:86:  代理无效  http://194.110.192.142:3128
+2020/09/21 23:56:56 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 23:56:57 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:56347 -> 117.23.61.238:80
+2020/09/21 23:56:57 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 23:57:02 Form1Impl.go:146: map[]
+2020/09/21 23:57:05 main.go:34: 监听在： 8081
+2020/09/21 23:57:09 main.go:44: 收到停止信号
+2020/09/21 23:57:09 Form1Impl.go:66: 停止代理
+2020/09/21 23:57:09 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56348
+2020/09/21 23:57:09 CheckProxy.go:20: http://61.135.186.222:80
+2020/09/21 23:57:09 CheckProxy.go:44: JCTLog: 代理地址:  61.135.186.222:80
+2020/09/21 23:57:09 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 23:57:10 CheckProxy.go:109: JCTLog: 删除代理:  61.135.186.222:80
+2020/09/21 23:57:10 main.go:86:  代理无效  http://61.135.186.222:80
+2020/09/21 23:57:10 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 23:57:10 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:56353 -> 117.23.61.238:80
+2020/09/21 23:57:10 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 23:57:19 Form1Impl.go:79: 导入文件
+2020/09/21 23:57:19 Form1Impl.go:80: C:\Data\JCRP\code\新建文本文档.txt
+2020/09/21 23:57:22 main.go:34: 监听在： 8081
+2020/09/21 23:57:50 main.go:44: 收到停止信号
+2020/09/21 23:57:50 Form1Impl.go:66: 停止代理
+2020/09/21 23:57:50 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56354
+2020/09/21 23:57:50 CheckProxy.go:20: http://218.59.139.238:80
+2020/09/21 23:57:50 CheckProxy.go:44: JCTLog: 代理地址:  218.59.139.238:80
+2020/09/21 23:57:50 CheckProxy.go:55: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 23:57:54 CheckProxy.go:109: JCTLog: 删除代理:  218.59.139.238:80
+2020/09/21 23:57:54 main.go:86:  代理无效  http://218.59.139.238:80
+2020/09/21 23:57:54 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 23:57:54 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:56359 -> 117.23.61.238:80
+2020/09/21 23:57:54 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 23:58:05 main.go:34: 监听在： 8081
+2020/09/21 23:58:11 main.go:44: 收到停止信号
+2020/09/21 23:58:11 Form1Impl.go:66: 停止代理
+2020/09/21 23:58:11 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56362
+2020/09/21 23:58:11 CheckProxy.go:20: http://118.24.172.37:1080
+2020/09/21 23:58:11 CheckProxy.go:44: JCTLog: 代理地址:  118.24.172.37:1080
+2020/09/21 23:58:17 main.go:86:  代理无效  http://118.24.172.37:1080
+2020/09/21 23:58:17 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/21 23:58:17 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:56368 -> 117.23.61.238:80
+2020/09/21 23:58:21 Form1Impl.go:79: 导入文件
+2020/09/21 23:58:21 Form1Impl.go:80: C:\Data\JCRP\code\新建文本文档.txt
+2020/09/21 23:58:22 localproxy.go:76: JCTLog: 结束： 
+2020/09/21 23:58:24 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/21 23:58:25 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/22 00:00:59 Form1Impl.go:79: 导入文件
+2020/09/22 00:00:59 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:01:10 Form1Impl.go:147: map[]
+2020/09/22 00:01:25 Form1Impl.go:79: 导入文件
+2020/09/22 00:01:25 Form1Impl.go:80: C:\Data\JCRP\code\新建文本文档.txt
+2020/09/22 00:01:38 main.go:34: 监听在： 8081
+2020/09/22 00:01:52 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56383
+2020/09/22 00:01:52 CheckProxy.go:20: http://218.22.7.62:53281
+2020/09/22 00:01:52 CheckProxy.go:44: JCTLog: 代理地址:  218.22.7.62:53281
+2020/09/22 00:01:57 main.go:86:  代理无效  http://218.22.7.62:53281
+2020/09/22 00:01:57 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/22 00:01:57 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:56387 -> 117.23.61.238:80
+2020/09/22 00:01:58 localproxy.go:76: JCTLog: 结束： 
+2020/09/22 00:02:18 Form1Impl.go:79: 导入文件
+2020/09/22 00:02:18 Form1Impl.go:80: C:\Data\JCRP\code\新建文本文档.txt
+2020/09/22 00:02:22 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/22 00:02:26 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/22 00:02:27 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/22 00:02:28 Form1Impl.go:47: 自定义代理池中没有代理，启动失败
+2020/09/22 00:02:31 main.go:34: 监听在： 8081
+2020/09/22 00:02:36 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56392
+2020/09/22 00:02:36 GetAProxyB.go:16: map[842895ca2aca17f6ee36ddb2f621194d:{http 127.0.0.1 80}]
+2020/09/22 00:02:36 CheckProxy.go:20: http://127.0.0.1:80
+2020/09/22 00:02:36 CheckProxy.go:44: JCTLog: 代理地址:  127.0.0.1:80
+2020/09/22 00:02:37 main.go:86:  代理无效  http://127.0.0.1:80
+2020/09/22 00:02:37 localproxy.go:35: GET http://myip.ipip.net/
+2020/09/22 00:02:37 localproxy.go:61: JCTLog: server tcp tunnel connection:  192.168.14.109:56394 -> 117.23.61.238:80
+2020/09/22 00:02:37 localproxy.go:76: JCTLog: 结束： 
+2020/09/22 00:02:39 main.go:74: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:56395
+2020/09/22 00:02:39 GetAProxyB.go:16: map[]
+2020/09/22 00:02:39 main.go:67: invalid argument to Intn
+2020/09/22 00:04:16 Form1Impl.go:79: 导入文件
+2020/09/22 00:04:16 Form1Impl.go:80: C:\Data\JCRP\code\新建文本文档.txt
+2020/09/22 00:04:16 Form1Impl.go:85: 导入文件失败
+2020/09/22 00:04:59 Form1Impl.go:79: 导入文件
+2020/09/22 00:04:59 Form1Impl.go:80: C:\Data\JCRP\code\新建文本文档.txt
+2020/09/22 00:04:59 Form1Impl.go:85: 导入文件失败
+2020/09/22 00:05:09 Form1Impl.go:79: 导入文件
+2020/09/22 00:05:09 Form1Impl.go:80: C:\Data\JCRP\code\main.go
+2020/09/22 00:06:09 Form1Impl.go:79: 导入文件
+2020/09/22 00:06:09 Form1Impl.go:80: C:\Data\Go\src\Utils\Encrypt\AESEncrypt\AESEncrypt.go
+2020/09/22 00:06:36 Form1Impl.go:79: 导入文件
+2020/09/22 00:06:36 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:09:39 Form1Impl.go:79: 导入文件
+2020/09/22 00:09:39 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:10:00 Form1Impl.go:79: 导入文件
+2020/09/22 00:10:00 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:10:17 Form1Impl.go:79: 导入文件
+2020/09/22 00:10:17 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:10:55 Form1Impl.go:79: 导入文件
+2020/09/22 00:10:55 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:13:32 Form1Impl.go:79: 导入文件
+2020/09/22 00:13:32 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:13:32 Form1Impl.go:85: 导入文件失败
+2020/09/22 00:13:45 Form1Impl.go:79: 导入文件
+2020/09/22 00:13:45 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:13:54 Form1Impl.go:79: 导入文件
+2020/09/22 00:13:54 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:13:54 Form1Impl.go:85: 导入文件失败
+2020/09/22 00:14:03 Form1Impl.go:79: 导入文件
+2020/09/22 00:14:03 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:14:03 Form1Impl.go:85: 导入文件失败
+2020/09/22 00:15:51 Form1Impl.go:79: 导入文件
+2020/09/22 00:15:51 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:15:59 Form1Impl.go:79: 导入文件
+2020/09/22 00:15:59 Form1Impl.go:80: C:\Data\JCRP\code\proxy.lst
+2020/09/22 00:15:59 Form1Impl.go:86: 导入文件失败

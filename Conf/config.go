@@ -35,7 +35,7 @@ func InitConfig(aMinProxyNum int, aUseProxyPool bool, aPort string, aUseProxy bo
 	UseHttpsProxy = aUseHttpsProxy
 	PPIP = aPPIP
 	PPPort = aPPPort
-	log.Println(MinProxyNum)
+	// log.Println(MinProxyNum)
 	// CustomProxyFile, _ = filepath.Abs(cfg.Section("customproxy").Key("CustomProxyFile").String())
 	// log.Println(UseHttpsProxy)
 

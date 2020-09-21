@@ -42,25 +42,18 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	Conf.InitConfig(MinProxyNum, UseProxyPool, Port, UseProxy, UseHttpsProxy, PPIP, PPPort)
 	// 启动代理
 	// go ProxyEntry.Proxymain()
+	// 如果代理模式是自定义，则
+	if !UseProxyPool && len(Proxy.MetaProxymap) < 1 {
+		log.Println("自定义代理池中没有代理，启动失败")
+		f.ListBox2.Items().Add("自定义代理池中没有代理，启动失败")
+		return
+	}
 	// 可以停止
 	go ProxyEntry.Proxymain(c)
-	// go func(stop chan int) {
-	// 	var isFirst = true
-	// 	for {
-	// 		select {
-	// 		case <-stop:
-	// 			stop <- 1
-	// 			break
-	// 		default:
-	// 		}
-	// 		if isFirst {
-	// 			isFirst = false
-	// 			ProxyEntry.Proxymain(stop)
-	// 		}
-	// 	}
-	// }(c)
 	// 渲染可用代理池
 	go RenderValidProxyPool()
+	f.Button1.SetEnabled(false)
+	f.Button2.SetEnabled(true)
 
 	// 启动日志实时输出
 	//go logRealTime()//拉低性能，暂时取消
@@ -71,6 +64,8 @@ func (f *TForm1) OnButton2Click(sender vcl.IObject) {
 	c <- 1
 	<-c
 	log.Println("停止代理")
+	f.Button1.SetEnabled(true)
+	f.Button2.SetEnabled(false)
 }
 
 func (f *TForm1) OnButton3Click(sender vcl.IObject) {
@@ -83,9 +78,16 @@ func (f *TForm1) OnButton3Click(sender vcl.IObject) {
 		f.ListBox2.Items().Add(time.Now().Format(fmt.Sprintf("2006-01-02 15:04:05 : %s", "导入代理文件")))
 		log.Println("导入文件")
 		log.Println(dlgOpen.FileName())
+		tmp := Conf.CustomProxyFile
 		Conf.CustomProxyFile = dlgOpen.FileName()
 		var tmpmap = make(map[string]Proxy.Aproxy)
-		tmpmap = Proxy.GetMetaproxyFromFile()
+		tmpmap, err := Proxy.GetMetaproxyFromFile()
+		if err != nil {
+			log.Println("导入文件失败")
+			f.ListBox2.Items().Add("导入文件失败")
+			Conf.CustomProxyFile = tmp
+			return
+		}
 		Proxy.MetaProxymap = tmpmap
 		f.ListView1.Items().BeginUpdate()
 		i := 0
@@ -98,6 +100,7 @@ func (f *TForm1) OnButton3Click(sender vcl.IObject) {
 			item.SubItems().Add(tmpmap[k].Port)
 		}
 		f.ListView1.Items().EndUpdate()
+		f.Button5.SetEnabled(true)
 
 	}
 
@@ -135,6 +138,11 @@ func (f *TForm1) OnButton5Click(sender vcl.IObject) {
 
 // 删除代理
 func (f *TForm1) OnButton6Click(sender vcl.IObject) {
+	if f.ListView1.Items().Count() < 1 || !f.ListView1.Selected().Selected() {
+		log.Println("没有选中item，或代理池为空")
+		f.ListBox2.Items().Add("没有选中item，或代理池为空")
+		return
+	}
 	protocol := f.ListView1.Selected().SubItems().ValueFromIndex(0)
 	ip := f.ListView1.Selected().SubItems().ValueFromIndex(1)
 	port := f.ListView1.Selected().SubItems().ValueFromIndex(2)
