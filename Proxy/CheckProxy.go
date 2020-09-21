@@ -60,7 +60,7 @@ func CheckProxyA(proxyAddr, checkaddr string) bool {
 	req.Close = false
 	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.3")
 	err = req.Write(proxc)
-	fmt.Println(req)
+	log.Println(req)
 	if err != nil {
 		log.Println("JCTLog: req.Write: ", err)
 		return false
@@ -72,25 +72,25 @@ func CheckProxyA(proxyAddr, checkaddr string) bool {
 		return false
 	}
 	defer resp.Body.Close()
-	fmt.Println("===================sss")
+	log.Println("===================sss")
 	// fmt.Println(resp.Body)
 	// fmt.Println(resp.StatusCode)
-	fmt.Println(resp.Status)
+	log.Println(resp.Status)
 	// fmt.Println(resp.Proto)
 	// fmt.Println(resp.Header)
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 		return false
 	}
 
 	// fmt.Println(string(body))
-	fmt.Println("===================eee")
+	log.Println("===================eee")
 	defer resp.Body.Close()
 	// fmt.Println(strings.Split(prox.Host,":")[1])
 	if strings.Contains(string(body), strings.Split(prox.Host, ":")[0]) {
-		fmt.Println("包含", prox.Host)
+		log.Println("包含", prox.Host)
 		return true
 	}
 	// 删除无效代理

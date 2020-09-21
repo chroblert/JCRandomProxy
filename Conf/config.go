@@ -1,40 +1,41 @@
 package Conf
-import (
-    "path/filepath"
-    "fmt"
-    "github.com/go-ini/ini"
-    "crypto/tls"
-)
-var (
-	PPIP string
-	PPPort string
-	UseProxyPool bool
-    CustomProxyFile string
-	Port string
-	UseProxy bool
-	UseHttpsProxy bool
- )
 
- func InitConfig() {
-     confFile,_ := filepath.Abs("Conf/config.ini")
-     cfg,err  := ini.Load(confFile)
-     if err != nil {
-         panic(err)
-     }
-     fmt.Println("JCTest",cfg)
-     UseProxyPool,_ = cfg.Section("main").Key("UseProxypool").Bool()
-	 Port = cfg.Section("main").Key("Port").String()
-	 UseProxy,_ = cfg.Section("main").Key("UseProxy").Bool()
-	 UseHttpsProxy,_ = cfg.Section("main").Key("UseHttpsProxy").Bool()
-     PPIP  = cfg.Section("proxypool").Key("PPIP").String()
-	 PPPort = cfg.Section("proxypool").Key("PPPort").String()
-	 CustomProxyFile,_ = filepath.Abs(cfg.Section("customproxy").Key("CustomProxyFile").String())
+import (
+	"crypto/tls"
+	"log"
+	"path/filepath"
+
+	"github.com/go-ini/ini"
+)
+
+var (
+	PPIP            string
+	PPPort          string
+	UseProxyPool    bool
+	CustomProxyFile string
+	Port            string
+	UseProxy        bool
+	UseHttpsProxy   bool
+)
+
+func InitConfig() {
+
+	confFile, _ := filepath.Abs("Conf/config.ini")
+	cfg, err := ini.Load(confFile)
+	if err != nil {
+		panic(err)
+	}
+	log.Println("JCTest", cfg)
+	UseProxyPool, _ = cfg.Section("main").Key("UseProxypool").Bool()
+	Port = cfg.Section("main").Key("Port").String()
+	UseProxy, _ = cfg.Section("main").Key("UseProxy").Bool()
+	UseHttpsProxy, _ = cfg.Section("main").Key("UseHttpsProxy").Bool()
+	PPIP = cfg.Section("proxypool").Key("PPIP").String()
+	PPPort = cfg.Section("proxypool").Key("PPPort").String()
+	CustomProxyFile, _ = filepath.Abs(cfg.Section("customproxy").Key("CustomProxyFile").String())
 	// log.Println(UseHttpsProxy)
 
- }
-
-
-
+}
 
 type Cfg struct {
 	Port    *string
