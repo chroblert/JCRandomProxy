@@ -1,15 +1,16 @@
-package main
+package ProxyEntry
+
 import (
-	"net"
-	"log"
-	"runtime/debug"
-	"fmt"
 	"bytes"
+	"fmt"
+	"log"
+	"net"
 	"net/url"
+	"runtime/debug"
 	"strings"
 )
 
-func lproxy(client net.Conn){
+func lproxy(client net.Conn) {
 	defer func() {
 		if err := recover(); err != nil {
 			log.Panic(err)
@@ -48,7 +49,7 @@ func lproxy(client net.Conn){
 			address = hostPortURL.Host
 		}
 	}
-	log.Println("JCTLog: hostPortURL", address)
+	// log.Println("JCTLog: hostPortURL", address)
 	// 建立一个到代理服务器的传输通道
 	server, err := Dial("tcp", address)
 	if err != nil {
@@ -69,17 +70,15 @@ func lproxy(client net.Conn){
 	}
 	// 进行转发
 	go func() {
-		proxyRequest(client,server)
+		proxyRequest(client, server)
 	}()
-	proxyRequest(server,client)
+	proxyRequest(server, client)
 	log.Println("JCTLog: 结束： ")
 }
-
 
 // 建立一个传输通道
 // network : 网络类型，tcp
 // addr: 最终目标服务器地址
 func Dial(network, addr string) (net.Conn, error) {
-	return net.Dial(network,addr)
+	return net.Dial(network, addr)
 }
-

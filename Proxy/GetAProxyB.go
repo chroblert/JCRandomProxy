@@ -15,6 +15,7 @@ import (
 func GetAProxyB() (string, string, error) {
 	if len(metaproxymap) != 0 {
 		tmp := GetAvailableProxy(metaproxymap)
+		delete(metaproxymap, fmt.Sprintf("%x", md5.Sum([]byte(tmp.protocol+"://"+tmp.ip+":"+tmp.port))))
 		return tmp.ip + ":" + tmp.port, tmp.protocol, nil
 	}
 	// 设置随机数种子

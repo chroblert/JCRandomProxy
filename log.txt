@@ -1,0 +1,40 @@
+2020/09/21 10:25:35 config.go:28: JCTest &{{false false false false false false false false false false false false [] =: = false <nil> 0 false} [{C:\Data\Go\src\JCRandomProxy\Conf\config.ini}] true {{0 0} 0 0 0 0} [DEFAULT main proxypool customproxy] [0 0 0 0] map[DEFAULT:[0xc00010c620] customproxy:[0xc00010ca80] main:[0xc00010c690] proxypool:[0xc00010c930]] <nil> <nil>}
+2020/09/21 10:25:40 main.go:61: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:49487
+2020/09/21 10:25:40 CheckProxy.go:42: JCTLog: 代理地址:  54.168.222.142:80
+2020/09/21 10:25:40 CheckProxy.go:53: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 10:25:40 CheckProxy.go:71: JCTLog: http.ReadResponse:  read tcp 192.168.14.109:49488->54.168.222.142:80: wsarecv: An existing connection was forcibly closed by the remote host.
+2020/09/21 10:25:40 main.go:73:  代理无效  http://54.168.222.142:80
+2020/09/21 10:25:40 localproxy.go:35: GET http://www.google.com/
+2020/09/21 10:25:45 main.go:61: JCTLog: client tcp tunnel connection:  127.0.0.1:8081 -> 127.0.0.1:49491
+2020/09/21 10:25:45 CheckProxy.go:42: JCTLog: 代理地址:  38.77.36.35:8080
+2020/09/21 10:25:45 main.go:61: JCTLog: client tcp tunnel connection:  127.0.0.1:8081 -> 127.0.0.1:49493
+2020/09/21 10:25:45 CheckProxy.go:42: JCTLog: 代理地址:  211.137.52.159:8080
+2020/09/21 10:25:45 CheckProxy.go:53: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 10:25:45 CheckProxy.go:53: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 10:25:45 CheckProxy.go:93: 包含 211.137.52.159:8080
+2020/09/21 10:25:45 CheckProxy.go:28: 当前可用代理池:  map[f303fa798d2b086c9fcf88614b542947:{http 211.137.52.159 8080}]
+2020/09/21 10:25:45 main.go:69:  代理有效  http://211.137.52.159:8080
+2020/09/21 10:25:45 main.go:61: JCTLog: client tcp tunnel connection:  127.0.0.1:8081 -> 127.0.0.1:49496
+2020/09/21 10:25:45 CheckProxy.go:42: JCTLog: 代理地址:  103.141.182.100:80
+2020/09/21 10:25:45 CheckProxy.go:53: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 10:25:46 main.go:61: JCTLog: client tcp tunnel connection:  127.0.0.1:8081 -> 127.0.0.1:49498
+2020/09/21 10:25:46 CheckProxy.go:42: JCTLog: 代理地址:  223.82.106.253:3128
+2020/09/21 10:25:46 CheckProxy.go:53: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 10:25:46 CheckProxy.go:93: 包含 38.77.36.35:8080
+2020/09/21 10:25:46 CheckProxy.go:28: 当前可用代理池:  map[27ffd890d2a9d2fc13ad7e853d62c6ff:{http 38.77.36.35 8080} f303fa798d2b086c9fcf88614b542947:{http 211.137.52.159 8080}]
+2020/09/21 10:25:46 main.go:69:  代理有效  http://38.77.36.35:8080
+2020/09/21 10:25:46 CheckProxy.go:93: 包含 223.82.106.253:3128
+2020/09/21 10:25:46 CheckProxy.go:28: 当前可用代理池:  map[27ffd890d2a9d2fc13ad7e853d62c6ff:{http 38.77.36.35 8080} 5470c9ad2cb8a0086d3c4ca65794e96a:{http 223.82.106.253 3128} f303fa798d2b086c9fcf88614b542947:{http 211.137.52.159 8080}]
+2020/09/21 10:25:46 main.go:69:  代理有效  http://223.82.106.253:3128
+2020/09/21 10:25:46 CheckProxy.go:93: 包含 103.141.182.100:80
+2020/09/21 10:25:46 CheckProxy.go:28: 当前可用代理池:  map[2738a436b86458c3c5e74eab47d8f889:{http 103.141.182.100 80} 27ffd890d2a9d2fc13ad7e853d62c6ff:{http 38.77.36.35 8080} 5470c9ad2cb8a0086d3c4ca65794e96a:{http 223.82.106.253 3128} f303fa798d2b086c9fcf88614b542947:{http 211.137.52.159 8080}]
+2020/09/21 10:25:46 main.go:69:  代理有效  http://103.141.182.100:80
+2020/09/21 10:26:01 localproxy.go:56: JCTLog: Dial:  dial tcp 172.217.27.132:80: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/09/21 10:26:07 portforward.go:20: Unable to connect to: %s, error: %s
+ 223.82.106.253:3128 dial tcp 223.82.106.253:3128: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/09/21 10:26:07 main.go:61: JCTLog: client tcp tunnel connection:  127.0.0.1:8081 -> 127.0.0.1:49504
+2020/09/21 10:26:07 CheckProxy.go:42: JCTLog: 代理地址:  54.168.222.142:80
+2020/09/21 10:26:07 CheckProxy.go:53: JCTLog: 目标URL:  http://myip.ipip.net
+2020/09/21 10:26:08 CheckProxy.go:93: 包含 54.168.222.142:80
+2020/09/21 10:26:08 CheckProxy.go:28: 当前可用代理池:  map[2738a436b86458c3c5e74eab47d8f889:{http 103.141.182.100 80} 27ffd890d2a9d2fc13ad7e853d62c6ff:{http 38.77.36.35 8080} 5470c9ad2cb8a0086d3c4ca65794e96a:{http 223.82.106.253 3128} 6b4cd7718601e8002daa2a32a78bc8fa:{http 54.168.222.142 80} f303fa798d2b086c9fcf88614b542947:{http 211.137.52.159 8080}]
+2020/09/21 10:26:08 main.go:69:  代理有效  http://54.168.222.142:80

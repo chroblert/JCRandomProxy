@@ -25,7 +25,7 @@ func CheckProxy(proxyAddr, checkaddr string) bool {
 		tmpproxy := aproxy{protocol, ip, port}
 		// proxylist = append(proxylist, tmpproxy)
 		proxymap[proxymd5] = tmpproxy
-		log.Println(proxymap)
+		log.Println("当前可用代理池: ", proxymap)
 		return true
 	}
 	// 代理服务器不可用，则删除
@@ -50,7 +50,7 @@ func CheckProxyA(proxyAddr, checkaddr string) bool {
 	if err != nil {
 		return false
 	}
-	log.Println("JCTLog: reqURL: ", reqURL.String())
+	log.Println("JCTLog: 目标URL: ", reqURL.String())
 	req, err := http.NewRequest(http.MethodGet, reqURL.String(), nil)
 	if err != nil {
 		log.Println("JCTLog: http.NewRequest: ", err)
@@ -60,7 +60,7 @@ func CheckProxyA(proxyAddr, checkaddr string) bool {
 	req.Close = false
 	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.3")
 	err = req.Write(proxc)
-	log.Println(req)
+	// log.Println(req)
 	if err != nil {
 		log.Println("JCTLog: req.Write: ", err)
 		return false
@@ -72,10 +72,10 @@ func CheckProxyA(proxyAddr, checkaddr string) bool {
 		return false
 	}
 	defer resp.Body.Close()
-	log.Println("===================sss")
+	// log.Println("===================sss")
 	// fmt.Println(resp.Body)
 	// fmt.Println(resp.StatusCode)
-	log.Println(resp.Status)
+	// log.Println(resp.Status)
 	// fmt.Println(resp.Proto)
 	// fmt.Println(resp.Header)
 
@@ -86,7 +86,7 @@ func CheckProxyA(proxyAddr, checkaddr string) bool {
 	}
 
 	// fmt.Println(string(body))
-	log.Println("===================eee")
+	// log.Println("===================eee")
 	defer resp.Body.Close()
 	// fmt.Println(strings.Split(prox.Host,":")[1])
 	if strings.Contains(string(body), strings.Split(prox.Host, ":")[0]) {
