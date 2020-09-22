@@ -3,12 +3,14 @@ package ProxyEntry
 import (
 	"log"
 	"net"
+	"time"
 )
 
 func PortForward(client net.Conn, targetaddr string) {
 	// Read a header firstly in case you could have opportunity to check request
 	// whether to decline or proceed the request
 	defer client.Close()
+	// tmpClient := client
 	buffer := make([]byte, 1024)
 	n, err := client.Read(buffer)
 	if err != nil {
@@ -16,9 +18,10 @@ func PortForward(client net.Conn, targetaddr string) {
 		return
 	}
 	// targetaddr = "223.82.106.253:3128"
-	targetconn, err := net.Dial("tcp", targetaddr)
+	// 20200922: 使用带有超时的拨号
+	targetconn, err := net.DialTimeout("tcp", targetaddr, time.Duration(5*time.Second))
 	if err != nil {
-		log.Println("Unable to connect to: %s, error: %s\n", targetaddr, err.Error())
+		log.Printf("Unable to connect to: %s, error: %s\n", targetaddr, err.Error())
 		return
 	}
 	defer targetconn.Close()

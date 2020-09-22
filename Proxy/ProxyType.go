@@ -41,6 +41,13 @@ func (spm *SafeProxymap) DeleteAproxy(k string) {
 	spm.Unlock()
 }
 
+func (spm *SafeProxymap) AProxyExist(k string) bool {
+	spm.RLock()
+	_, ok := spm.Map[k]
+	spm.RUnlock()
+	return ok
+}
+
 func NewSafeMetaProxymap() *SafeMetaProxymap {
 	var smpm = new(SafeMetaProxymap)
 	smpm.Map = make(map[string]Aproxy)

@@ -39,6 +39,10 @@ func CheckProxy(proxyAddr, checkaddr string) bool {
 	return false
 }
 func CheckProxyB(proxyAddr, checkaddr string) bool {
+	// tttmp := MSafeProxymap.ReadAproxy(fmt.Sprintf("%x", md5.Sum([]byte(proxyAddr))))
+	if MSafeProxymap.AProxyExist(fmt.Sprintf("%x", md5.Sum([]byte(proxyAddr)))) {
+		return true
+	}
 	// 20200922使用新方法校验代理
 	httpproxy := proxyAddr
 	prox, _ := url.Parse(proxyAddr)
@@ -50,7 +54,9 @@ func CheckProxyB(proxyAddr, checkaddr string) bool {
 	}
 	cli := &http.Client{
 		Transport: ht,
+		Timeout:   5 * time.Second, //20200922: 增加超时机制
 	}
+
 	// req,err := http.NewRequest("GET","https://myip.ipip.net",nil)
 	log.Println(time.Now().Format("15:04:05"))
 	resp, err := cli.Get(checkaddr)

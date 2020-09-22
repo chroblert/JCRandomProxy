@@ -22,6 +22,7 @@ type TForm1Fields struct {
 }
 
 var c = make(chan int)
+var d = make(chan int)
 
 // 启动代理
 func (f *TForm1) OnButton1Click(sender vcl.IObject) {
@@ -52,7 +53,7 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	// 可以停止
 	go ProxyEntry.Proxymain(c)
 	// 渲染可用代理池
-	go RenderValidProxyPool()
+	go RenderValidProxyPool(d)
 	f.Button1.SetEnabled(false)
 	f.Button2.SetEnabled(true)
 
@@ -62,11 +63,16 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 
 // 停止代理
 func (f *TForm1) OnButton2Click(sender vcl.IObject) {
+	tmp1 := "http://localhost:" + f.Edit3.Text()
+	go Proxy.VisitThroughProxy(tmp1, "http://myip.ipip.net")
 	c <- 1
 	<-c
+	d <- 1
+	<-d
 	log.Println("停止代理")
 	f.Button1.SetEnabled(true)
 	f.Button2.SetEnabled(false)
+
 }
 
 func (f *TForm1) OnButton3Click(sender vcl.IObject) {
@@ -168,15 +174,23 @@ func logRealTime() {
 }
 
 // 定时渲染可用代理池
-func RenderValidProxyPool() {
+func RenderValidProxyPool(stop chan int) {
 	ticker := time.NewTicker(time.Duration(2 * time.Second))
-	for range ticker.C {
-		Form1.ListBox1.Items().Clear()
-		// 可能存在一些问题，
-		// 考虑为MSafeProxymap新建一个Keys()方法
-		for k := range Proxy.MSafeProxymap.Map {
-			tmp := Proxy.MSafeProxymap.ReadAproxy(k)
-			Form1.ListBox1.Items().Add(tmp.Protocol + "://" + tmp.Ip + ":" + tmp.Port)
+	// 20200922: [+] 控制停止更新可用代理池
+	for {
+		select {
+		case <-stop:
+			log.Print("停止更新可用代理池")
+			stop <- 1
+			return
+		case <-ticker.C:
+			Form1.ListBox1.Items().Clear()
+			// 可能存在一些问题，
+			// 考虑为MSafeProxymap新建一个Keys()方法
+			for k := range Proxy.MSafeProxymap.Map {
+				tmp := Proxy.MSafeProxymap.ReadAproxy(k)
+				Form1.ListBox1.Items().Add(tmp.Protocol + "://" + tmp.Ip + ":" + tmp.Port)
+			}
 		}
 	}
 
