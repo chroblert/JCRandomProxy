@@ -8,6 +8,7 @@ import (
 func PortForward(client net.Conn, targetaddr string) {
 	// Read a header firstly in case you could have opportunity to check request
 	// whether to decline or proceed the request
+	defer client.Close()
 	buffer := make([]byte, 1024)
 	n, err := client.Read(buffer)
 	if err != nil {
@@ -18,14 +19,12 @@ func PortForward(client net.Conn, targetaddr string) {
 	targetconn, err := net.Dial("tcp", targetaddr)
 	if err != nil {
 		log.Println("Unable to connect to: %s, error: %s\n", targetaddr, err.Error())
-		client.Close()
 		return
 	}
+	defer targetconn.Close()
 	n, err = targetconn.Write(buffer[:n])
 	if err != nil {
 		log.Printf("Unable to write to output, error: %s\n", err.Error())
-		client.Close()
-		targetconn.Close()
 		return
 	}
 	go proxyRequest(client, targetconn)

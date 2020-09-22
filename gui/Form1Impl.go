@@ -43,7 +43,8 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	// 启动代理
 	// go ProxyEntry.Proxymain()
 	// 如果代理模式是自定义，则
-	if !UseProxyPool && len(Proxy.MetaProxymap) < 1 {
+	// if !UseProxyPool && len(Proxy.MetaProxymap) < 1 {
+	if !UseProxyPool && Proxy.MSafeMetaProxymap.Length() < 1 {
 		log.Println("自定义代理池中没有代理，启动失败")
 		f.ListBox2.Items().Add("自定义代理池中没有代理，启动失败")
 		return
@@ -88,7 +89,8 @@ func (f *TForm1) OnButton3Click(sender vcl.IObject) {
 			Conf.CustomProxyFile = tmp
 			return
 		}
-		Proxy.MetaProxymap = tmpmap
+		// Proxy.MetaProxymap = tmpmap
+		Proxy.MSafeMetaProxymap.Map = tmpmap
 		f.ListView1.Items().BeginUpdate()
 		i := 0
 		for k := range tmpmap {
@@ -146,8 +148,10 @@ func (f *TForm1) OnButton6Click(sender vcl.IObject) {
 	protocol := f.ListView1.Selected().SubItems().ValueFromIndex(0)
 	ip := f.ListView1.Selected().SubItems().ValueFromIndex(1)
 	port := f.ListView1.Selected().SubItems().ValueFromIndex(2)
-	delete(Proxy.MetaProxymap, fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port))))
-	log.Println(Proxy.MetaProxymap)
+	// delete(Proxy.MetaProxymap, fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port))))
+	Proxy.MSafeMetaProxymap.DeleteAproxy(fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port))))
+	// log.Println(Proxy.MetaProxymap)
+	log.Println(Proxy.MSafeMetaProxymap.Map)
 	f.ListView1.DeleteSelected()
 }
 
@@ -168,8 +172,10 @@ func RenderValidProxyPool() {
 	ticker := time.NewTicker(time.Duration(2 * time.Second))
 	for range ticker.C {
 		Form1.ListBox1.Items().Clear()
-		for k := range Proxy.Proxymap {
-			tmp := Proxy.Proxymap[k]
+		// 可能存在一些问题，
+		// 考虑为MSafeProxymap新建一个Keys()方法
+		for k := range Proxy.MSafeProxymap.Map {
+			tmp := Proxy.MSafeProxymap.ReadAproxy(k)
 			Form1.ListBox1.Items().Add(tmp.Protocol + "://" + tmp.Ip + ":" + tmp.Port)
 		}
 	}

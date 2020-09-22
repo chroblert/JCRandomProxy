@@ -26,7 +26,8 @@ func (f *TForm2) OnButton1Click(sender vcl.IObject) {
 	item.SubItems().Add(fmt.Sprintf("%s", port))
 	item.MakeVisible(true)
 	f.Close()
-	Proxy.MetaProxymap[fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port)))] = Proxy.Aproxy{protocol, ip, port}
+	// Proxy.MetaProxymap[fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port)))] = Proxy.Aproxy{protocol, ip, port}
+	Proxy.MSafeMetaProxymap.WriteAproxy(fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port))), Proxy.Aproxy{protocol, ip, port})
 	// Form1.ListView1.Items().EndUpdate()
 }
 

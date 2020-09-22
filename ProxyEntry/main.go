@@ -65,7 +65,7 @@ func handle(client net.Conn) {
 	paddr, ptype, _ := Proxy.GetAProxy()
 	proxyAddr := ptype + "://" + paddr
 	// 验证代理是否有效
-	checkaddr := "http://myip.ipip.net"
+	checkaddr := "https://myip.ipip.net"
 	if Proxy.CheckProxy(proxyAddr, checkaddr) {
 		log.Println(" 代理有效 ", proxyAddr)
 		// 有效，使用端口转发

@@ -13,18 +13,22 @@ import (
 )
 
 func GetAProxyB() (string, string, error) {
-	log.Println(MetaProxymap)
-	if len(MetaProxymap) != 0 {
-		tmp := GetAvailableProxy(MetaProxymap)
-		delete(MetaProxymap, fmt.Sprintf("%x", md5.Sum([]byte(tmp.Protocol+"://"+tmp.Ip+":"+tmp.Port))))
+	// log.Println(MetaProxymap)
+	log.Println(MSafeMetaProxymap.Map)
+	// if len(MetaProxymap) != 0 {
+	if MSafeMetaProxymap.Length() != 0 {
+		// tmp := GetAvailableProxy(MetaProxymap)
+		tmp := GetAvailableProxy(MSafeMetaProxymap.Map)
+		// delete(MetaProxymap, fmt.Sprintf("%x", md5.Sum([]byte(tmp.Protocol+"://"+tmp.Ip+":"+tmp.Port))))
 		return tmp.Ip + ":" + tmp.Port, tmp.Protocol, nil
 	}
-	MetaProxymap, err := GetMetaproxyFromFile()
+	ttmp, err := GetMetaproxyFromFile()
+	MSafeMetaProxymap.Map = ttmp
 	if err != nil {
 		return "", "", err
 	}
 	// return proxy, ptype, err
-	tmp := GetAvailableProxy(MetaProxymap)
+	tmp := GetAvailableProxy(MSafeMetaProxymap.Map)
 	return tmp.Ip + ":" + tmp.Port, tmp.Protocol, nil
 }
 func GetMetaproxyFromFile() (map[string]aproxy, error) {

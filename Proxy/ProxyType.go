@@ -29,6 +29,17 @@ func (spm *SafeProxymap) WriteAproxy(k string, v Aproxy) {
 	spm.Map[k] = v
 	spm.Unlock()
 }
+func (spm *SafeProxymap) Length() int {
+	spm.RLock()
+	value := len(spm.Map)
+	spm.RUnlock()
+	return value
+}
+func (spm *SafeProxymap) DeleteAproxy(k string) {
+	spm.Lock()
+	delete(spm.Map, k)
+	spm.Unlock()
+}
 
 func NewSafeMetaProxymap() *SafeMetaProxymap {
 	var smpm = new(SafeMetaProxymap)
@@ -45,5 +56,16 @@ func (smpm *SafeMetaProxymap) ReadAproxy(k string) Aproxy {
 func (smpm *SafeMetaProxymap) WriteAproxy(k string, v Aproxy) {
 	smpm.Lock()
 	smpm.Map[k] = v
+	smpm.Unlock()
+}
+func (smpm *SafeMetaProxymap) Length() int {
+	smpm.RLock()
+	value := len(smpm.Map)
+	smpm.RUnlock()
+	return value
+}
+func (smpm *SafeMetaProxymap) DeleteAproxy(k string) {
+	smpm.Lock()
+	delete(smpm.Map, k)
 	smpm.Unlock()
 }

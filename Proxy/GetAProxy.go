@@ -34,22 +34,22 @@ type aproxy = Aproxy
 
 // var proxylist []aproxy
 // 经过验证的可用代理池
-var Proxymap = make(map[string]aproxy)
+// var Proxymap = make(map[string]aproxy)
 
 // 使用具有读写锁的map
-// var MSafeProxymap = NewSafeProxymap()
+var MSafeProxymap = NewSafeProxymap()
 
 // 从文件中读取的代理
-var MetaProxymap = make(map[string]aproxy)
+// var MetaProxymap = make(map[string]aproxy)
 
-// var MSafeMetaProxymap = NewSafeMetaProxymap()
+var MSafeMetaProxymap = NewSafeMetaProxymap()
 
 func GetAProxy() (string, string, error) {
 	// 先判断可用代理池中的可用代理数量是否大于等于10
 	// 若大于等于10，则从可用代理池中随机取出一个
-	if len(Proxymap) >= Conf.MinProxyNum {
+	if MSafeProxymap.Length() >= Conf.MinProxyNum {
 		// tmpProxy := proxylist[rand.Intn(len(proxylist))]
-		tmpProxy := GetAvailableProxy(Proxymap)
+		tmpProxy := GetAvailableProxy(MSafeProxymap.Map)
 		log.Println(tmpProxy)
 		return tmpProxy.Ip + ":" + tmpProxy.Port, tmpProxy.Protocol, nil
 	}
