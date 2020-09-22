@@ -36,8 +36,13 @@ type aproxy = Aproxy
 // 经过验证的可用代理池
 var Proxymap = make(map[string]aproxy)
 
+// 使用具有读写锁的map
+// var MSafeProxymap = NewSafeProxymap()
+
 // 从文件中读取的代理
 var MetaProxymap = make(map[string]aproxy)
+
+// var MSafeMetaProxymap = NewSafeMetaProxymap()
 
 func GetAProxy() (string, string, error) {
 	// 先判断可用代理池中的可用代理数量是否大于等于10
