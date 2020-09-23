@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-func lproxy(client net.Conn) {
+func Lproxy(client net.Conn) {
 	defer func() {
 		if err := recover(); err != nil {
 			log.Panic(err)
@@ -50,7 +50,6 @@ func lproxy(client net.Conn) {
 			address = hostPortURL.Host
 		}
 	}
-	// log.Println("JCTLog: hostPortURL", address)
 	// 建立一个到代理服务器的传输通道
 	server, err := Dial("tcp", address)
 	if err != nil {
@@ -66,7 +65,6 @@ func lproxy(client net.Conn) {
 		fmt.Fprint(client, "HTTP/1.1 200 Connection Established\r\n\r\n")
 	} else {
 		// http
-		// log.Println("JCTLog: ", "server write ", method)
 		server.Write(b[:n])
 	}
 	// 进行转发
