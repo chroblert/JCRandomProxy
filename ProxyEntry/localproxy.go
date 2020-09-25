@@ -9,6 +9,8 @@ import (
 	"runtime/debug"
 	"strings"
 	"time"
+
+	"../Conf"
 )
 
 func Lproxy(client net.Conn) {
@@ -80,5 +82,5 @@ func Lproxy(client net.Conn) {
 // addr: 最终目标服务器地址
 func Dial(network, addr string) (net.Conn, error) {
 	// 20200922: 使用超时函数
-	return net.DialTimeout(network, addr, time.Duration(3*time.Second))
+	return net.DialTimeout(network, addr, time.Duration(Conf.Timeout)*time.Second)
 }

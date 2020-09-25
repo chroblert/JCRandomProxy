@@ -5,6 +5,8 @@ import (
 	"net/http"
 	"net/url"
 	"time"
+
+	"../Conf"
 )
 
 func VisitThroughProxy(httpproxy, targeturl string) {
@@ -16,11 +18,10 @@ func VisitThroughProxy(httpproxy, targeturl string) {
 	}
 	cli := &http.Client{
 		Transport: ht,
-		Timeout:   5 * time.Second, //20200922: 增加超时机制
+		Timeout:   time.Duration(Conf.Timeout) * time.Second, //20200922: 增加超时机制
 	}
 
 	// req,err := http.NewRequest("GET","https://myip.ipip.net",nil)
-	log.Println(time.Now().Format("15:04:05"))
 	_, err := cli.Get(targeturl)
 	if err != nil {
 		log.Println(err)

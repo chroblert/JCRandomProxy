@@ -17,31 +17,24 @@ var (
 	Port            string
 	UseProxy        bool
 	UseHttpsProxy   bool
-	MinProxyNum     int
+	MinProxyNum     int    = 0
+	MaxProxyNum     int    = 5
+	ProxyCheckAddr  string = "https://myip.ipip.net"
+	Timeout         int    = 5
+	StopUrl         string = "http://myip.ipip.net"
 )
 
-func InitConfig(aMinProxyNum int, aUseProxyPool bool, aPort string, aUseProxy bool, aUseHttpsProxy bool, aPPIP string, aPPPort string) {
-
-	// confFile, _ := filepath.Abs("Conf/config.ini")
-	// cfg, err := ini.Load(confFile)
-	// if err != nil {
-	// 	panic(err)
-	// }
-	// log.Println("JCTest", cfg)
-	MinProxyNum = aMinProxyNum
+func InitConfig(aMaxProxyNum int, aUseProxyPool bool, aPort string, aUseProxy bool, aUseHttpsProxy bool, aPPIP string, aPPPort string) {
+	MaxProxyNum = aMaxProxyNum
 	UseProxyPool = aUseProxyPool
 	Port = aPort
 	UseProxy = aUseProxy
 	UseHttpsProxy = aUseHttpsProxy
 	PPIP = aPPIP
 	PPPort = aPPPort
-	// log.Println(MinProxyNum)
-	// CustomProxyFile, _ = filepath.Abs(cfg.Section("customproxy").Key("CustomProxyFile").String())
-	// log.Println(UseHttpsProxy)
 
 }
 func InitConfigFromFile() {
-
 	confFile, _ := filepath.Abs("Conf/config.ini")
 	cfg, err := ini.Load(confFile)
 	if err != nil {

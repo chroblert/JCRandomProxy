@@ -4,6 +4,8 @@ import (
 	"log"
 	"net"
 	"time"
+
+	"../Conf"
 )
 
 func Rproxy(client net.Conn, targetaddr string) {
@@ -18,7 +20,7 @@ func Rproxy(client net.Conn, targetaddr string) {
 	}
 	// targetaddr = "223.82.106.253:3128"
 	// 20200922: 使用带有超时的拨号
-	targetconn, err := net.DialTimeout("tcp", targetaddr, time.Duration(5*time.Second))
+	targetconn, err := net.DialTimeout("tcp", targetaddr, time.Duration(Conf.Timeout)*time.Second)
 	if err != nil {
 		log.Printf("Unable to connect to: %s, error: %s\n", targetaddr, err.Error())
 		return

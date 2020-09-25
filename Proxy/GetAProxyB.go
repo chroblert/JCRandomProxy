@@ -12,57 +12,71 @@ import (
 	"strings"
 )
 
-func GetAProxyB() (string, string, error) {
-	// log.Println(MetaProxymap)
-	log.Println(MSafeMetaProxymap.Map)
-	// if len(MetaProxymap) != 0 {
-	if MSafeMetaProxymap.Length() != 0 {
-		// tmp := GetAvailableProxy(MetaProxymap)
-		tmp := GetAvailableProxy(MSafeMetaProxymap.Map)
-		// delete(MetaProxymap, fmt.Sprintf("%x", md5.Sum([]byte(tmp.Protocol+"://"+tmp.Ip+":"+tmp.Port))))
-		return tmp.Ip + ":" + tmp.Port, tmp.Protocol, nil
-	}
-	ttmp, err := GetMetaproxyFromFile()
-	MSafeMetaProxymap.Map = ttmp
-	if err != nil {
-		return "", "", err
-	}
-	// return proxy, ptype, err
-	tmp := GetAvailableProxy(MSafeMetaProxymap.Map)
-	return tmp.Ip + ":" + tmp.Port, tmp.Protocol, nil
-}
-func GetMetaproxyFromFile() (map[string]aproxy, error) {
-	var tmpmetaproxymap = make(map[string]aproxy)
-	// 设置随机数种子
-	// rand.Seed(time.Now().UnixNano())
+// 从文件中读取代理到MetaSafeProxymap中【即元代理池】
+func GetMetaproxyBFromFile() error {
 	file, err := os.Open(Conf.CustomProxyFile)
 	if err != nil {
 		log.Println(err)
-		return nil, err
+		return err
 	}
 	defer file.Close()
-	// var proxyList []string
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		proxystr := scanner.Text()
 		if !strings.Contains(proxystr, ",") {
-			return nil, fmt.Errorf("格式错误")
+			return fmt.Errorf("格式错误")
 		}
-		ptype := strings.Split(proxystr, ",")[0]
+		protocol := strings.Split(proxystr, ",")[0]
 		proxy := strings.Split(proxystr, ",")[1]
 		if !strings.Contains(proxystr, ":") {
-			return nil, fmt.Errorf("格式错误")
+			return fmt.Errorf("格式错误")
 		}
-		IP := strings.Split(proxy, ":")[0]
-		Port := strings.Split(proxy, ":")[1]
-		tmpmetaproxymap[fmt.Sprintf("%x", md5.Sum([]byte(ptype+"://"+IP+":"+Port)))] = aproxy{ptype, IP, Port}
+		ip := strings.Split(proxy, ":")[0]
+		port := strings.Split(proxy, ":")[1]
+		tmpmd5 := fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port)))
+		tmpaproxy := aproxy{protocol, ip, port}
+		MSafeMetaProxymap.WriteAproxy(tmpmd5, tmpaproxy)
 	}
 	if err := scanner.Err(); err != nil {
 		log.Println(err)
-		return nil, err
+		return err
 	}
-	if len(tmpmetaproxymap) < 1 {
-		return nil, fmt.Errorf("空，未读取到代理")
+	return nil
+}
+
+// 从文件中获取代理
+func GetProxysB() {
+	for i := MSafeProxymap.Length(); i < Conf.MaxProxyNum; i = MSafeProxymap.Length() {
+		tmpAproxy, err := GetAproxyB()
+		if err != nil {
+			log.Println("从元代理池中获取代理失败: ", err)
+			continue
+		}
+		tmpproxyaddr := tmpAproxy.Protocol + "://" + tmpAproxy.Ip + ":" + tmpAproxy.Port
+		tmpproxyaddrmd5 := fmt.Sprintf("%x", md5.Sum([]byte(tmpproxyaddr)))
+		if CheckProxyC(tmpproxyaddr, Conf.ProxyCheckAddr) {
+			MSafeProxymap.WriteAproxy(tmpproxyaddrmd5, tmpAproxy)
+		} else {
+			// 删除无效代理
+			DeleteProxyB(tmpproxyaddr)
+		}
+
 	}
-	return tmpmetaproxymap, nil
+}
+
+// 从元代理池中删去某个代理
+func DeleteProxyB(proxyaddr string) {
+	tmpmd5 := fmt.Sprintf("%x", md5.Sum([]byte(proxyaddr)))
+	MSafeMetaProxymap.DeleteAproxy(tmpmd5)
+	log.Printf("删除代理 %s", proxyaddr)
+}
+
+// 从元代理池中随机获取代理
+func GetAproxyB() (Aproxy, error) {
+	//
+	tmpAproxy, ok := MSafeMetaProxymap.GetARandProxy()
+	if ok {
+		return tmpAproxy, nil
+	}
+	return Aproxy{}, fmt.Errorf("%s", "error")
 }

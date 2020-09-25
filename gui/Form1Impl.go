@@ -24,6 +24,8 @@ type TForm1Fields struct {
 var c = make(chan int)
 var d = make(chan int)
 
+// var e = make(chan int)
+
 // 启动代理
 func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	var UseProxyPool bool = true
@@ -33,24 +35,18 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	var PPIP string = Form1.Edit1.Text()
 	var PPPort string = Form1.Edit2.Text()
 	var Port string = Form1.Edit3.Text()
-	// 临时
-	// PPIP = "http://10.103.91.179"
-	// PPPort = "5010"
-	// Port = "8081"
 	var UseProxy bool = true
 	var UseHttpsProxy bool = true
-	var MinProxyNum, _ = strconv.Atoi(Form1.Edit4.Text())
-	Conf.InitConfig(MinProxyNum, UseProxyPool, Port, UseProxy, UseHttpsProxy, PPIP, PPPort)
-	// 启动代理
-	// go ProxyEntry.Proxymain()
-	// 如果代理模式是自定义，则
-	// if !UseProxyPool && len(Proxy.MetaProxymap) < 1 {
+	var MaxProxyNum, _ = strconv.Atoi(Form1.Edit4.Text())
+	Conf.InitConfig(MaxProxyNum, UseProxyPool, Port, UseProxy, UseHttpsProxy, PPIP, PPPort)
 	if !UseProxyPool && Proxy.MSafeMetaProxymap.Length() < 1 {
 		log.Println("自定义代理池中没有代理，启动失败")
 		f.ListBox2.Items().Add("自定义代理池中没有代理，启动失败")
 		return
 	}
-	// 可以停止
+	// 启动一个协程，获取可用代理
+	go Proxy.GetProxys(e)
+	// 启动代理，可以停止
 	go ProxyEntry.Proxymain(c)
 	// 渲染可用代理池
 	go RenderValidProxyPool(d)
@@ -64,11 +60,13 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 // 停止代理
 func (f *TForm1) OnButton2Click(sender vcl.IObject) {
 	tmp1 := "http://localhost:" + f.Edit3.Text()
-	go Proxy.VisitThroughProxy(tmp1, "http://myip.ipip.net")
+	go Proxy.VisitThroughProxy(tmp1, Conf.StopUrl)
 	c <- 1
 	<-c
 	d <- 1
 	<-d
+	// e <- 1
+	// <-e
 	log.Println("停止代理")
 	f.Button1.SetEnabled(true)
 	f.Button2.SetEnabled(false)
@@ -87,16 +85,14 @@ func (f *TForm1) OnButton3Click(sender vcl.IObject) {
 		log.Println(dlgOpen.FileName())
 		tmp := Conf.CustomProxyFile
 		Conf.CustomProxyFile = dlgOpen.FileName()
-		var tmpmap = make(map[string]Proxy.Aproxy)
-		tmpmap, err := Proxy.GetMetaproxyFromFile()
+		err := Proxy.GetMetaproxyBFromFile()
 		if err != nil {
 			log.Println("导入文件失败")
 			f.ListBox2.Items().Add("导入文件失败")
 			Conf.CustomProxyFile = tmp
 			return
 		}
-		// Proxy.MetaProxymap = tmpmap
-		Proxy.MSafeMetaProxymap.Map = tmpmap
+		tmpmap := Proxy.MSafeMetaProxymap.Map
 		f.ListView1.Items().BeginUpdate()
 		i := 0
 		for k := range tmpmap {
@@ -109,7 +105,6 @@ func (f *TForm1) OnButton3Click(sender vcl.IObject) {
 		}
 		f.ListView1.Items().EndUpdate()
 		f.Button5.SetEnabled(true)
-
 	}
 
 }

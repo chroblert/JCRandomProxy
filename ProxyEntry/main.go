@@ -23,9 +23,7 @@ func Proxymain(stop chan int) {
 	if err != nil {
 		log.Panic(err)
 	}
-
 	for {
-
 		// 接收停止信号
 		select {
 		case <-stop:
@@ -88,10 +86,11 @@ func visit(client net.Conn) {
 		Lproxy(client)
 	} else {
 		// 取出代理成功，则使用可用代理
-		protocol := aproxyaddr.Protocol
+		// protocol := aproxyaddr.Protocol
 		ip := aproxyaddr.Ip
 		port := aproxyaddr.Port
-		paddr := protocol + "://" + ip + ":" + port
+		// paddr := protocol + "://" + ip + ":" + port
+		paddr := ip + ":" + port
 		Rproxy(client, paddr)
 	}
 }

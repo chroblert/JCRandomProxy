@@ -1,10 +1,6 @@
 package Proxy
 
 import (
-	"log"
-	"math/rand"
-	"time"
-
 	"../Conf"
 )
 
@@ -32,43 +28,16 @@ type Aproxy struct {
 }
 type aproxy = Aproxy
 
-// var proxylist []aproxy
-// 经过验证的可用代理池
-// var Proxymap = make(map[string]aproxy)
-
 // 使用具有读写锁的map
 var MSafeProxymap = NewSafeProxymap()
 
-// 从文件中读取的代理
-// var MetaProxymap = make(map[string]aproxy)
-
+// 从文件中读取的元代理池
 var MSafeMetaProxymap = NewSafeMetaProxymap()
 
-func GetAProxy() (string, string, error) {
-	// 先判断可用代理池中的可用代理数量是否大于等于10
-	// 若大于等于10，则从可用代理池中随机取出一个
-	if MSafeProxymap.Length() >= Conf.MinProxyNum {
-		// tmpProxy := proxylist[rand.Intn(len(proxylist))]
-		tmpProxy := GetAvailableProxy(MSafeProxymap.Map)
-		log.Println(tmpProxy)
-		return tmpProxy.Ip + ":" + tmpProxy.Port, tmpProxy.Protocol, nil
-	}
+func GetProxys() {
 	if Conf.UseProxyPool {
-		return GetAProxyA()
+		GetProxysA()
 	} else {
-		return GetAProxyB()
+		GetProxysB()
 	}
-
-}
-
-// 随机的从可用代理池中取出一个代理
-func GetAvailableProxy(tmp map[string]aproxy) aproxy {
-	// 设置随机数种子
-	rand.Seed(time.Now().UnixNano())
-	keys := make([]string, 0, len(tmp))
-	for k := range tmp {
-		keys = append(keys, k)
-	}
-	// log.Println("keys: ", keys)
-	return tmp[keys[rand.Intn(len(keys))]]
 }

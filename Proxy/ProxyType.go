@@ -94,7 +94,7 @@ func (spm *SafeProxymap) ProxyCheck(stop chan int) {
 				ip := tmpaproxy.Ip
 				port := tmpaproxy.Port
 				proxyadd := protocol + "://" + ip + ":" + port
-				res := CheckProxyB(proxyadd, "https://myip.ipip.net")
+				res := CheckProxyC(proxyadd, "https://myip.ipip.net")
 				if !res {
 					//删除代理
 					delete(spm.Map, k)
@@ -132,4 +132,19 @@ func (smpm *SafeMetaProxymap) DeleteAproxy(k string) {
 	smpm.Lock()
 	delete(smpm.Map, k)
 	smpm.Unlock()
+}
+
+// 从元代理池中随机获取一个代理
+func (smpm *SafeMetaProxymap) GetARandProxy() (Aproxy, bool) {
+	rand.Seed(time.Now().UnixNano())
+	smpm.RLock()
+	defer smpm.RUnlock()
+	if tmp := len(smpm.Map); tmp > 0 {
+		keys := make([]string, 0, tmp)
+		for k := range smpm.Map {
+			keys = append(keys, k)
+		}
+		return smpm.Map[keys[rand.Intn(len(keys))]], true
+	}
+	return Aproxy{}, false
 }
