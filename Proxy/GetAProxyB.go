@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"log"
 
-	"../Conf"
-
 	"os"
 	"strings"
+
+	"../Conf"
 )
 
 // 从文件中读取代理到MetaSafeProxymap中【即元代理池】
@@ -45,8 +45,21 @@ func GetMetaproxyBFromFile() error {
 }
 
 // 从文件中获取代理
-func GetProxysB() {
+func GetProxysB(stop chan int) {
 	for i := MSafeProxymap.Length(); i < Conf.MaxProxyNum; i = MSafeProxymap.Length() {
+		// 结束条件：MSafeMetaProxymap中代理数量为0或MSafeProxymap中代理数量达标或者收到停止信号
+		if MSafeMetaProxymap.Length() == 0 {
+			log.Println("当前元代理池中的数量为空，停止获取可用代理")
+			return
+		}
+		// 收到停止信号
+		select {
+		case <-stop:
+			log.Println("收到停止信号：停止获取可用代理")
+			stop <- 1
+			return
+		default:
+		}
 		tmpAproxy, err := GetAproxyB()
 		if err != nil {
 			log.Println("从元代理池中获取代理失败: ", err)

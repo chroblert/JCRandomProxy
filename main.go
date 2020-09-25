@@ -23,7 +23,7 @@ func init() {
 }
 func main() {
     vcl.Application.SetScaled(true)
-    vcl.Application.SetTitle("project1")
+    vcl.Application.SetTitle("JCRP【随机代理】")
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
     vcl.Application.CreateForm(&gui.Form1)

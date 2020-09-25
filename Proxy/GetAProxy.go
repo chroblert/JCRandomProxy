@@ -34,10 +34,10 @@ var MSafeProxymap = NewSafeProxymap()
 // 从文件中读取的元代理池
 var MSafeMetaProxymap = NewSafeMetaProxymap()
 
-func GetProxys() {
+func GetProxys(stop chan int) {
 	if Conf.UseProxyPool {
 		GetProxysA()
 	} else {
-		GetProxysB()
+		GetProxysB(stop)
 	}
 }

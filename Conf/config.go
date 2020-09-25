@@ -9,12 +9,12 @@ import (
 )
 
 var (
-	PPIP            string
-	PPPort          string
-	UseProxyPool    bool
+	PPIP            string = "http://localhost"
+	PPPort          string = "5010"
+	UseProxyPool    bool   = true
 	CustomProxyFile string
 	SaveProxyFile   string = "proxy.lst"
-	Port            string
+	Port            string = "8081"
 	UseProxy        bool
 	UseHttpsProxy   bool
 	MinProxyNum     int    = 0
@@ -24,7 +24,9 @@ var (
 	StopUrl         string = "http://myip.ipip.net"
 )
 
-func InitConfig(aMaxProxyNum int, aUseProxyPool bool, aPort string, aUseProxy bool, aUseHttpsProxy bool, aPPIP string, aPPPort string) {
+func InitConfig(aTimeout, aMinProxyNum, aMaxProxyNum int, aUseProxyPool bool, aPort string, aUseProxy bool, aUseHttpsProxy bool, aPPIP string, aPPPort string) {
+	Timeout = aTimeout
+	MinProxyNum = aMinProxyNum
 	MaxProxyNum = aMaxProxyNum
 	UseProxyPool = aUseProxyPool
 	Port = aPort

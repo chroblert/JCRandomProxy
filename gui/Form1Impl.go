@@ -24,7 +24,7 @@ type TForm1Fields struct {
 var c = make(chan int)
 var d = make(chan int)
 
-// var e = make(chan int)
+var e = make(chan int)
 
 // 启动代理
 func (f *TForm1) OnButton1Click(sender vcl.IObject) {
@@ -37,8 +37,11 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	var Port string = Form1.Edit3.Text()
 	var UseProxy bool = true
 	var UseHttpsProxy bool = true
-	var MaxProxyNum, _ = strconv.Atoi(Form1.Edit4.Text())
-	Conf.InitConfig(MaxProxyNum, UseProxyPool, Port, UseProxy, UseHttpsProxy, PPIP, PPPort)
+	var MinProxyNum, _ = strconv.Atoi(Form1.Edit4.Text())
+	var MaxProxyNum, _ = strconv.Atoi(Form1.Edit5.Text())
+	var Timeout, _ = strconv.Atoi(Form1.Edit6.Text())
+
+	Conf.InitConfig(Timeout, MinProxyNum, MaxProxyNum, UseProxyPool, Port, UseProxy, UseHttpsProxy, PPIP, PPPort)
 	if !UseProxyPool && Proxy.MSafeMetaProxymap.Length() < 1 {
 		log.Println("自定义代理池中没有代理，启动失败")
 		f.ListBox2.Items().Add("自定义代理池中没有代理，启动失败")
@@ -65,8 +68,11 @@ func (f *TForm1) OnButton2Click(sender vcl.IObject) {
 	<-c
 	d <- 1
 	<-d
-	// e <- 1
-	// <-e
+	if Proxy.MSafeMetaProxymap.Length() > 0 {
+		e <- 1
+		<-e
+	}
+
 	log.Println("停止代理")
 	f.Button1.SetEnabled(true)
 	f.Button2.SetEnabled(false)
@@ -249,4 +255,9 @@ func (f *TForm1) OnMenuItem4Click(sender vcl.IObject) {
 
 func (f *TForm1) OnMenuItem5Click(sender vcl.IObject) {
 
+}
+
+func (f *TForm1) OnButton9Click(sender vcl.IObject) {
+	f.ListBox1.DeleteSelected()
+	log.Println("已删除选择的代理")
 }
