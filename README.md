@@ -1,4 +1,5 @@
-(一)JCRandomProxy(随机代理)- 图形版
+# (一)JCRandomProxy(随机代理)- 图形版
+
 JCRandomProxy【随机代理】Gui版
 ```shell
 Author: JC0o0l
@@ -86,7 +87,7 @@ https://github.com/chroblert/JCRandomProxy/releases
 - 删除： 删除可用代理池中选中的代理
 
 
-(二)JCRandomProxy(随机代理)- 命令行版
+# (二)JCRandomProxy(随机代理)- 命令行版
 
 ## 功能：
 - http代理
