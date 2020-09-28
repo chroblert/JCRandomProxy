@@ -1,0 +1,544 @@
+2020/09/28 17:25:36 main.go:22: 监听在： 8081
+2020/09/28 17:25:37 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:37 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:38 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:38 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:39 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:39 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:40 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:40 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:41 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:41 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:42 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:42 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:43 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:43 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:44 main.go:30: 收到停止信号
+2020/09/28 17:25:44 main.go:58: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:52697
+2020/09/28 17:25:44 localproxy.go:38: GET http://myip.ipip.net/
+2020/09/28 17:25:44 Form1Impl.go:189: 停止更新可用代理池
+2020/09/28 17:25:44 ProxyType.go:81: 停止校验可用代理池
+2020/09/28 17:25:44 Form1Impl.go:81: 停止代理
+2020/09/28 17:25:44 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:44 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:45 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:45 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:46 localproxy.go:63: JCTLog: server tcp tunnel connection:  192.168.14.109:52700 -> 118.212.233.124:80
+2020/09/28 17:25:46 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:46 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:47 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:47 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:48 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:48 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:49 localproxy.go:77: JCTLog: 结束： 
+2020/09/28 17:25:49 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:49 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:50 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:50 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:51 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:51 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:52 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:52 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:53 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:53 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:54 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:54 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:55 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:55 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:56 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:56 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:57 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:57 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:58 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:58 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:59 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:25:59 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:26:00 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:26:00 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:26:01 GetAProxyA.go:59: Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:26:01 GetAProxyA.go:22: 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: No connection could be made because the target machine actively refused it.
+2020/09/28 17:29:11 main.go:22: 监听在： 8081
+2020/09/28 17:29:11 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:11 GetAProxyA.go:44: 删除代理 http://180.97.33.144:80
+2020/09/28 17:29:12 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:29:12 GetAProxyA.go:44: 删除代理 http://200.38.19.231:80
+2020/09/28 17:29:12 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:12 GetAProxyA.go:44: 删除代理 http://61.135.185.103:80
+2020/09/28 17:29:12 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:12 GetAProxyA.go:44: 删除代理 http://180.97.33.92:80
+2020/09/28 17:29:17 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:29:17 GetAProxyA.go:44: 删除代理 http://203.202.245.58:80
+2020/09/28 17:29:17 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:17 GetAProxyA.go:44: 删除代理 http://123.125.114.18:80
+2020/09/28 17:29:22 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:29:22 GetAProxyA.go:44: 删除代理 http://221.180.170.104:8080
+2020/09/28 17:29:22 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:22 GetAProxyA.go:44: 删除代理 http://180.97.33.218:80
+2020/09/28 17:29:22 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:22 GetAProxyA.go:44: 删除代理 http://180.97.33.92:80
+2020/09/28 17:29:22 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:29:22 GetAProxyA.go:44: 删除代理 http://218.59.139.238:80
+2020/09/28 17:29:22 CheckProxy.go:33: Get "https://myip.ipip.net": Access Denied
+2020/09/28 17:29:22 GetAProxyA.go:44: 删除代理 http://222.74.202.227:9999
+2020/09/28 17:29:22 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:22 GetAProxyA.go:44: 删除代理 http://112.80.255.29:80
+2020/09/28 17:29:22 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:22 GetAProxyA.go:44: 删除代理 http://61.135.185.20:80
+2020/09/28 17:29:22 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 17:29:22 GetAProxyA.go:44: 删除代理 http://59.47.73.57:80
+2020/09/28 17:29:23 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:23 GetAProxyA.go:44: 删除代理 http://103.235.46.154:80
+2020/09/28 17:29:23 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:23 GetAProxyA.go:44: 删除代理 http://180.97.33.212:80
+2020/09/28 17:29:23 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:23 GetAProxyA.go:44: 删除代理 http://180.97.33.92:80
+2020/09/28 17:29:23 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:23 GetAProxyA.go:44: 删除代理 http://61.135.186.243:80
+2020/09/28 17:29:23 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:23 GetAProxyA.go:44: 删除代理 http://61.135.185.20:80
+2020/09/28 17:29:23 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:23 GetAProxyA.go:44: 删除代理 http://183.232.232.69:80
+2020/09/28 17:29:23 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:23 GetAProxyA.go:44: 删除代理 http://61.135.185.153:80
+2020/09/28 17:29:25 CheckProxy.go:42: 代理http://218.66.253.144:8800有效
+2020/09/28 17:29:25 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:25 GetAProxyA.go:44: 删除代理 http://180.149.144.176:80
+2020/09/28 17:29:26 CheckProxy.go:33: Get "https://myip.ipip.net": x509: certificate signed by unknown authority
+2020/09/28 17:29:26 GetAProxyA.go:44: 删除代理 http://140.143.142.218:1080
+2020/09/28 17:29:27 CheckProxy.go:42: 代理http://218.66.253.144:8800有效
+2020/09/28 17:29:27 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:27 GetAProxyA.go:44: 删除代理 http://123.125.114.21:80
+2020/09/28 17:29:27 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:27 GetAProxyA.go:44: 删除代理 http://180.97.33.212:80
+2020/09/28 17:29:27 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:27 GetAProxyA.go:44: 删除代理 http://180.149.145.160:80
+2020/09/28 17:29:32 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:29:32 GetAProxyA.go:44: 删除代理 http://8.129.1.86:8080
+2020/09/28 17:29:36 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 17:29:36 GetAProxyA.go:44: 删除代理 http://59.47.73.57:80
+2020/09/28 17:29:36 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 17:29:36 GetAProxyA.go:44: 删除代理 http://59.47.73.57:80
+2020/09/28 17:29:36 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:36 GetAProxyA.go:44: 删除代理 http://61.135.185.112:80
+2020/09/28 17:29:36 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:36 GetAProxyA.go:44: 删除代理 http://61.135.185.103:80
+2020/09/28 17:29:36 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:29:36 GetAProxyA.go:44: 删除代理 http://117.185.17.177:80
+2020/09/28 17:29:36 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:36 GetAProxyA.go:44: 删除代理 http://112.80.255.77:80
+2020/09/28 17:29:36 CheckProxy.go:33: Get "https://myip.ipip.net": Access Denied
+2020/09/28 17:29:36 GetAProxyA.go:44: 删除代理 http://222.193.28.4:80
+2020/09/28 17:29:36 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:36 GetAProxyA.go:44: 删除代理 http://183.232.232.69:80
+2020/09/28 17:29:39 CheckProxy.go:33: Get "https://myip.ipip.net": x509: certificate signed by unknown authority
+2020/09/28 17:29:39 GetAProxyA.go:44: 删除代理 http://140.143.142.218:1080
+2020/09/28 17:29:44 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:29:44 GetAProxyA.go:44: 删除代理 http://117.103.5.186:44825
+2020/09/28 17:29:49 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:29:49 GetAProxyA.go:44: 删除代理 http://163.172.229.166:3838
+2020/09/28 17:29:49 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 17:29:49 GetAProxyA.go:44: 删除代理 http://59.47.73.57:80
+2020/09/28 17:29:49 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:49 GetAProxyA.go:44: 删除代理 http://111.206.37.244:80
+2020/09/28 17:29:49 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:29:49 GetAProxyA.go:44: 删除代理 http://180.149.145.132:80
+2020/09/28 17:29:49 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:49 GetAProxyA.go:44: 删除代理 http://61.135.185.68:80
+2020/09/28 17:29:49 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:49 GetAProxyA.go:44: 删除代理 http://180.97.33.78:80
+2020/09/28 17:29:49 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:49 GetAProxyA.go:44: 删除代理 http://180.97.104.170:80
+2020/09/28 17:29:50 GetAProxyA.go:44: 删除代理 http://220.174.236.211:8091
+2020/09/28 17:29:50 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:29:50 GetAProxyA.go:44: 删除代理 http://180.149.145.139:80
+2020/09/28 17:29:50 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:50 GetAProxyA.go:44: 删除代理 http://123.125.114.21:80
+2020/09/28 17:29:50 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:29:50 GetAProxyA.go:44: 删除代理 http://218.59.139.238:80
+2020/09/28 17:29:50 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:29:50 GetAProxyA.go:44: 删除代理 http://115.223.7.110:80
+2020/09/28 17:29:50 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:50 GetAProxyA.go:44: 删除代理 http://61.135.185.92:80
+2020/09/28 17:29:50 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:29:50 GetAProxyA.go:44: 删除代理 http://218.59.139.238:80
+2020/09/28 17:29:50 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:50 GetAProxyA.go:44: 删除代理 http://123.125.114.18:80
+2020/09/28 17:29:51 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:51 GetAProxyA.go:44: 删除代理 http://112.80.255.29:80
+2020/09/28 17:29:51 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:51 GetAProxyA.go:44: 删除代理 http://61.135.185.152:80
+2020/09/28 17:29:51 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:29:51 GetAProxyA.go:44: 删除代理 http://61.135.185.156:80
+2020/09/28 17:29:51 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:29:51 GetAProxyA.go:44: 删除代理 http://198.71.162.59:80
+2020/09/28 17:29:56 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:29:56 GetAProxyA.go:44: 删除代理 http://113.161.58.255:8080
+2020/09/28 17:30:01 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:01 GetAProxyA.go:44: 删除代理 http://118.24.90.160:1080
+2020/09/28 17:30:01 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:01 GetAProxyA.go:44: 删除代理 http://61.135.185.92:80
+2020/09/28 17:30:06 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:06 GetAProxyA.go:44: 删除代理 http://52.179.18.244:8080
+2020/09/28 17:30:06 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:06 GetAProxyA.go:44: 删除代理 http://61.135.185.112:80
+2020/09/28 17:30:06 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:06 GetAProxyA.go:44: 删除代理 http://180.97.104.97:80
+2020/09/28 17:30:06 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:30:06 GetAProxyA.go:44: 删除代理 http://123.125.115.215:80
+2020/09/28 17:30:06 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:06 GetAProxyA.go:44: 删除代理 http://61.135.185.176:80
+2020/09/28 17:30:06 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:06 GetAProxyA.go:44: 删除代理 http://111.206.37.68:80
+2020/09/28 17:30:07 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:30:07 GetAProxyA.go:44: 删除代理 http://59.120.117.244:80
+2020/09/28 17:30:07 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:07 GetAProxyA.go:44: 删除代理 http://61.135.185.112:80
+2020/09/28 17:30:07 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:07 GetAProxyA.go:44: 删除代理 http://112.80.248.95:80
+2020/09/28 17:30:07 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Gateway
+2020/09/28 17:30:07 GetAProxyA.go:44: 删除代理 http://211.137.52.158:8080
+2020/09/28 17:30:07 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:07 GetAProxyA.go:44: 删除代理 http://183.232.232.69:80
+2020/09/28 17:30:07 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:07 GetAProxyA.go:44: 删除代理 http://123.125.114.18:80
+2020/09/28 17:30:07 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:07 GetAProxyA.go:44: 删除代理 http://61.135.185.112:80
+2020/09/28 17:30:07 CheckProxy.go:33: Get "https://myip.ipip.net": Access Denied
+2020/09/28 17:30:07 GetAProxyA.go:44: 删除代理 http://222.74.202.228:9999
+2020/09/28 17:30:12 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:12 GetAProxyA.go:44: 删除代理 http://218.66.253.144:80
+2020/09/28 17:30:12 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:12 GetAProxyA.go:44: 删除代理 http://61.135.186.243:80
+2020/09/28 17:30:12 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:30:12 GetAProxyA.go:44: 删除代理 http://180.149.144.108:80
+2020/09/28 17:30:12 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:12 GetAProxyA.go:44: 删除代理 http://111.206.37.100:80
+2020/09/28 17:30:13 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:13 GetAProxyA.go:44: 删除代理 http://180.97.33.218:80
+2020/09/28 17:30:16 GetAProxyA.go:44: 删除代理 http://14.20.235.129:808
+2020/09/28 17:30:16 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:16 GetAProxyA.go:44: 删除代理 http://61.135.185.176:80
+2020/09/28 17:30:16 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:16 GetAProxyA.go:44: 删除代理 http://182.61.62.23:80
+2020/09/28 17:30:16 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:16 GetAProxyA.go:44: 删除代理 http://182.61.62.74:80
+2020/09/28 17:30:16 CheckProxy.go:33: Get "https://myip.ipip.net": unexpected EOF
+2020/09/28 17:30:16 GetAProxyA.go:44: 删除代理 http://122.226.57.70:8888
+2020/09/28 17:30:21 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:21 GetAProxyA.go:44: 删除代理 http://113.161.58.255:8080
+2020/09/28 17:30:21 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:30:21 GetAProxyA.go:44: 删除代理 http://61.135.185.172:80
+2020/09/28 17:30:21 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:21 GetAProxyA.go:44: 删除代理 http://112.80.248.95:80
+2020/09/28 17:30:21 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:21 GetAProxyA.go:44: 删除代理 http://182.61.62.23:80
+2020/09/28 17:30:21 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:30:21 GetAProxyA.go:44: 删除代理 http://35.220.173.181:80
+2020/09/28 17:30:22 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:22 GetAProxyA.go:44: 删除代理 http://61.135.185.90:80
+2020/09/28 17:30:26 CheckProxy.go:33: Get "https://myip.ipip.net": x509: certificate signed by unknown authority
+2020/09/28 17:30:26 GetAProxyA.go:44: 删除代理 http://140.143.152.93:1080
+2020/09/28 17:30:26 CheckProxy.go:33: Get "https://myip.ipip.net": Access Denied
+2020/09/28 17:30:26 GetAProxyA.go:44: 删除代理 http://222.74.202.227:9999
+2020/09/28 17:30:26 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:26 GetAProxyA.go:44: 删除代理 http://61.135.185.111:80
+2020/09/28 17:30:31 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:31 GetAProxyA.go:44: 删除代理 http://125.46.0.62:53281
+2020/09/28 17:30:31 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:30:31 GetAProxyA.go:44: 删除代理 http://35.220.173.181:80
+2020/09/28 17:30:36 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:36 GetAProxyA.go:44: 删除代理 http://14.20.235.129:808
+2020/09/28 17:30:36 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:36 GetAProxyA.go:44: 删除代理 http://61.135.185.90:80
+2020/09/28 17:30:37 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 17:30:37 GetAProxyA.go:44: 删除代理 http://61.135.185.31:80
+2020/09/28 17:30:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:37 GetAProxyA.go:44: 删除代理 http://112.80.255.51:80
+2020/09/28 17:30:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:37 GetAProxyA.go:44: 删除代理 http://61.135.186.243:80
+2020/09/28 17:30:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:37 GetAProxyA.go:44: 删除代理 http://112.80.248.18:80
+2020/09/28 17:30:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:37 GetAProxyA.go:44: 删除代理 http://180.97.33.92:80
+2020/09/28 17:30:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:37 GetAProxyA.go:44: 删除代理 http://61.135.186.222:80
+2020/09/28 17:30:42 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:42 GetAProxyA.go:44: 删除代理 http://211.137.52.158:8080
+2020/09/28 17:30:47 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:47 GetAProxyA.go:44: 删除代理 http://211.137.52.158:8080
+2020/09/28 17:30:48 CheckProxy.go:42: 代理http://218.66.253.144:80有效
+2020/09/28 17:30:48 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:48 GetAProxyA.go:44: 删除代理 http://61.135.186.243:80
+2020/09/28 17:30:48 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:48 GetAProxyA.go:44: 删除代理 http://180.97.33.144:80
+2020/09/28 17:30:48 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:30:48 GetAProxyA.go:44: 删除代理 http://112.80.255.29:80
+2020/09/28 17:30:50 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57254
+2020/09/28 17:30:53 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:53 GetAProxyA.go:44: 删除代理 http://163.172.229.166:3838
+2020/09/28 17:30:53 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:30:53 GetAProxyA.go:44: 删除代理 http://61.135.185.172:80
+2020/09/28 17:30:53 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57258
+2020/09/28 17:30:58 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:30:58 GetAProxyA.go:44: 删除代理 http://117.103.5.186:44825
+2020/09/28 17:31:02 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57266
+2020/09/28 17:31:03 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:31:03 GetAProxyA.go:44: 删除代理 http://222.175.171.6:8080
+2020/09/28 17:31:03 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:03 GetAProxyA.go:44: 删除代理 http://61.135.185.152:80
+2020/09/28 17:31:03 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:03 GetAProxyA.go:44: 删除代理 http://61.135.185.103:80
+2020/09/28 17:31:03 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:31:03 GetAProxyA.go:44: 删除代理 http://117.185.17.177:80
+2020/09/28 17:31:03 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 17:31:03 GetAProxyA.go:44: 删除代理 http://61.135.185.31:80
+2020/09/28 17:31:03 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:03 GetAProxyA.go:44: 删除代理 http://61.135.185.103:80
+2020/09/28 17:31:03 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:31:03 GetAProxyA.go:44: 删除代理 http://117.185.16.226:80
+2020/09/28 17:31:05 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57271
+2020/09/28 17:31:08 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:31:08 GetAProxyA.go:44: 删除代理 http://117.103.5.186:44825
+2020/09/28 17:31:08 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 17:31:08 GetAProxyA.go:44: 删除代理 http://61.135.169.121:80
+2020/09/28 17:31:08 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:08 GetAProxyA.go:44: 删除代理 http://112.80.255.29:80
+2020/09/28 17:31:09 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57276
+2020/09/28 17:31:12 CheckProxy.go:42: 代理http://218.66.253.144:80有效
+2020/09/28 17:31:13 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:31:13 GetAProxyA.go:44: 删除代理 http://144.76.214.154:1080
+2020/09/28 17:31:16 CheckProxy.go:42: 代理http://218.66.253.144:8800有效
+2020/09/28 17:31:16 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:16 GetAProxyA.go:44: 删除代理 http://61.135.185.38:80
+2020/09/28 17:31:21 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:31:21 GetAProxyA.go:44: 删除代理 http://113.161.58.255:8080
+2020/09/28 17:31:21 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:21 GetAProxyA.go:44: 删除代理 http://61.135.185.20:80
+2020/09/28 17:31:21 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:21 GetAProxyA.go:44: 删除代理 http://123.125.114.18:80
+2020/09/28 17:31:21 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:21 GetAProxyA.go:44: 删除代理 http://61.135.185.69:80
+2020/09/28 17:31:24 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57284
+2020/09/28 17:31:25 CheckProxy.go:33: Get "https://myip.ipip.net": unexpected EOF
+2020/09/28 17:31:25 GetAProxyA.go:44: 删除代理 http://203.202.245.58:80
+2020/09/28 17:31:25 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:31:25 GetAProxyA.go:44: 删除代理 http://218.59.139.238:80
+2020/09/28 17:31:27 CheckProxy.go:33: Get "https://myip.ipip.net": x509: certificate signed by unknown authority
+2020/09/28 17:31:27 GetAProxyA.go:44: 删除代理 http://140.143.156.166:1080
+2020/09/28 17:31:27 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:27 GetAProxyA.go:44: 删除代理 http://123.125.115.183:80
+2020/09/28 17:31:30 CheckProxy.go:33: Get "https://myip.ipip.net": x509: certificate signed by unknown authority
+2020/09/28 17:31:30 GetAProxyA.go:44: 删除代理 http://118.24.172.149:1080
+2020/09/28 17:31:30 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:30 GetAProxyA.go:44: 删除代理 http://111.206.37.68:80
+2020/09/28 17:31:30 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:31:30 GetAProxyA.go:44: 删除代理 http://117.185.17.177:80
+2020/09/28 17:31:35 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:31:35 GetAProxyA.go:44: 删除代理 http://117.103.5.186:44825
+2020/09/28 17:31:40 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:31:40 GetAProxyA.go:44: 删除代理 http://118.24.128.46:1080
+2020/09/28 17:31:40 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:40 GetAProxyA.go:44: 删除代理 http://180.97.104.170:80
+2020/09/28 17:31:40 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:40 GetAProxyA.go:44: 删除代理 http://180.97.33.92:80
+2020/09/28 17:31:41 CheckProxy.go:33: Get "https://myip.ipip.net": x509: certificate signed by unknown authority
+2020/09/28 17:31:41 GetAProxyA.go:44: 删除代理 http://144.76.214.154:1080
+2020/09/28 17:31:41 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:41 GetAProxyA.go:44: 删除代理 http://180.97.104.97:80
+2020/09/28 17:31:41 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:31:41 GetAProxyA.go:44: 删除代理 http://117.185.17.177:80
+2020/09/28 17:31:46 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:31:46 GetAProxyA.go:44: 删除代理 http://118.24.172.37:1080
+2020/09/28 17:31:46 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 17:31:46 GetAProxyA.go:44: 删除代理 http://115.223.7.110:80
+2020/09/28 17:31:46 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:31:46 GetAProxyA.go:44: 删除代理 http://117.185.17.177:80
+2020/09/28 17:31:46 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:46 GetAProxyA.go:44: 删除代理 http://111.206.37.68:80
+2020/09/28 17:31:46 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:31:46 GetAProxyA.go:44: 删除代理 http://117.185.16.226:80
+2020/09/28 17:31:47 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 17:31:47 GetAProxyA.go:44: 删除代理 http://180.149.145.132:80
+2020/09/28 17:31:47 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 17:31:47 GetAProxyA.go:44: 删除代理 http://180.149.144.176:80
+2020/09/28 17:31:49 CheckProxy.go:42: 代理http://84.47.136.146:8080有效
+2020/09/28 17:32:02 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57334
+2020/09/28 17:32:07 remoteproxy.go:25: Unable to connect to: 84.47.136.146:8080, error: dial tcp 84.47.136.146:8080: i/o timeout
+2020/09/28 17:32:18 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57346
+2020/09/28 17:32:20 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57348
+2020/09/28 17:32:25 remoteproxy.go:25: Unable to connect to: 84.47.136.146:8080, error: dial tcp 84.47.136.146:8080: i/o timeout
+2020/09/28 17:32:27 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57353
+2020/09/28 17:32:34 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57356
+2020/09/28 17:32:35 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57358
+2020/09/28 17:32:40 remoteproxy.go:25: Unable to connect to: 84.47.136.146:8080, error: dial tcp 84.47.136.146:8080: i/o timeout
+2020/09/28 17:32:44 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57364
+2020/09/28 17:32:49 remoteproxy.go:25: Unable to connect to: 84.47.136.146:8080, error: dial tcp 84.47.136.146:8080: i/o timeout
+2020/09/28 17:32:54 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57371
+2020/09/28 17:32:59 remoteproxy.go:25: Unable to connect to: 84.47.136.146:8080, error: dial tcp 84.47.136.146:8080: i/o timeout
+2020/09/28 17:33:05 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57380
+2020/09/28 17:33:06 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57382
+2020/09/28 17:33:11 remoteproxy.go:25: Unable to connect to: 84.47.136.146:8080, error: dial tcp 84.47.136.146:8080: i/o timeout
+2020/09/28 17:33:12 CheckProxy.go:42: 代理http://218.66.253.144:8800有效
+2020/09/28 17:33:12 CheckProxy.go:42: 代理http://218.66.253.144:80有效
+2020/09/28 17:33:13 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57389
+2020/09/28 17:33:17 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 17:33:19 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57393
+2020/09/28 17:33:20 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57395
+2020/09/28 17:33:21 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57396
+2020/09/28 17:33:22 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57398
+2020/09/28 17:33:23 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57399
+2020/09/28 17:33:56 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57417
+2020/09/28 17:34:18 Form1Impl.go:267: 已删除选择的代理
+2020/09/28 17:34:29 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.50.2:57442
+2020/09/28 17:34:35 Form1Impl.go:267: 已删除选择的代理
+2020/09/28 17:34:44 Form1Impl.go:267: 已删除选择的代理
+2020/09/28 17:34:45 Form1Impl.go:267: 已删除选择的代理
+2020/09/28 17:34:50 Form1Impl.go:267: 已删除选择的代理
+2020/09/28 17:34:51 Form1Impl.go:267: 已删除选择的代理
+2020/09/28 17:34:54 Form1Impl.go:267: 已删除选择的代理
+2020/09/28 17:34:55 Form1Impl.go:267: 已删除选择的代理
+2020/09/28 19:51:37 main.go:22: 监听在： 8081
+2020/09/28 19:51:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:51:37 GetAProxyA.go:44: 删除代理 http://112.80.248.95:80
+2020/09/28 19:51:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:51:37 GetAProxyA.go:44: 删除代理 http://123.125.114.21:80
+2020/09/28 19:51:37 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 19:51:37 GetAProxyA.go:44: 删除代理 http://117.185.16.226:80
+2020/09/28 19:51:38 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:51:38 GetAProxyA.go:44: 删除代理 http://180.97.104.97:80
+2020/09/28 19:51:40 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 19:51:40 GetAProxyA.go:44: 删除代理 http://80.241.222.138:80
+2020/09/28 19:51:41 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 19:51:41 GetAProxyA.go:44: 删除代理 http://47.240.53.195:8888
+2020/09/28 19:51:43 CheckProxy.go:42: 代理http://165.225.32.107:13084有效
+2020/09/28 19:51:43 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:51:43 GetAProxyA.go:44: 删除代理 http://183.232.231.239:80
+2020/09/28 19:51:43 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:51:43 GetAProxyA.go:44: 删除代理 http://182.61.62.74:80
+2020/09/28 19:51:43 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:51:43 GetAProxyA.go:44: 删除代理 http://123.125.115.183:80
+2020/09/28 19:51:43 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 19:51:43 GetAProxyA.go:44: 删除代理 http://117.185.17.151:80
+2020/09/28 19:51:43 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:51:43 GetAProxyA.go:44: 删除代理 http://180.149.145.160:80
+2020/09/28 19:51:46 CheckProxy.go:42: 代理http://165.225.32.110:10223有效
+2020/09/28 19:51:55 Form1Impl.go:278: 已删除选择的代理
+2020/09/28 19:52:41 Form1Impl.go:278: 已删除选择的代理
+2020/09/28 19:52:56 Form1Impl.go:278: 已删除选择的代理
+2020/09/28 19:52:59 Form1Impl.go:278: 已删除选择的代理
+2020/09/28 19:53:36 main.go:22: 监听在： 8081
+2020/09/28 19:53:37 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 19:53:37 GetAProxyA.go:44: 删除代理 http://80.241.222.138:80
+2020/09/28 19:53:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:53:37 GetAProxyA.go:44: 删除代理 http://61.135.185.118:80
+2020/09/28 19:53:37 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 19:53:37 GetAProxyA.go:44: 删除代理 http://117.185.17.17:80
+2020/09/28 19:53:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:53:37 GetAProxyA.go:44: 删除代理 http://180.97.33.218:80
+2020/09/28 19:53:38 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:53:38 GetAProxyA.go:44: 删除代理 http://61.135.185.92:80
+2020/09/28 19:53:43 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 19:53:43 GetAProxyA.go:44: 删除代理 http://211.137.52.158:8080
+2020/09/28 19:53:43 CheckProxy.go:33: Get "https://myip.ipip.net": Bad Request
+2020/09/28 19:53:43 GetAProxyA.go:44: 删除代理 http://180.149.145.139:80
+2020/09/28 19:53:43 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:53:43 GetAProxyA.go:44: 删除代理 http://61.135.185.92:80
+2020/09/28 19:53:43 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:53:43 GetAProxyA.go:44: 删除代理 http://112.80.255.29:80
+2020/09/28 19:53:48 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 19:53:48 GetAProxyA.go:44: 删除代理 http://58.87.68.189:1080
+2020/09/28 19:53:48 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:53:48 GetAProxyA.go:44: 删除代理 http://123.125.114.18:80
+2020/09/28 19:53:48 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:53:48 GetAProxyA.go:44: 删除代理 http://112.80.248.95:80
+2020/09/28 19:53:48 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 19:53:48 GetAProxyA.go:44: 删除代理 http://117.185.17.151:80
+2020/09/28 19:53:53 CheckProxy.go:42: 代理http://165.225.32.106:10223有效
+2020/09/28 19:53:55 CheckProxy.go:42: 代理http://165.225.32.116:10223有效
+2020/09/28 19:55:05 Form1Impl.go:272: http://165.225.32.106:10223
+2020/09/28 19:55:05 Form1Impl.go:278: 已删除选择的代理
+2020/09/28 19:55:38 CheckProxy.go:42: 代理http://165.225.32.116:10223有效
+2020/09/28 19:56:02 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54592
+2020/09/28 19:56:05 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54593
+2020/09/28 19:56:12 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54594
+2020/09/28 19:56:19 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54595
+2020/09/28 19:56:31 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54596
+2020/09/28 19:56:35 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54598
+2020/09/28 19:56:36 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54599
+2020/09/28 19:56:37 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54600
+2020/09/28 19:56:55 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54601
+2020/09/28 19:57:07 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54603
+2020/09/28 19:57:09 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54604
+2020/09/28 19:57:19 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54605
+2020/09/28 19:57:21 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54606
+2020/09/28 19:57:22 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54607
+2020/09/28 19:57:24 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54608
+2020/09/28 19:57:36 CheckProxy.go:33: Get "https://myip.ipip.net": read tcp 192.168.14.109:53559->165.225.32.116:10223: wsarecv: An existing connection was forcibly closed by the remote host.
+2020/09/28 19:57:42 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54609
+2020/09/28 19:57:42 localproxy.go:38: GET http://www.baidu.com/
+2020/09/28 19:57:42 localproxy.go:63: JCTLog: server tcp tunnel connection:  192.168.14.109:53560 -> 180.101.49.12:80
+2020/09/28 19:57:42 localproxy.go:77: JCTLog: 结束： 
+2020/09/28 19:58:18 main.go:30: 收到停止信号
+2020/09/28 19:58:18 main.go:58: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:53561
+2020/09/28 19:58:18 localproxy.go:38: GET http://myip.ipip.net/
+2020/09/28 19:58:18 Form1Impl.go:189: 停止更新可用代理池
+2020/09/28 19:58:18 ProxyType.go:81: 停止校验可用代理池
+2020/09/28 19:58:18 Form1Impl.go:81: 停止代理
+2020/09/28 19:58:20 localproxy.go:63: JCTLog: server tcp tunnel connection:  192.168.14.109:53562 -> 116.211.155.164:80
+2020/09/28 19:58:23 localproxy.go:77: JCTLog: 结束： 
+2020/09/28 19:58:28 main.go:22: 监听在： 8081
+2020/09/28 19:58:28 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 19:58:28 GetAProxyA.go:44: 删除代理 http://117.185.17.145:80
+2020/09/28 19:58:28 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 19:58:28 GetAProxyA.go:44: 删除代理 http://61.135.185.31:80
+2020/09/28 19:58:29 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:58:29 GetAProxyA.go:44: 删除代理 http://123.125.115.74:80
+2020/09/28 19:58:29 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:58:29 GetAProxyA.go:44: 删除代理 http://61.135.185.156:80
+2020/09/28 19:58:29 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:58:29 GetAProxyA.go:44: 删除代理 http://182.61.62.74:80
+2020/09/28 19:58:30 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54610
+2020/09/28 19:58:30 localproxy.go:38: GET http://www.baidu.com/
+2020/09/28 19:58:30 localproxy.go:63: JCTLog: server tcp tunnel connection:  192.168.14.109:53580 -> 180.101.49.12:80
+2020/09/28 19:58:30 localproxy.go:77: JCTLog: 结束： 
+2020/09/28 19:58:31 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54612
+2020/09/28 19:58:31 localproxy.go:38: GET http://www.baidu.com/
+2020/09/28 19:58:31 localproxy.go:63: JCTLog: server tcp tunnel connection:  192.168.14.109:53581 -> 180.101.49.12:80
+2020/09/28 19:58:31 localproxy.go:77: JCTLog: 结束： 
+2020/09/28 19:58:34 CheckProxy.go:33: Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2020/09/28 19:58:34 GetAProxyA.go:44: 删除代理 http://211.137.52.158:8080
+2020/09/28 19:58:34 CheckProxy.go:33: Get "https://myip.ipip.net": Access Denied
+2020/09/28 19:58:34 GetAProxyA.go:44: 删除代理 http://222.74.202.227:9999
+2020/09/28 19:58:34 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:58:34 GetAProxyA.go:44: 删除代理 http://117.185.16.253:80
+2020/09/28 19:58:34 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:58:34 GetAProxyA.go:44: 删除代理 http://61.135.185.103:80
+2020/09/28 19:58:34 CheckProxy.go:33: Get "https://myip.ipip.net": Forbidden
+2020/09/28 19:58:34 GetAProxyA.go:44: 删除代理 http://61.135.185.31:80
+2020/09/28 19:58:34 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:58:34 GetAProxyA.go:44: 删除代理 http://61.135.185.90:80
+2020/09/28 19:58:34 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:58:34 GetAProxyA.go:44: 删除代理 http://112.80.255.29:80
+2020/09/28 19:58:34 CheckProxy.go:33: Get "https://myip.ipip.net": Found
+2020/09/28 19:58:34 GetAProxyA.go:44: 删除代理 http://180.149.144.108:80
+2020/09/28 19:58:37 CheckProxy.go:42: 代理http://62.210.90.200:8080有效
+2020/09/28 19:58:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:58:37 GetAProxyA.go:44: 删除代理 http://180.97.33.78:80
+2020/09/28 19:58:37 CheckProxy.go:33: Get "https://myip.ipip.net": Internal Server Error
+2020/09/28 19:58:37 GetAProxyA.go:44: 删除代理 http://123.125.114.21:80
+2020/09/28 19:58:38 CheckProxy.go:42: 代理http://153.35.185.69:80有效
+2020/09/28 19:58:40 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54613
+2020/09/28 19:58:44 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54614
+2020/09/28 19:58:50 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54615
+2020/09/28 19:59:57 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54617
+2020/09/28 20:00:16 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54619
+2020/09/28 20:00:31 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54621
+2020/09/28 20:00:31 CheckProxy.go:42: 代理http://62.210.90.200:8080有效
+2020/09/28 20:00:34 CheckProxy.go:42: 代理http://153.35.185.69:80有效
+2020/09/28 20:00:41 main.go:58: JCTLog: client tcp tunnel connection:  192.168.14.109:8081 -> 192.168.30.105:54622
+2020/09/28 20:01:03 main.go:30: 收到停止信号
+2020/09/28 20:01:03 main.go:58: JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:53626
+2020/09/28 20:01:03 Form1Impl.go:189: 停止更新可用代理池
+2020/09/28 20:01:03 ProxyType.go:81: 停止校验可用代理池
+2020/09/28 20:01:03 Form1Impl.go:81: 停止代理
+2020/09/28 20:01:03 VisitThroughProxy.go:27: Get "http://myip.ipip.net": EOF

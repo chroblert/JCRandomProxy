@@ -26,6 +26,8 @@ var d = make(chan int)
 
 var e = make(chan int)
 
+var g = make(chan int)
+
 // 启动代理
 func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	var UseProxyPool bool = true
@@ -53,6 +55,8 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	go ProxyEntry.Proxymain(c)
 	// 渲染可用代理池
 	go RenderValidProxyPool(d)
+	// 启动一个协程，用于校验可用代理池中的代理
+	go Proxy.ProxyCheckSche(g)
 	f.Button1.SetEnabled(false)
 	f.Button2.SetEnabled(true)
 
@@ -72,7 +76,8 @@ func (f *TForm1) OnButton2Click(sender vcl.IObject) {
 		e <- 1
 		<-e
 	}
-
+	g <- 1
+	<-g
 	log.Println("停止代理")
 	f.Button1.SetEnabled(true)
 	f.Button2.SetEnabled(false)
@@ -258,6 +263,17 @@ func (f *TForm1) OnMenuItem5Click(sender vcl.IObject) {
 }
 
 func (f *TForm1) OnButton9Click(sender vcl.IObject) {
-	f.ListBox1.DeleteSelected()
-	log.Println("已删除选择的代理")
+	// f.ListBox1.DeleteSelected()
+	if f.ListBox1.SelCount() > 0 {
+		var i int32
+		for i = 0; i < f.ListBox1.Items().Count(); i++ {
+			if f.ListBox1.Selected(i) {
+				tmpstring := f.ListBox1.Items().ValueFromIndex(i)
+				log.Println(tmpstring)
+				log.Println("已删除选择的代理")
+				f.ListBox1.Items().Delete(i)
+				Proxy.MSafeProxymap.DeleteAproxy(fmt.Sprintf("%x", md5.Sum([]byte(tmpstring))))
+			}
+		}
+	}
 }

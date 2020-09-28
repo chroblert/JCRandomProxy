@@ -5,6 +5,8 @@ import (
 	"math/rand"
 	"sync"
 	"time"
+
+	"../Conf"
 )
 
 type SafeProxymap struct {
@@ -69,9 +71,10 @@ func (spm *SafeProxymap) GetARandProxy() (Aproxy, bool) {
 }
 
 // 校验可用代理池
+// 校验间隔：Conf.CheckInterval 以分钟为单位
 func (spm *SafeProxymap) ProxyCheck(stop chan int) {
 	// 每两分钟校验一次可用代理池
-	ticker := time.NewTicker(time.Duration(60 * time.Second))
+	ticker := time.NewTicker(time.Duration(Conf.CheckInterval) * time.Minute)
 	for {
 		select {
 		case <-stop:

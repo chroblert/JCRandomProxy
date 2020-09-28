@@ -22,6 +22,7 @@ var (
 	ProxyCheckAddr  string = "https://myip.ipip.net"
 	Timeout         int    = 5
 	StopUrl         string = "http://myip.ipip.net"
+	CheckInterval   int    = 2
 )
 
 func InitConfig(aTimeout, aMinProxyNum, aMaxProxyNum int, aUseProxyPool bool, aPort string, aUseProxy bool, aUseHttpsProxy bool, aPPIP string, aPPPort string) {
