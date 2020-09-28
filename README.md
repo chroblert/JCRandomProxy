@@ -22,7 +22,7 @@ Wechat: JC_SecNotes
 ## 效果
 
 开启后，在浏览器中配置http代理，之后查看IP，结果如下：
-![1601306340500.png](https://github.com/chroblert/JCRandomProxy/blob/GUIVersion/img/1601306340500.png
+![1601306340500.png](https://github.com/chroblert/JCRandomProxy/blob/GUIVersion/img/1601306340500.png)
 ## 步骤
 提前配置好[proxypool](https://github.com/jhao104/proxy_pool)
 
