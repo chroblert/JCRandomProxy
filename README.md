@@ -20,7 +20,7 @@ Wechat: JC_SecNotes
 ## 效果
 
 开启后，在浏览器中配置http代理，之后查看IP，结果如下：
-![1601306340500.png](img\1601306340500.png)
+![1601306340500.png](img/1601306340500.png)
 
 ## 步骤
 提前配置好[proxypool](https://github.com/jhao104/proxy_pool)
@@ -37,7 +37,7 @@ https://github.com/chroblert/JCRandomProxy/releases
 ```
 3\. 执行后，界面如下
 
-![1601305000116.png](img\1601305000116.png)
+![1601305000116.png](img/1601305000116.png)
 
 > 执行后会发现出现一个cmd框，这个是故意这样的，方面出错时调试用的。若要不弹框，则需要使用如下命令重新进行编译
 > ```shell
@@ -77,7 +77,7 @@ https://github.com/chroblert/JCRandomProxy/releases
 
 点击启动后，JCRP会收集MAX数量的可用代理,从左下框中可以看到
 
-![1601304925725.png](img\1601304925725.png)
+![1601304925725.png](img/1601304925725.png)
 
 6\. 可用代理操作说明
 
