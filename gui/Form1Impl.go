@@ -21,15 +21,27 @@ import (
 type TForm1Fields struct {
 }
 
-var c = make(chan int)
-var d = make(chan int)
+// var c = make(chan int)
+// var d = make(chan int)
 
-var e = make(chan int)
+// var e = make(chan int)
 
-var g = make(chan int)
+// var g = make(chan int)
+// var h = make(chan int)
+// 20200928: 优化：使用关闭channel作为停止的信号
+var c chan int
+var d chan int
+var e chan int
+var g chan int
+var h chan int
 
 // 启动代理
 func (f *TForm1) OnButton1Click(sender vcl.IObject) {
+	c = make(chan int)
+	d = make(chan int)
+	e = make(chan int)
+	g = make(chan int)
+	h = make(chan int)
 	var UseProxyPool bool = true
 	if !Form1.RadioButton1.Checked() {
 		UseProxyPool = false
@@ -55,8 +67,10 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	go ProxyEntry.Proxymain(c)
 	// 渲染可用代理池
 	go RenderValidProxyPool(d)
-	// 启动一个协程，用于校验可用代理池中的代理
+	// 启动一个协程，用于定时校验可用代理池中的代理
 	go Proxy.ProxyCheckSche(g)
+	// 启动一个协程，用于定时检测可用代理池中的代理的数量
+	go Proxy.ProxyNumCheckSche(h)
 	f.Button1.SetEnabled(false)
 	f.Button2.SetEnabled(true)
 
@@ -68,22 +82,35 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 func (f *TForm1) OnButton2Click(sender vcl.IObject) {
 	tmp1 := "http://localhost:" + f.Edit3.Text()
 	go Proxy.VisitThroughProxy(tmp1, Conf.StopUrl)
-	c <- 1
-	<-c
-	d <- 1
-	<-d
+	// 停止代理
+	// c <- 1
+	// <-c
+	close(c)
+	// 停止渲染可用代理池
+	// d <- 1
+	// <-d
+	close(d)
+	// 停止获取可用代理
 	if Proxy.MSafeMetaProxymap.Length() > 0 {
-		e <- 1
-		<-e
+		// e <- 1
+		// <-e
+		close(e)
 	}
-	g <- 1
-	<-g
+	// 停止定时校验可用代理池
+	// g <- 1
+	// <-g
+	close(g)
+	// 停止定时检测可用代理池
+	// h <- 1
+	// <-h
+	close(h)
 	log.Println("停止代理")
 	f.Button1.SetEnabled(true)
 	f.Button2.SetEnabled(false)
 
 }
 
+// 从文件中导入代理
 func (f *TForm1) OnButton3Click(sender vcl.IObject) {
 	dlgOpen := vcl.NewOpenDialog(f)
 	dlgOpen.SetFilter("代理列表(*.ls)|*.lst|文本文件(*.txt)|*.txt|所有文件(*.*)|*.*")
@@ -152,7 +179,8 @@ func (f *TForm1) OnButton5Click(sender vcl.IObject) {
 
 // 删除代理
 func (f *TForm1) OnButton6Click(sender vcl.IObject) {
-	if f.ListView1.Items().Count() < 1 || !f.ListView1.Selected().Selected() {
+
+	if f.ListView1.Items().Count() < 1 || f.ListView1.SelCount() < 1 {
 		log.Println("没有选中item，或代理池为空")
 		f.ListBox2.Items().Add("没有选中item，或代理池为空")
 		return
@@ -187,7 +215,7 @@ func RenderValidProxyPool(stop chan int) {
 		select {
 		case <-stop:
 			log.Print("停止更新可用代理池")
-			stop <- 1
+			// stop <- 1
 			return
 		case <-ticker.C:
 			Form1.ListBox1.Items().Clear()

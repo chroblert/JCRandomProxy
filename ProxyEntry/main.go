@@ -29,7 +29,7 @@ func Proxymain(stop chan int) {
 		case <-stop:
 			log.Println("收到停止信号")
 			l.Close()
-			stop <- 1
+			// stop <- 1
 			return
 		default:
 		}

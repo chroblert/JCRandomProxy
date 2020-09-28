@@ -56,7 +56,7 @@ func GetProxysB(stop chan int) {
 		select {
 		case <-stop:
 			log.Println("收到停止信号：停止获取可用代理")
-			stop <- 1
+			// stop <- 1
 			return
 		default:
 		}

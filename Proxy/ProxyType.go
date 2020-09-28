@@ -79,7 +79,7 @@ func (spm *SafeProxymap) ProxyCheck(stop chan int) {
 		select {
 		case <-stop:
 			log.Println("停止校验可用代理池")
-			stop <- 1
+			// stop <- 1
 			return
 		case <-ticker.C:
 			spm.RLock()
@@ -107,6 +107,23 @@ func (spm *SafeProxymap) ProxyCheck(stop chan int) {
 		}
 	}
 
+}
+
+// 20200928: 定时检测可用代理池中代理的数量，并获取代理
+func (spm *SafeProxymap) GetProxysSche(stop chan int) {
+	ticker := time.NewTicker(time.Duration(Conf.CheckInterval) * time.Minute)
+	for {
+		select {
+		case <-stop:
+			log.Println("停止检测并获取可用代理")
+			// stop <- 1
+			return
+		case <-ticker.C:
+			if spm.Length() <= Conf.MinProxyNum {
+				GetProxys(stop)
+			}
+		}
+	}
 }
 func NewSafeMetaProxymap() *SafeMetaProxymap {
 	var smpm = new(SafeMetaProxymap)
