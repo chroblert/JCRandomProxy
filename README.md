@@ -85,3 +85,7 @@ https://github.com/chroblert/JCRandomProxy/releases
 - 覆盖： 将可用代理池中代理覆盖到proxy.lst文件
 - 删除： 删除可用代理池中选中的代理
 
+
+
+
+**注：要将liblcl.dll文件放置到windows/system32目录下**
