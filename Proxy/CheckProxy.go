@@ -2,7 +2,7 @@ package Proxy
 
 import (
 	"io/ioutil"
-	"log"
+	log "../Logs"
 	"net/http"
 	"net/url"
 	"strings"

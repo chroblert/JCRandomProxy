@@ -1,0 +1,23 @@
+2020/10/12 00:00:42.1279 [I] initLogs.go:24] 删除代理 http://112.80.255.51:80
+2020/10/12 00:00:43.0020 [I] initLogs.go:20] [Get "https://myip.ipip.net": unexpected EOF]
+2020/10/12 00:00:43.0167 [I] initLogs.go:24] 删除代理 http://134.209.104.73:80
+2020/10/12 00:00:43.3384 [I] initLogs.go:24] 代理http://150.138.253.71:808有效
+2020/10/12 00:00:43.3816 [I] initLogs.go:20] [Get "https://myip.ipip.net": Bad Request]
+2020/10/12 00:00:43.3851 [I] initLogs.go:24] 删除代理 http://113.214.13.1:1080
+2020/10/12 00:00:43.4417 [I] initLogs.go:20] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/12 00:00:43.4437 [I] initLogs.go:24] 删除代理 http://123.125.115.74:80
+2020/10/12 00:00:44.6800 [I] initLogs.go:20] [JCTLog: 结束： ]
+2020/10/12 00:01:27.4783 [I] initLogs.go:20] [监听在： 8081]
+2020/10/12 00:01:27.5479 [I] initLogs.go:20] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/12 00:01:27.5489 [I] initLogs.go:24] 删除代理 http://61.135.185.176:80
+2020/10/12 00:01:27.5712 [I] initLogs.go:20] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/12 00:01:27.5732 [I] initLogs.go:24] 删除代理 http://180.97.33.218:80
+2020/10/12 00:01:28.0968 [I] initLogs.go:20] [Get "https://myip.ipip.net": Found]
+2020/10/12 00:01:28.0988 [I] initLogs.go:24] 删除代理 http://183.232.231.133:80
+2020/10/12 00:01:30.8347 [I] initLogs.go:20] [停止更新可用代理池]
+2020/10/12 00:01:30.8347 [I] initLogs.go:20] [停止代理]
+2020/10/12 00:01:30.8347 [I] initLogs.go:20] [停止检测并获取可用代理]
+2020/10/12 00:01:30.8357 [I] initLogs.go:20] [停止校验可用代理池]
+2020/10/12 00:01:30.8537 [I] initLogs.go:20] [收到停止信号]
+2020/10/12 00:01:30.8537 [I] initLogs.go:20] [JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:61358]
+2020/10/12 00:01:30.8547 [I] initLogs.go:20] [GET http://myip.ipip.net/]

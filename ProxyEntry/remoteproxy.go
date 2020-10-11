@@ -1,7 +1,7 @@
 package ProxyEntry
 
 import (
-	"log"
+	log "../Logs"
 	"net"
 	"time"
 

@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"crypto/md5"
 	"fmt"
-	"log"
+	log "../Logs"
 
 	"os"
 	"strings"

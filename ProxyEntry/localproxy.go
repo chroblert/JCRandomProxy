@@ -3,7 +3,7 @@ package ProxyEntry
 import (
 	"bytes"
 	"fmt"
-	"log"
+	log "../Logs"
 	"net"
 	"net/url"
 	"runtime/debug"
@@ -16,8 +16,9 @@ import (
 func Lproxy(client net.Conn) {
 	defer func() {
 		if err := recover(); err != nil {
-			log.Panic(err)
+			log.Println(err)
 			debug.PrintStack()
+			return
 		}
 	}()
 	if client == nil {

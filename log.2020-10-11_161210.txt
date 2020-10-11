@@ -1,0 +1,561 @@
+2020/10/11 16:08:23.8825 [I] initLogs.go:14] test
+2020/10/11 16:08:49.6409 [I] initLogs.go:17] [监听在： 8081]
+2020/10/11 16:08:49.7174 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:08:49.7214 [I] initLogs.go:21] 删除代理 http://180.149.145.132:80
+2020/10/11 16:08:49.7770 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:08:49.7790 [I] initLogs.go:21] 删除代理 http://202.108.23.174:80
+2020/10/11 16:08:49.8488 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:08:49.8512 [I] initLogs.go:21] 删除代理 http://182.61.62.23:80
+2020/10/11 16:08:53.5208 [I] initLogs.go:17] [Get "https://myip.ipip.net": read tcp 192.168.14.109:56555->146.141.116.177:80: wsarecv: An existing connection was forcibly closed by the remote host.]
+2020/10/11 16:08:53.5230 [I] initLogs.go:21] 删除代理 http://146.141.116.177:80
+2020/10/11 16:08:53.6051 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:08:53.6071 [I] initLogs.go:21] 删除代理 http://180.149.145.139:80
+2020/10/11 16:08:53.8766 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:08:53.8792 [I] initLogs.go:21] 删除代理 http://111.206.37.100:80
+2020/10/11 16:08:53.9324 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:08:53.9355 [I] initLogs.go:21] 删除代理 http://123.125.114.21:80
+2020/10/11 16:08:58.9404 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:08:58.9451 [I] initLogs.go:21] 删除代理 http://8.210.237.103:8080
+2020/10/11 16:09:02.4162 [I] initLogs.go:21] 删除代理 http://220.174.236.211:8091
+2020/10/11 16:09:02.4717 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:02.4745 [I] initLogs.go:21] 删除代理 http://123.125.115.165:80
+2020/10/11 16:09:02.5348 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:02.5381 [I] initLogs.go:21] 删除代理 http://123.125.115.183:80
+2020/10/11 16:09:02.6199 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:02.6276 [I] initLogs.go:21] 删除代理 http://183.232.231.239:80
+2020/10/11 16:09:02.6530 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:09:02.6559 [I] initLogs.go:21] 删除代理 http://117.185.16.226:80
+2020/10/11 16:09:02.7080 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:02.7100 [I] initLogs.go:21] 删除代理 http://123.125.114.21:80
+2020/10/11 16:09:02.7871 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:09:02.7901 [I] initLogs.go:21] 删除代理 http://180.149.145.139:80
+2020/10/11 16:09:02.8125 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:02.8136 [I] initLogs.go:21] 删除代理 http://180.97.33.92:80
+2020/10/11 16:09:02.8735 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:02.8757 [I] initLogs.go:21] 删除代理 http://61.135.169.121:80
+2020/10/11 16:09:02.9277 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:02.9317 [I] initLogs.go:21] 删除代理 http://111.206.37.248:80
+2020/10/11 16:09:04.7447 [I] initLogs.go:17] [Get "https://myip.ipip.net": x509: certificate signed by unknown authority]
+2020/10/11 16:09:04.7458 [I] initLogs.go:21] 删除代理 http://140.143.142.14:1080
+2020/10/11 16:09:04.7593 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:04.7700 [I] initLogs.go:21] 删除代理 http://180.97.33.249:80
+2020/10/11 16:09:09.7808 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:09:09.7829 [I] initLogs.go:21] 删除代理 http://146.141.116.177:80
+2020/10/11 16:09:09.8455 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:09.8465 [I] initLogs.go:21] 删除代理 http://123.125.114.107:80
+2020/10/11 16:09:09.9065 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:09.9076 [I] initLogs.go:21] 删除代理 http://111.206.37.161:80
+2020/10/11 16:09:09.9667 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:09.9697 [I] initLogs.go:21] 删除代理 http://202.108.22.5:80
+2020/10/11 16:09:13.7320 [I] initLogs.go:21] 删除代理 http://220.174.236.211:8091
+2020/10/11 16:09:13.7968 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:13.7993 [I] initLogs.go:21] 删除代理 http://111.206.37.68:80
+2020/10/11 16:09:18.8158 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:09:18.8186 [I] initLogs.go:21] 删除代理 http://212.129.27.246:5836
+2020/10/11 16:09:18.8812 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:18.8832 [I] initLogs.go:21] 删除代理 http://111.206.37.68:80
+2020/10/11 16:09:19.0789 [I] initLogs.go:17] [Get "https://myip.ipip.net": Access Denied]
+2020/10/11 16:09:19.0809 [I] initLogs.go:21] 删除代理 http://222.74.202.227:9999
+2020/10/11 16:09:19.8489 [I] initLogs.go:17] [Get "https://myip.ipip.net": unexpected EOF]
+2020/10/11 16:09:19.8662 [I] initLogs.go:21] 删除代理 http://134.209.104.73:80
+2020/10/11 16:09:24.8767 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:09:24.8810 [I] initLogs.go:21] 删除代理 http://96.30.194.21:3128
+2020/10/11 16:09:26.9930 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:26.9950 [I] initLogs.go:21] 删除代理 http://103.235.46.154:80
+2020/10/11 16:09:27.0529 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:27.0548 [I] initLogs.go:21] 删除代理 http://61.135.185.118:80
+2020/10/11 16:09:28.6921 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:28.6945 [I] initLogs.go:21] 删除代理 http://5.196.23.219:80
+2020/10/11 16:09:28.9007 [I] initLogs.go:17] [Get "https://myip.ipip.net": Access Denied]
+2020/10/11 16:09:28.9066 [I] initLogs.go:21] 删除代理 http://222.74.202.229:9999
+2020/10/11 16:09:28.9766 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:28.9839 [I] initLogs.go:21] 删除代理 http://180.97.33.144:80
+2020/10/11 16:09:29.0358 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:29.0388 [I] initLogs.go:21] 删除代理 http://61.135.185.20:80
+2020/10/11 16:09:29.0957 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:29.0987 [I] initLogs.go:21] 删除代理 http://61.135.185.38:80
+2020/10/11 16:09:29.1685 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:29.1707 [I] initLogs.go:21] 删除代理 http://111.206.37.244:80
+2020/10/11 16:09:34.1866 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:09:34.1890 [I] initLogs.go:21] 删除代理 http://211.137.52.158:8080
+2020/10/11 16:09:39.2038 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:09:39.2061 [I] initLogs.go:21] 删除代理 http://8.210.237.103:8080
+2020/10/11 16:09:39.8251 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:39.8262 [I] initLogs.go:21] 删除代理 http://192.81.219.179:8080
+2020/10/11 16:09:41.8273 [I] initLogs.go:17] [Get "https://myip.ipip.net": unexpected EOF]
+2020/10/11 16:09:41.8294 [I] initLogs.go:21] 删除代理 http://175.141.69.200:80
+2020/10/11 16:09:46.8452 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:09:46.8475 [I] initLogs.go:21] 删除代理 http://146.141.116.177:80
+2020/10/11 16:09:46.9999 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:47.0132 [I] initLogs.go:21] 删除代理 http://111.206.37.100:80
+2020/10/11 16:09:47.1116 [I] initLogs.go:17] [Get "https://myip.ipip.net": Access Denied]
+2020/10/11 16:09:47.1138 [I] initLogs.go:21] 删除代理 http://222.74.202.227:9999
+2020/10/11 16:09:47.1357 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:47.1387 [I] initLogs.go:21] 删除代理 http://112.80.255.29:80
+2020/10/11 16:09:47.2732 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:09:47.2766 [I] initLogs.go:21] 删除代理 http://47.240.53.195:8888
+2020/10/11 16:09:47.3017 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:47.3038 [I] initLogs.go:21] 删除代理 http://180.97.34.35:80
+2020/10/11 16:09:47.3303 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:47.3333 [I] initLogs.go:21] 删除代理 http://117.185.17.145:80
+2020/10/11 16:09:47.9741 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:47.9762 [I] initLogs.go:21] 删除代理 http://192.81.219.179:8080
+2020/10/11 16:09:48.0440 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:48.0477 [I] initLogs.go:21] 删除代理 http://182.61.62.23:80
+2020/10/11 16:09:48.1235 [I] initLogs.go:17] [Get "https://myip.ipip.net": Access Denied]
+2020/10/11 16:09:48.1269 [I] initLogs.go:21] 删除代理 http://222.74.202.228:9999
+2020/10/11 16:09:48.1571 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:48.1604 [I] initLogs.go:21] 删除代理 http://112.80.248.73:80
+2020/10/11 16:09:48.2190 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:48.2213 [I] initLogs.go:21] 删除代理 http://111.206.37.68:80
+2020/10/11 16:09:48.9314 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:48.9335 [I] initLogs.go:21] 删除代理 http://103.235.46.121:80
+2020/10/11 16:09:50.6241 [I] initLogs.go:17] [Get "https://myip.ipip.net": x509: certificate signed by unknown authority]
+2020/10/11 16:09:50.6312 [I] initLogs.go:21] 删除代理 http://140.143.142.14:1080
+2020/10/11 16:09:50.6807 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:50.6828 [I] initLogs.go:21] 删除代理 http://61.135.185.31:80
+2020/10/11 16:09:50.7453 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:50.7483 [I] initLogs.go:21] 删除代理 http://111.206.37.68:80
+2020/10/11 16:09:50.7744 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:50.7764 [I] initLogs.go:21] 删除代理 http://112.80.255.77:80
+2020/10/11 16:09:50.8281 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:50.8305 [I] initLogs.go:21] 删除代理 http://123.125.114.18:80
+2020/10/11 16:09:55.8444 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:09:55.8475 [I] initLogs.go:21] 删除代理 http://211.137.52.159:8080
+2020/10/11 16:09:55.8685 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:55.8705 [I] initLogs.go:21] 删除代理 http://180.97.33.78:80
+2020/10/11 16:09:55.9346 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:55.9366 [I] initLogs.go:21] 删除代理 http://180.149.145.160:80
+2020/10/11 16:09:55.9898 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:55.9915 [I] initLogs.go:21] 删除代理 http://61.135.186.222:80
+2020/10/11 16:09:56.0593 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:56.0613 [I] initLogs.go:21] 删除代理 http://150.242.249.73:80
+2020/10/11 16:09:56.1274 [I] initLogs.go:17] [Get "https://myip.ipip.net": unexpected EOF]
+2020/10/11 16:09:56.1297 [I] initLogs.go:21] 删除代理 http://180.149.144.199:80
+2020/10/11 16:09:56.1522 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:09:56.1549 [I] initLogs.go:21] 删除代理 http://117.185.17.144:80
+2020/10/11 16:09:56.2086 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:56.2106 [I] initLogs.go:21] 删除代理 http://61.135.185.78:80
+2020/10/11 16:09:56.7797 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:56.7893 [I] initLogs.go:21] 删除代理 http://103.235.46.154:80
+2020/10/11 16:09:56.8095 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:09:56.8113 [I] initLogs.go:21] 删除代理 http://180.97.33.93:80
+2020/10/11 16:09:56.8849 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Gateway]
+2020/10/11 16:09:56.8873 [I] initLogs.go:21] 删除代理 http://211.137.52.159:8080
+2020/10/11 16:10:01.8934 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:10:01.8963 [I] initLogs.go:21] 删除代理 http://134.209.104.73:80
+2020/10/11 16:10:01.9641 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:01.9669 [I] initLogs.go:21] 删除代理 http://163.177.151.76:80
+2020/10/11 16:10:02.2456 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:02.2477 [I] initLogs.go:21] 删除代理 http://163.177.151.224:80
+2020/10/11 16:10:02.2996 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:02.3026 [I] initLogs.go:21] 删除代理 http://61.135.185.156:80
+2020/10/11 16:10:02.3643 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:02.3683 [I] initLogs.go:21] 删除代理 http://180.149.144.223:80
+2020/10/11 16:10:02.4323 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:02.4362 [I] initLogs.go:21] 删除代理 http://61.135.186.222:80
+2020/10/11 16:10:02.4958 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:02.4978 [I] initLogs.go:21] 删除代理 http://123.125.114.107:80
+2020/10/11 16:10:03.2795 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:03.2815 [I] initLogs.go:21] 删除代理 http://103.235.46.154:80
+2020/10/11 16:10:03.3393 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:03.3422 [I] initLogs.go:21] 删除代理 http://61.135.185.156:80
+2020/10/11 16:10:03.3980 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:03.4000 [I] initLogs.go:21] 删除代理 http://61.135.185.118:80
+2020/10/11 16:10:03.4589 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:03.4617 [I] initLogs.go:21] 删除代理 http://61.135.186.243:80
+2020/10/11 16:10:03.5570 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:03.5592 [I] initLogs.go:21] 删除代理 http://183.232.232.69:80
+2020/10/11 16:10:03.6223 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:03.6259 [I] initLogs.go:21] 删除代理 http://180.149.145.160:80
+2020/10/11 16:10:03.6425 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:03.6499 [I] initLogs.go:21] 删除代理 http://112.80.255.29:80
+2020/10/11 16:10:03.6749 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:03.6769 [I] initLogs.go:21] 删除代理 http://180.97.104.170:80
+2020/10/11 16:10:08.6941 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:10:08.6969 [I] initLogs.go:21] 删除代理 http://103.235.46.121:80
+2020/10/11 16:10:08.7173 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:08.7193 [I] initLogs.go:21] 删除代理 http://180.97.33.92:80
+2020/10/11 16:10:08.7766 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:08.7786 [I] initLogs.go:21] 删除代理 http://123.125.115.165:80
+2020/10/11 16:10:08.8280 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:08.8298 [I] initLogs.go:21] 删除代理 http://61.135.186.222:80
+2020/10/11 16:10:08.8953 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:08.9085 [I] initLogs.go:21] 删除代理 http://183.232.232.69:80
+2020/10/11 16:10:08.9609 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:08.9649 [I] initLogs.go:21] 删除代理 http://61.135.185.92:80
+2020/10/11 16:10:09.1475 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:10:09.1496 [I] initLogs.go:21] 删除代理 http://47.240.53.195:8888
+2020/10/11 16:10:09.2060 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:09.2087 [I] initLogs.go:21] 删除代理 http://123.125.115.165:80
+2020/10/11 16:10:09.2350 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:09.2370 [I] initLogs.go:21] 删除代理 http://117.185.17.145:80
+2020/10/11 16:10:09.2987 [I] initLogs.go:17] [Get "https://myip.ipip.net": unexpected EOF]
+2020/10/11 16:10:09.3012 [I] initLogs.go:21] 删除代理 http://180.149.144.199:80
+2020/10/11 16:10:09.3504 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:09.3538 [I] initLogs.go:21] 删除代理 http://111.206.37.248:80
+2020/10/11 16:10:10.9571 [I] initLogs.go:21] 代理http://165.22.36.75:8888有效
+2020/10/11 16:10:11.0277 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:11.0308 [I] initLogs.go:21] 删除代理 http://122.13.0.75:3128
+2020/10/11 16:10:11.2126 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:11.2156 [I] initLogs.go:21] 删除代理 http://111.206.37.100:80
+2020/10/11 16:10:11.3263 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:11.3284 [I] initLogs.go:21] 删除代理 http://180.97.33.144:80
+2020/10/11 16:10:11.3861 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:11.3888 [I] initLogs.go:21] 删除代理 http://61.135.185.78:80
+2020/10/11 16:10:11.4169 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:11.4192 [I] initLogs.go:21] 删除代理 http://117.185.17.145:80
+2020/10/11 16:10:15.9356 [I] initLogs.go:17] [Get "https://myip.ipip.net": x509: certificate signed by unknown authority]
+2020/10/11 16:10:15.9377 [I] initLogs.go:21] 删除代理 http://140.143.142.14:1080
+2020/10/11 16:10:16.0052 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:16.0073 [I] initLogs.go:21] 删除代理 http://122.13.0.75:3128
+2020/10/11 16:10:16.1231 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:16.1253 [I] initLogs.go:21] 删除代理 http://163.177.151.224:80
+2020/10/11 16:10:16.1819 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:16.1839 [I] initLogs.go:21] 删除代理 http://61.135.185.152:80
+2020/10/11 16:10:16.2538 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:16.2570 [I] initLogs.go:21] 删除代理 http://163.177.151.76:80
+2020/10/11 16:10:16.3114 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:16.3151 [I] initLogs.go:21] 删除代理 http://123.125.115.242:80
+2020/10/11 16:10:16.3750 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:16.3780 [I] initLogs.go:21] 删除代理 http://61.135.185.152:80
+2020/10/11 16:10:21.3921 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:10:21.3949 [I] initLogs.go:21] 删除代理 http://221.180.170.104:8080
+2020/10/11 16:10:26.4082 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:10:26.4104 [I] initLogs.go:21] 删除代理 http://36.85.255.144:80
+2020/10/11 16:10:31.4241 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:10:31.4263 [I] initLogs.go:21] 删除代理 http://88.99.10.251:1080
+2020/10/11 16:10:31.4456 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:31.4488 [I] initLogs.go:21] 删除代理 http://180.97.33.93:80
+2020/10/11 16:10:31.5090 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:10:31.5111 [I] initLogs.go:21] 删除代理 http://180.149.144.108:80
+2020/10/11 16:10:31.5645 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:31.5665 [I] initLogs.go:21] 删除代理 http://61.135.185.156:80
+2020/10/11 16:10:31.6218 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:31.6244 [I] initLogs.go:21] 删除代理 http://61.135.186.222:80
+2020/10/11 16:10:36.6411 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:10:36.6432 [I] initLogs.go:21] 删除代理 http://211.137.52.159:8080
+2020/10/11 16:10:36.6652 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:36.6672 [I] initLogs.go:21] 删除代理 http://180.97.33.92:80
+2020/10/11 16:10:36.7713 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:10:36.7723 [I] initLogs.go:21] 删除代理 http://221.182.31.54:8080
+2020/10/11 16:10:36.8308 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:36.8328 [I] initLogs.go:21] 删除代理 http://220.181.111.37:80
+2020/10/11 16:10:36.8492 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:36.8568 [I] initLogs.go:21] 删除代理 http://180.97.33.212:80
+2020/10/11 16:10:37.4537 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:10:37.4566 [I] initLogs.go:21] 删除代理 http://91.205.174.26:80
+2020/10/11 16:10:37.5637 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:37.5666 [I] initLogs.go:21] 删除代理 http://117.185.16.31:80
+2020/10/11 16:10:37.6455 [I] initLogs.go:17] [Get "https://myip.ipip.net": unexpected EOF]
+2020/10/11 16:10:37.6485 [I] initLogs.go:21] 删除代理 http://180.149.144.199:80
+2020/10/11 16:10:37.6685 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:37.6715 [I] initLogs.go:21] 删除代理 http://180.97.33.92:80
+2020/10/11 16:10:41.1690 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:10:41.1711 [I] initLogs.go:21] 删除代理 http://78.47.16.54:80
+2020/10/11 16:10:41.2267 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Gateway]
+2020/10/11 16:10:41.2392 [I] initLogs.go:21] 删除代理 http://211.137.52.159:8080
+2020/10/11 16:10:41.2642 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:41.2662 [I] initLogs.go:21] 删除代理 http://112.80.255.29:80
+2020/10/11 16:10:41.3302 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:41.3334 [I] initLogs.go:21] 删除代理 http://61.135.185.160:80
+2020/10/11 16:10:41.4898 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:10:41.4913 [I] initLogs.go:21] 删除代理 http://61.135.185.172:80
+2020/10/11 16:10:41.5448 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:41.5471 [I] initLogs.go:21] 删除代理 http://61.135.185.156:80
+2020/10/11 16:10:42.1412 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:42.1437 [I] initLogs.go:21] 删除代理 http://192.81.219.179:8080
+2020/10/11 16:10:42.2282 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:10:42.2310 [I] initLogs.go:21] 删除代理 http://180.149.145.139:80
+2020/10/11 16:10:42.2537 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:42.2565 [I] initLogs.go:21] 删除代理 http://180.97.34.35:80
+2020/10/11 16:10:42.3167 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:42.3199 [I] initLogs.go:21] 删除代理 http://180.149.144.223:80
+2020/10/11 16:10:42.3899 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:42.3919 [I] initLogs.go:21] 删除代理 http://117.185.17.17:80
+2020/10/11 16:10:42.4428 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:42.4478 [I] initLogs.go:21] 删除代理 http://123.125.114.18:80
+2020/10/11 16:10:42.5065 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:42.5096 [I] initLogs.go:21] 删除代理 http://123.125.115.183:80
+2020/10/11 16:10:42.6773 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:10:42.6794 [I] initLogs.go:21] 删除代理 http://119.8.111.250:80
+2020/10/11 16:10:42.8109 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:10:42.8254 [I] initLogs.go:21] 删除代理 http://47.240.53.195:8888
+2020/10/11 16:10:42.8807 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:42.8827 [I] initLogs.go:21] 删除代理 http://123.125.115.165:80
+2020/10/11 16:10:42.9319 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:42.9339 [I] initLogs.go:21] 删除代理 http://61.135.185.31:80
+2020/10/11 16:10:47.9451 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:10:47.9475 [I] initLogs.go:21] 删除代理 http://178.215.175.34:8081
+2020/10/11 16:10:48.0050 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:48.0069 [I] initLogs.go:21] 删除代理 http://61.135.185.176:80
+2020/10/11 16:10:51.2249 [I] initLogs.go:21] 代理http://165.22.36.75:8888有效
+2020/10/11 16:10:53.0125 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:10:53.0158 [I] initLogs.go:21] 删除代理 http://178.215.175.34:8081
+2020/10/11 16:10:53.1284 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:53.1305 [I] initLogs.go:21] 删除代理 http://180.97.33.144:80
+2020/10/11 16:10:53.1528 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:53.1567 [I] initLogs.go:21] 删除代理 http://180.97.33.212:80
+2020/10/11 16:10:53.2132 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:10:53.2152 [I] initLogs.go:21] 删除代理 http://61.135.185.31:80
+2020/10/11 16:10:53.2484 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:53.2518 [I] initLogs.go:21] 删除代理 http://112.80.248.95:80
+2020/10/11 16:10:53.3448 [I] initLogs.go:17] [Get "https://myip.ipip.net": Access Denied]
+2020/10/11 16:10:53.3481 [I] initLogs.go:21] 删除代理 http://222.74.202.229:9999
+2020/10/11 16:10:53.4080 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:53.4106 [I] initLogs.go:21] 删除代理 http://123.125.115.183:80
+2020/10/11 16:10:58.4130 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:10:58.4149 [I] initLogs.go:21] 删除代理 http://123.139.56.238:9999
+2020/10/11 16:10:58.4349 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:58.4379 [I] initLogs.go:21] 删除代理 http://112.80.255.29:80
+2020/10/11 16:10:58.4579 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:58.4609 [I] initLogs.go:21] 删除代理 http://180.97.33.212:80
+2020/10/11 16:10:58.5099 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:58.5129 [I] initLogs.go:21] 删除代理 http://61.135.186.222:80
+2020/10/11 16:10:58.5749 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:58.5779 [I] initLogs.go:21] 删除代理 http://123.125.115.183:80
+2020/10/11 16:10:58.6429 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:10:58.6459 [I] initLogs.go:21] 删除代理 http://123.125.115.215:80
+2020/10/11 16:10:58.6719 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:58.6739 [I] initLogs.go:21] 删除代理 http://180.97.33.92:80
+2020/10/11 16:10:58.7229 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:10:58.7249 [I] initLogs.go:21] 删除代理 http://61.135.185.112:80
+2020/10/11 16:11:03.7348 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:11:03.7371 [I] initLogs.go:21] 删除代理 http://96.30.194.21:3128
+2020/10/11 16:11:03.8276 [I] initLogs.go:17] [Get "https://myip.ipip.net": Access Denied]
+2020/10/11 16:11:03.8299 [I] initLogs.go:21] 删除代理 http://222.74.202.228:9999
+2020/10/11 16:11:03.8860 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:11:03.8883 [I] initLogs.go:21] 删除代理 http://123.125.115.215:80
+2020/10/11 16:11:04.4852 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:04.4862 [I] initLogs.go:21] 删除代理 http://192.81.219.179:8080
+2020/10/11 16:11:04.6041 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:04.6130 [I] initLogs.go:21] 删除代理 http://180.97.33.144:80
+2020/10/11 16:11:09.6258 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:11:09.6278 [I] initLogs.go:21] 删除代理 http://36.85.255.144:80
+2020/10/11 16:11:09.6960 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:09.7000 [I] initLogs.go:21] 删除代理 http://61.135.185.12:80
+2020/10/11 16:11:09.7260 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:09.7280 [I] initLogs.go:21] 删除代理 http://117.185.17.145:80
+2020/10/11 16:11:09.7842 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:09.7871 [I] initLogs.go:21] 删除代理 http://61.135.185.38:80
+2020/10/11 16:11:09.8166 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:09.8206 [I] initLogs.go:21] 删除代理 http://112.80.248.95:80
+2020/10/11 16:11:09.8867 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:09.8889 [I] initLogs.go:21] 删除代理 http://61.135.185.176:80
+2020/10/11 16:11:09.9438 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:09.9460 [I] initLogs.go:21] 删除代理 http://123.125.114.107:80
+2020/10/11 16:11:12.9023 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:11:12.9033 [I] initLogs.go:21] 删除代理 http://78.47.16.54:80
+2020/10/11 16:11:12.9530 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:12.9566 [I] initLogs.go:21] 删除代理 http://61.135.185.31:80
+2020/10/11 16:11:12.9820 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:12.9841 [I] initLogs.go:21] 删除代理 http://112.80.248.73:80
+2020/10/11 16:11:13.0652 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:11:13.0663 [I] initLogs.go:21] 删除代理 http://180.149.145.139:80
+2020/10/11 16:11:15.4239 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:15.4259 [I] initLogs.go:21] 删除代理 http://5.196.23.219:80
+2020/10/11 16:11:15.5123 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:15.5144 [I] initLogs.go:21] 删除代理 http://117.185.17.16:80
+2020/10/11 16:11:15.5371 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:15.5411 [I] initLogs.go:21] 删除代理 http://112.80.255.77:80
+2020/10/11 16:11:15.5731 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:15.5761 [I] initLogs.go:21] 删除代理 http://180.97.33.249:80
+2020/10/11 16:11:15.5981 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:15.6021 [I] initLogs.go:21] 删除代理 http://180.97.33.218:80
+2020/10/11 16:11:20.6117 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:11:20.6145 [I] initLogs.go:21] 删除代理 http://220.174.236.211:8091
+2020/10/11 16:11:22.0239 [I] initLogs.go:21] 代理http://165.22.36.75:8888有效
+2020/10/11 16:11:22.1413 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:22.1438 [I] initLogs.go:21] 删除代理 http://180.97.104.97:80
+2020/10/11 16:11:22.2241 [I] initLogs.go:17] [Get "https://myip.ipip.net": Access Denied]
+2020/10/11 16:11:22.2261 [I] initLogs.go:21] 删除代理 http://222.74.202.228:9999
+2020/10/11 16:11:22.2801 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:22.2829 [I] initLogs.go:21] 删除代理 http://111.206.37.248:80
+2020/10/11 16:11:22.3129 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:22.3169 [I] initLogs.go:21] 删除代理 http://112.80.248.73:80
+2020/10/11 16:11:22.3815 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:11:22.3851 [I] initLogs.go:21] 删除代理 http://123.125.115.215:80
+2020/10/11 16:11:22.4758 [I] initLogs.go:17] [Get "https://myip.ipip.net": Access Denied]
+2020/10/11 16:11:22.4782 [I] initLogs.go:21] 删除代理 http://222.74.202.228:9999
+2020/10/11 16:11:22.5489 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:22.5511 [I] initLogs.go:21] 删除代理 http://183.232.231.76:80
+2020/10/11 16:11:22.5772 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:11:22.5802 [I] initLogs.go:21] 删除代理 http://117.185.16.226:80
+2020/10/11 16:11:22.6532 [I] initLogs.go:17] [Get "https://myip.ipip.net": Access Denied]
+2020/10/11 16:11:22.6562 [I] initLogs.go:21] 删除代理 http://222.74.202.228:9999
+2020/10/11 16:11:22.7033 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:22.7063 [I] initLogs.go:21] 删除代理 http://180.97.33.66:80
+2020/10/11 16:11:22.7308 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:22.7338 [I] initLogs.go:21] 删除代理 http://180.97.34.35:80
+2020/10/11 16:11:22.7538 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:22.7568 [I] initLogs.go:21] 删除代理 http://180.97.33.92:80
+2020/10/11 16:11:22.7798 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:22.7832 [I] initLogs.go:21] 删除代理 http://112.80.255.77:80
+2020/10/11 16:11:22.8357 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:22.8389 [I] initLogs.go:21] 删除代理 http://123.125.114.21:80
+2020/10/11 16:11:23.0351 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:11:23.0372 [I] initLogs.go:21] 删除代理 http://183.232.231.133:80
+2020/10/11 16:11:23.0923 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:11:23.0947 [I] initLogs.go:21] 删除代理 http://112.84.54.73:9999
+2020/10/11 16:11:23.1563 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:23.1589 [I] initLogs.go:21] 删除代理 http://180.149.144.223:80
+2020/10/11 16:11:23.2474 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:23.2500 [I] initLogs.go:21] 删除代理 http://117.185.17.151:80
+2020/10/11 16:11:23.2753 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:23.2763 [I] initLogs.go:21] 删除代理 http://117.185.17.145:80
+2020/10/11 16:11:23.3518 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:23.3540 [I] initLogs.go:21] 删除代理 http://123.125.115.165:80
+2020/10/11 16:11:23.4345 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:23.4365 [I] initLogs.go:21] 删除代理 http://117.185.17.16:80
+2020/10/11 16:11:28.4436 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:11:28.4462 [I] initLogs.go:21] 删除代理 http://211.137.52.158:8080
+2020/10/11 16:11:28.5023 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:28.5048 [I] initLogs.go:21] 删除代理 http://123.125.114.107:80
+2020/10/11 16:11:33.5207 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:11:33.5232 [I] initLogs.go:21] 删除代理 http://211.137.52.158:8080
+2020/10/11 16:11:33.5711 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:33.5731 [I] initLogs.go:21] 删除代理 http://202.108.23.174:80
+2020/10/11 16:11:33.6077 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:33.6117 [I] initLogs.go:21] 删除代理 http://112.80.248.95:80
+2020/10/11 16:11:38.6300 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:11:38.6321 [I] initLogs.go:21] 删除代理 http://221.180.170.104:8080
+2020/10/11 16:11:38.6852 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:38.6877 [I] initLogs.go:21] 删除代理 http://202.108.23.174:80
+2020/10/11 16:11:38.7949 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:38.7969 [I] initLogs.go:21] 删除代理 http://111.206.37.100:80
+2020/10/11 16:11:38.8227 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:11:38.8250 [I] initLogs.go:21] 删除代理 http://117.185.16.226:80
+2020/10/11 16:11:38.8873 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:38.8895 [I] initLogs.go:21] 删除代理 http://111.206.37.161:80
+2020/10/11 16:11:38.9543 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:11:38.9577 [I] initLogs.go:21] 删除代理 http://180.149.145.132:80
+2020/10/11 16:11:38.9841 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:38.9869 [I] initLogs.go:21] 删除代理 http://117.185.17.144:80
+2020/10/11 16:11:39.0494 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:39.0518 [I] initLogs.go:21] 删除代理 http://61.135.185.118:80
+2020/10/11 16:11:39.1907 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:11:39.1917 [I] initLogs.go:21] 删除代理 http://119.8.111.250:80
+2020/10/11 16:11:39.2466 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:39.2486 [I] initLogs.go:21] 删除代理 http://61.135.186.243:80
+2020/10/11 16:11:39.2744 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:39.2754 [I] initLogs.go:21] 删除代理 http://117.185.17.144:80
+2020/10/11 16:11:39.3581 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:39.3601 [I] initLogs.go:21] 删除代理 http://111.206.37.68:80
+2020/10/11 16:11:39.3802 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:39.3826 [I] initLogs.go:21] 删除代理 http://180.97.33.78:80
+2020/10/11 16:11:39.4347 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:39.4377 [I] initLogs.go:21] 删除代理 http://111.206.37.248:80
+2020/10/11 16:11:39.5038 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:11:39.5060 [I] initLogs.go:21] 删除代理 http://180.149.144.108:80
+2020/10/11 16:11:39.5323 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:39.5352 [I] initLogs.go:21] 删除代理 http://117.185.17.145:80
+2020/10/11 16:11:39.6294 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:39.6314 [I] initLogs.go:21] 删除代理 http://112.80.248.18:80
+2020/10/11 16:11:39.7023 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:39.7081 [I] initLogs.go:21] 删除代理 http://61.135.185.153:80
+2020/10/11 16:11:44.7198 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:11:44.7230 [I] initLogs.go:21] 删除代理 http://103.235.46.121:80
+2020/10/11 16:11:44.7780 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:44.7805 [I] initLogs.go:21] 删除代理 http://123.125.115.165:80
+2020/10/11 16:11:44.8279 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:44.8306 [I] initLogs.go:21] 删除代理 http://202.108.23.174:80
+2020/10/11 16:11:44.8517 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:44.8547 [I] initLogs.go:21] 删除代理 http://180.97.33.212:80
+2020/10/11 16:11:44.8793 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:44.8824 [I] initLogs.go:21] 删除代理 http://117.185.17.144:80
+2020/10/11 16:11:44.9488 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:11:44.9509 [I] initLogs.go:21] 删除代理 http://61.135.169.121:80
+2020/10/11 16:11:45.0034 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:45.0064 [I] initLogs.go:21] 删除代理 http://123.125.115.219:80
+2020/10/11 16:11:45.0595 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:45.0624 [I] initLogs.go:21] 删除代理 http://61.135.185.92:80
+2020/10/11 16:11:45.1392 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:45.1412 [I] initLogs.go:21] 删除代理 http://163.177.151.224:80
+2020/10/11 16:11:45.2374 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:45.2535 [I] initLogs.go:21] 删除代理 http://112.80.248.95:80
+2020/10/11 16:11:45.3035 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:45.3070 [I] initLogs.go:21] 删除代理 http://123.125.115.242:80
+2020/10/11 16:11:45.3278 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:45.3308 [I] initLogs.go:21] 删除代理 http://112.80.255.29:80
+2020/10/11 16:11:45.3557 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:45.3581 [I] initLogs.go:21] 删除代理 http://112.80.255.77:80
+2020/10/11 16:11:45.4169 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:45.4199 [I] initLogs.go:21] 删除代理 http://61.135.185.69:80
+2020/10/11 16:11:50.4360 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:11:50.4381 [I] initLogs.go:21] 删除代理 http://221.180.170.104:8080
+2020/10/11 16:11:50.5866 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:50.5889 [I] initLogs.go:21] 删除代理 http://61.135.185.103:80
+2020/10/11 16:11:55.5981 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:11:55.6005 [I] initLogs.go:21] 删除代理 http://1.196.177.101:9999
+2020/10/11 16:11:55.6215 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:55.6234 [I] initLogs.go:21] 删除代理 http://180.97.33.78:80
+2020/10/11 16:11:57.0365 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:11:57.0376 [I] initLogs.go:21] 删除代理 http://191.101.39.219:80
+2020/10/11 16:11:57.1075 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:57.1096 [I] initLogs.go:21] 删除代理 http://163.177.151.224:80
+2020/10/11 16:11:57.1784 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:57.1812 [I] initLogs.go:21] 删除代理 http://182.61.62.23:80
+2020/10/11 16:11:57.2319 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:57.2345 [I] initLogs.go:21] 删除代理 http://123.125.114.21:80
+2020/10/11 16:11:57.2477 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:57.2579 [I] initLogs.go:21] 删除代理 http://112.80.255.29:80
+2020/10/11 16:11:57.3129 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:57.3153 [I] initLogs.go:21] 删除代理 http://61.135.185.111:80
+2020/10/11 16:11:57.3774 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:57.3814 [I] initLogs.go:21] 删除代理 http://61.135.185.68:80
+2020/10/11 16:11:57.9361 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:11:57.9382 [I] initLogs.go:21] 删除代理 http://78.47.16.54:80
+2020/10/11 16:11:58.0010 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:58.0039 [I] initLogs.go:21] 删除代理 http://61.135.186.243:80
+2020/10/11 16:11:58.7363 [I] initLogs.go:17] [Get "https://myip.ipip.net": unexpected EOF]
+2020/10/11 16:11:58.7443 [I] initLogs.go:21] 删除代理 http://175.141.69.200:80
+2020/10/11 16:11:58.7853 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:58.7886 [I] initLogs.go:21] 删除代理 http://112.80.248.95:80
+2020/10/11 16:11:58.8368 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:11:58.8389 [I] initLogs.go:21] 删除代理 http://61.135.186.222:80
+2020/10/11 16:12:01.7749 [I] initLogs.go:21] 代理http://165.22.36.75:8888有效
+2020/10/11 16:12:01.7956 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:01.7976 [I] initLogs.go:21] 删除代理 http://180.97.33.66:80
+2020/10/11 16:12:01.8186 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:01.8206 [I] initLogs.go:21] 删除代理 http://180.97.33.92:80
+2020/10/11 16:12:01.8738 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:01.8758 [I] initLogs.go:21] 删除代理 http://123.125.115.219:80
+2020/10/11 16:12:01.9342 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:01.9372 [I] initLogs.go:21] 删除代理 http://111.206.37.248:80
+2020/10/11 16:12:02.0024 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:12:02.0050 [I] initLogs.go:21] 删除代理 http://180.149.145.132:80
+2020/10/11 16:12:02.0559 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:12:02.0591 [I] initLogs.go:21] 删除代理 http://112.84.54.73:9999
+2020/10/11 16:12:02.1258 [I] initLogs.go:17] [Get "https://myip.ipip.net": unexpected EOF]
+2020/10/11 16:12:02.1279 [I] initLogs.go:21] 删除代理 http://180.149.144.199:80
+2020/10/11 16:12:02.1849 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:02.1868 [I] initLogs.go:21] 删除代理 http://202.108.23.174:80
+2020/10/11 16:12:02.2692 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:12:02.2712 [I] initLogs.go:21] 删除代理 http://180.149.145.139:80
+2020/10/11 16:12:03.3518 [I] initLogs.go:17] [Get "https://myip.ipip.net": proxyconnect tcp: dial tcp 49.89.86.112:9999: connectex: No connection could be made because the target machine actively refused it.]
+2020/10/11 16:12:03.3539 [I] initLogs.go:21] 删除代理 http://49.89.86.112:9999
+2020/10/11 16:12:03.4143 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:03.4169 [I] initLogs.go:21] 删除代理 http://61.135.185.156:80
+2020/10/11 16:12:03.4993 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:03.5014 [I] initLogs.go:21] 删除代理 http://183.232.231.76:80
+2020/10/11 16:12:03.5637 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:12:03.5680 [I] initLogs.go:21] 删除代理 http://180.149.144.223:80
+2020/10/11 16:12:03.6287 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:03.6317 [I] initLogs.go:21] 删除代理 http://61.135.185.176:80
+2020/10/11 16:12:03.7202 [I] initLogs.go:17] [Get "https://myip.ipip.net": Found]
+2020/10/11 16:12:03.7226 [I] initLogs.go:21] 删除代理 http://180.149.144.108:80
+2020/10/11 16:12:03.7904 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:03.8047 [I] initLogs.go:21] 删除代理 http://183.232.231.239:80
+2020/10/11 16:12:05.3555 [I] initLogs.go:17] [Get "https://myip.ipip.net": Bad Request]
+2020/10/11 16:12:05.3575 [I] initLogs.go:21] 删除代理 http://78.47.16.54:80
+2020/10/11 16:12:05.3808 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:12:05.3837 [I] initLogs.go:21] 删除代理 http://117.185.17.144:80
+2020/10/11 16:12:10.3858 [I] initLogs.go:17] [Get "https://myip.ipip.net": context deadline exceeded (Client.Timeout exceeded while awaiting headers)]
+2020/10/11 16:12:10.3880 [I] initLogs.go:21] 删除代理 http://96.30.194.21:3128
+2020/10/11 16:12:10.4444 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:10.4472 [I] initLogs.go:21] 删除代理 http://61.135.185.38:80
+2020/10/11 16:12:10.5015 [I] initLogs.go:17] [Get "https://myip.ipip.net": Forbidden]
+2020/10/11 16:12:10.5045 [I] initLogs.go:21] 删除代理 http://202.108.22.5:80
+2020/10/11 16:12:10.5568 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]
+2020/10/11 16:12:10.5592 [I] initLogs.go:21] 删除代理 http://123.125.114.21:80
+2020/10/11 16:12:10.5795 [I] initLogs.go:17] [Get "https://myip.ipip.net": Internal Server Error]

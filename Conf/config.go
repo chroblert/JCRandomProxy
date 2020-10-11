@@ -2,27 +2,34 @@ package Conf
 
 import (
 	"crypto/tls"
-	"log"
 	"path/filepath"
 
 	"github.com/go-ini/ini"
 )
 
 var (
-	PPIP            string = "http://localhost"
-	PPPort          string = "5010"
-	UseProxyPool    bool   = true
+	// main设置
+	UseProxyPool    bool = true
 	CustomProxyFile string
 	SaveProxyFile   string = "proxy.lst"
 	Port            string = "8081"
 	UseProxy        bool
 	UseHttpsProxy   bool
-	MinProxyNum     int    = 0
-	MaxProxyNum     int    = 5
-	ProxyCheckAddr  string = "https://myip.ipip.net"
-	Timeout         int    = 5
-	StopUrl         string = "http://myip.ipip.net"
-	CheckInterval   int    = 2
+	// Proxypool代理池设置
+	PPIP   string = "http://localhost"
+	PPPort string = "5010"
+	// 校验代理设置
+	MinProxyNum    int    = 0
+	MaxProxyNum    int    = 5
+	ProxyCheckAddr string = "https://myip.ipip.net"
+	Timeout        int    = 5
+	StopUrl        string = "http://myip.ipip.net"
+	CheckInterval  int    = 2
+	// 日志设置
+	LogPath  string = "logss/app.log"
+	LogCount int    = 5
+	MaxSize  int64  = 1024 * 1024 * 256
+	MaxAge   int    = 3
 )
 
 func InitConfig(aTimeout, aMinProxyNum, aMaxProxyNum int, aUseProxyPool bool, aPort string, aUseProxy bool, aUseHttpsProxy bool, aPPIP string, aPPPort string) {
@@ -43,15 +50,22 @@ func InitConfigFromFile() {
 	if err != nil {
 		panic(err)
 	}
-	log.Println("JCTest", cfg)
+	// main设置
 	UseProxyPool, _ = cfg.Section("main").Key("UseProxypool").Bool()
 	Port = cfg.Section("main").Key("Port").String()
 	UseProxy, _ = cfg.Section("main").Key("UseProxy").Bool()
 	UseHttpsProxy, _ = cfg.Section("main").Key("UseHttpsProxy").Bool()
+	// proxypool设置
 	PPIP = cfg.Section("proxypool").Key("PPIP").String()
 	PPPort = cfg.Section("proxypool").Key("PPPort").String()
 	CustomProxyFile, _ = filepath.Abs(cfg.Section("customproxy").Key("CustomProxyFile").String())
-	// log.Println(UseHttpsProxy)
+	// checkproxy设置
+
+	// log设置
+	LogPath = cfg.Section("log").Key("LogPath").String()
+	LogCount, _ = cfg.Section("log").Key("LogCount").Int()
+	MaxSize, _ = cfg.Section("log").Key("MaxSize").Int64()
+	MaxAge, _ = cfg.Section("log").Key("MaxAge").Int()
 
 }
 

@@ -1,7 +1,7 @@
 package Proxy
 
 import (
-	"log"
+	log "../Logs"
 	"math/rand"
 	"sync"
 	"time"

@@ -3,11 +3,12 @@ package gui
 import (
 	"crypto/md5"
 	"fmt"
-	"log"
 	"os"
 	"strconv"
 	"strings"
 	"time"
+
+	log "../Logs"
 
 	"../Conf"
 	"../Proxy"
@@ -56,6 +57,7 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	var Timeout, _ = strconv.Atoi(Form1.Edit6.Text())
 
 	Conf.InitConfig(Timeout, MinProxyNum, MaxProxyNum, UseProxyPool, Port, UseProxy, UseHttpsProxy, PPIP, PPPort)
+	log.InitLogs(Conf.LogPath, Conf.MaxSize, Conf.MaxAge, Conf.LogCount)
 	if !UseProxyPool && Proxy.MSafeMetaProxymap.Length() < 1 {
 		log.Println("自定义代理池中没有代理，启动失败")
 		f.ListBox2.Items().Add("自定义代理池中没有代理，启动失败")
@@ -214,7 +216,7 @@ func RenderValidProxyPool(stop chan int) {
 	for {
 		select {
 		case <-stop:
-			log.Print("停止更新可用代理池")
+			log.Println("停止更新可用代理池")
 			// stop <- 1
 			return
 		case <-ticker.C:

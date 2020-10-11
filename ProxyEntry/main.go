@@ -1,7 +1,7 @@
 package ProxyEntry
 
 import (
-	"log"
+	log "../Logs"
 	"net"
 	"runtime/debug"
 
@@ -21,7 +21,8 @@ func Proxymain(stop chan int) {
 	l, err := net.Listen("tcp", ":"+Conf.Port)
 	log.Println("监听在：", Conf.Port)
 	if err != nil {
-		log.Panic(err)
+		log.Println(err)
+		return
 	}
 	for {
 		// 接收停止信号
@@ -36,7 +37,8 @@ func Proxymain(stop chan int) {
 		// 接收TCP连接，返回一个net.Conn
 		client, err := l.Accept()
 		if err != nil {
-			log.Panic("Panic", err)
+			log.Println("Panic", err)
+			return
 		}
 		// 收到请求后，调用handle进行处理
 		go handle(client)
@@ -48,7 +50,8 @@ func handle(client net.Conn) {
 	defer func() {
 		if err := recover(); err != nil {
 			debug.PrintStack()
-			log.Panic(err)
+			log.Println(err)
+			return
 		}
 	}()
 	if client == nil {
@@ -56,23 +59,6 @@ func handle(client net.Conn) {
 	}
 
 	log.Println("JCTLog: client tcp tunnel connection: ", client.LocalAddr().String(), "->", client.RemoteAddr().String())
-	/* 20200923: 删除该段
-	// 随机取出一个代理
-	paddr, ptype, _ := Proxy.GetAProxy()
-	proxyAddr := ptype + "://" + paddr
-	// 验证代理是否有效
-	checkaddr := "https://myip.ipip.net"
-	if Proxy.CheckProxy(proxyAddr, checkaddr) {
-		log.Println(" 代理有效 ", proxyAddr)
-		// 有效，使用端口转发
-		Rproxy(client, paddr)
-	} else {
-		log.Println(" 代理无效 ", proxyAddr)
-		// 判断该代理是否在可用代理池，若在，则删除
-		// 无效，使用自身代理
-		Lproxy(client)
-	}
-	*/
 	// 使用代理
 	visit(client)
 }

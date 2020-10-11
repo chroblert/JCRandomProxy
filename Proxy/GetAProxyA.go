@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
+	log "../Logs"
 	"net/http"
 	"strings"
 

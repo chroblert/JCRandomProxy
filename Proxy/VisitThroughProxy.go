@@ -1,7 +1,7 @@
 package Proxy
 
 import (
-	"log"
+	log "../Logs"
 	"net/http"
 	"net/url"
 	"time"
