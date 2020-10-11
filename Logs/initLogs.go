@@ -17,9 +17,11 @@ func InitLogs(logpath string, amaxSize int64, amaxAge, alogCount int) {
 	//applog.Info("test")
 }
 func Println(args ...interface{}) {
-	applog.Info(args)
+	// applog.Info(args)
+	applog.println(INFO, args...)
 }
 
 func Printf(format string, args ...interface{}) {
-	applog.Infof(format, args...)
+	// applog.Infof(format, args...)
+	applog.printf(INFO, format, args...)
 }

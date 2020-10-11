@@ -1,3 +1,2 @@
-2020/10/12 00:01:30.8837 [I] initLogs.go:20] [JCTLog: server tcp tunnel connection:  192.168.14.109:61359 -> 116.211.155.164:80]
-2020/10/12 00:01:31.8504 [I] initLogs.go:20] [Get "https://myip.ipip.net": read tcp 192.168.14.109:61357->146.141.116.177:80: wsarecv: An existing connection was forcibly closed by the remote host.]
-2020/10/12 00:01:31.8553 [I] initLogs.go:24] 删除代理 http://146.141.116.177:80
+2020/10/12 00:05:40.9834 [I] GetAProxyA.go:44] 删除代理 http://115.223.7.110:80
+2020/10/12 00:05:43.0210 [I] GetAProxyA.go:44] 删除代理 http://220.174.236.211:8091
