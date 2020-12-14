@@ -1,2 +1,50 @@
-2020/10/12 00:05:40.9834 [I] GetAProxyA.go:44] 删除代理 http://115.223.7.110:80
-2020/10/12 00:05:43.0210 [I] GetAProxyA.go:44] 删除代理 http://220.174.236.211:8091
+2020/12/14 16:40:34.5122 [I] main.go:22] 监听在： 8081
+2020/12/14 16:40:55.5324 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:40:55.5324 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:40:59.7576 [I] Form1Impl.go:109] 停止代理
+2020/12/14 16:40:59.7576 [I] Form1Impl.go:219] 停止更新可用代理池
+2020/12/14 16:40:59.7586 [I] ProxyType.go:81] 停止校验可用代理池
+2020/12/14 16:40:59.7586 [I] ProxyType.go:118] 停止检测并获取可用代理
+2020/12/14 16:40:59.7763 [I] main.go:31] 收到停止信号
+2020/12/14 16:40:59.7763 [I] main.go:61] JCTLog: client tcp tunnel connection:  [::1]:8081 -> [::1]:54241
+2020/12/14 16:40:59.8301 [I] localproxy.go:39] GET http://myip.ipip.net/
+2020/12/14 16:41:00.8186 [I] localproxy.go:64] JCTLog: server tcp tunnel connection:  192.168.14.109:54242 -> 116.211.155.164:80
+2020/12/14 16:41:04.7630 [I] localproxy.go:78] JCTLog: 结束： 
+2020/12/14 16:41:16.5444 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:41:16.5444 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:41:37.5707 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:41:37.5707 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:41:58.5950 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:41:58.5953 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:42:19.6200 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:42:19.6200 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:42:40.6511 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:42:40.6549 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:43:01.6755 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:43:01.6755 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:43:22.7283 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:43:22.7283 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:43:43.7417 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:43:43.7441 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:44:04.7837 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:44:04.7875 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:44:25.8173 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:44:25.8173 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:44:46.8434 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:44:46.8434 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:45:07.8556 [I] GetAProxyA.go:60] Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:45:07.8556 [I] GetAProxyA.go:23] 从proxypool代理池中获取代理失败:  Get "http://10.103.91.179:5010/get/": dial tcp 10.103.91.179:5010: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2020/12/14 16:45:14.3715 [I] main.go:22] 监听在： 8081
+2020/12/14 16:45:15.0181 [I] CheckProxy.go:33] Get "https://myip.ipip.net": Bad Request
+2020/12/14 16:45:15.0210 [I] GetAProxyA.go:45] 删除代理 http://62.84.70.130:80
+2020/12/14 16:45:15.6274 [I] CheckProxy.go:33] Get "https://myip.ipip.net": Forbidden
+2020/12/14 16:45:15.6304 [I] GetAProxyA.go:45] 删除代理 http://107.1.80.135:80
+2020/12/14 16:45:15.6835 [I] CheckProxy.go:33] Get "https://myip.ipip.net": Internal Server Error
+2020/12/14 16:45:15.6859 [I] GetAProxyA.go:45] 删除代理 http://123.125.114.18:80
+2020/12/14 16:45:15.7502 [I] CheckProxy.go:33] Get "https://myip.ipip.net": Found
+2020/12/14 16:45:15.7559 [I] GetAProxyA.go:45] 删除代理 http://180.149.145.132:80
+2020/12/14 16:45:15.8103 [I] CheckProxy.go:33] Get "https://myip.ipip.net": Internal Server Error
+2020/12/14 16:45:15.8190 [I] GetAProxyA.go:45] 删除代理 http://202.108.23.174:80
+2020/12/14 16:45:15.8678 [I] CheckProxy.go:33] Get "https://myip.ipip.net": Internal Server Error
+2020/12/14 16:45:15.8818 [I] GetAProxyA.go:45] 删除代理 http://61.135.185.90:80
+2020/12/14 16:45:45.5652 [I] main.go:22] 监听在： 8081

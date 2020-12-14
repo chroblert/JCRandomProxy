@@ -25,6 +25,7 @@ var (
 	Timeout        int    = 5
 	StopUrl        string = "http://myip.ipip.net"
 	CheckInterval  int    = 2
+	EnableCheck    bool   = true
 	// 日志设置
 	LogPath  string = "logss/app.log"
 	LogCount int    = 5
@@ -60,7 +61,13 @@ func InitConfigFromFile() {
 	PPPort = cfg.Section("proxypool").Key("PPPort").String()
 	CustomProxyFile, _ = filepath.Abs(cfg.Section("customproxy").Key("CustomProxyFile").String())
 	// checkproxy设置
-
+	ProxyCheckAddr = cfg.Section("checkproxy").Key("ProxyCheckAddr").String()
+	StopUrl = cfg.Section("checkproxy").Key("StopUrl").String()
+	MinProxyNum, _ = cfg.Section("checkproxy").Key("MinProxyNum").Int()
+	MaxProxyNum, _ = cfg.Section("checkproxy").Key("MaxProxyNum").Int()
+	Timeout, _ = cfg.Section("checkproxy").Key("Timeout").Int()
+	CheckInterval, _ = cfg.Section("checkproxy").Key("CheckInterval").Int()
+	EnableCheck, _ = cfg.Section("checkproxy").Key("EnableCheck").Bool()
 	// log设置
 	LogPath = cfg.Section("log").Key("LogPath").String()
 	LogCount, _ = cfg.Section("log").Key("LogCount").Int()

@@ -5,9 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	log "../Logs"
 	"net/http"
 	"strings"
+
+	log "../Logs"
 
 	"../Conf"
 )
@@ -24,7 +25,7 @@ func GetProxysA() {
 		}
 		tmpproxyaddr := tmpAproxy.Protocol + "://" + tmpAproxy.Ip + ":" + tmpAproxy.Port
 		tmpproxyaddrmd5 := fmt.Sprintf("%x", md5.Sum([]byte(tmpproxyaddr)))
-		if CheckProxyC(tmpproxyaddr, Conf.ProxyCheckAddr) {
+		if !Conf.EnableCheck || CheckProxyC(tmpproxyaddr, Conf.ProxyCheckAddr) {
 			MSafeProxymap.WriteAproxy(tmpproxyaddrmd5, tmpAproxy)
 		} else {
 			// 删除无效代理
