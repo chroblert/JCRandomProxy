@@ -1,10 +1,12 @@
 package Proxy
 
 import (
-	log "../Logs"
 	"math/rand"
+	"sort"
 	"sync"
 	"time"
+
+	log "../Logs"
 
 	"../Conf"
 )
@@ -65,6 +67,8 @@ func (spm *SafeProxymap) GetARandProxy() (Aproxy, bool) {
 		for k := range spm.Map {
 			keys = append(keys, k)
 		}
+		sort.Strings(keys)
+		// log.Println("keys: ", keys)
 		return spm.Map[keys[rand.Intn(len(keys))]], true
 	}
 	return Aproxy{}, false
@@ -164,6 +168,8 @@ func (smpm *SafeMetaProxymap) GetARandProxy() (Aproxy, bool) {
 		for k := range smpm.Map {
 			keys = append(keys, k)
 		}
+		sort.Strings(keys)
+		// log.Println("keys: ", keys)
 		return smpm.Map[keys[rand.Intn(len(keys))]], true
 	}
 	return Aproxy{}, false

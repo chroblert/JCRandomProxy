@@ -2,11 +2,12 @@ package Proxy
 
 import (
 	"io/ioutil"
-	log "../Logs"
 	"net/http"
 	"net/url"
 	"strings"
 	"time"
+
+	log "../Logs"
 
 	"../Conf"
 )
@@ -38,7 +39,7 @@ func CheckProxyC(proxyAddr, checkaddr string) bool {
 		log.Println(err)
 		return false
 	}
-	if strings.Contains(string(body), strings.Split(prox.Host, ":")[0]) {
+	if (Conf.CustomSucFlag != "false" && strings.Contains(string(body), Conf.CustomSucFlag)) || strings.Contains(string(body), strings.Split(prox.Host, ":")[0]) {
 		log.Printf("代理%s有效\n", proxyAddr)
 		return true
 	}
