@@ -4,6 +4,7 @@ import (
 	"crypto/md5"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -223,7 +224,12 @@ func RenderValidProxyPool(stop chan int) {
 			Form1.ListBox1.Items().Clear()
 			// 可能存在一些问题，
 			// 考虑为MSafeProxymap新建一个Keys()方法
+			keys := make([]string, 0, len(Proxy.MSafeProxymap.Map))
 			for k := range Proxy.MSafeProxymap.Map {
+				keys = append(keys, k)
+			}
+			sort.Strings(keys)
+			for _, k := range keys {
 				tmp := Proxy.MSafeProxymap.ReadAproxy(k)
 				Form1.ListBox1.Items().Add(tmp.Protocol + "://" + tmp.Ip + ":" + tmp.Port)
 			}

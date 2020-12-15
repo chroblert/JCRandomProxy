@@ -68,8 +68,10 @@ func (spm *SafeProxymap) GetARandProxy() (Aproxy, bool) {
 			keys = append(keys, k)
 		}
 		sort.Strings(keys)
+		randKey := rand.Intn(len(keys))
+		log.Println("randKey: ", randKey)
 		// log.Println("keys: ", keys)
-		return spm.Map[keys[rand.Intn(len(keys))]], true
+		return spm.Map[keys[randKey]], true
 	}
 	return Aproxy{}, false
 }
@@ -102,9 +104,28 @@ func (spm *SafeProxymap) ProxyCheck(stop chan int) {
 				port := tmpaproxy.Port
 				proxyadd := protocol + "://" + ip + ":" + port
 				res := CheckProxyC(proxyadd, "https://myip.ipip.net")
-				if !res {
+				failLimit := tmpaproxy.FailLimit
+				if res {
+					failLimit++
+					// if failLimit > 4 {
+					// 	failLimit = 4
+					// }
+				} else {
+					failLimit--
+				}
+
+				if failLimit < 0 {
 					//删除代理
 					delete(spm.Map, k)
+					// 20201214计划：最少连续四次校验失败再删除
+					// 初始值delFlag为4：
+					// 若res为true：+1
+					// 若res为false：-1
+					// 若delFlag为0，则删除
+				} else {
+					delete(spm.Map, k)
+					// spm.WriteAproxy(k, Aproxy{protocol, ip, port, failLimit})
+					spm.Map[k] = Aproxy{protocol, ip, port, failLimit}
 				}
 			}
 			spm.Unlock()

@@ -22,9 +22,10 @@ type (
 )
 
 type Aproxy struct {
-	Protocol string
-	Ip       string
-	Port     string
+	Protocol  string
+	Ip        string
+	Port      string
+	FailLimit int
 }
 type aproxy = Aproxy
 

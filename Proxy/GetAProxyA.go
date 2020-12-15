@@ -80,5 +80,5 @@ func GetAproxyA() (Aproxy, error) {
 	}
 	ip := strings.Split(ppproxy.Proxy, ":")[0]
 	port := strings.Split(ppproxy.Proxy, ":")[1]
-	return Aproxy{protocol, ip, port}, nil
+	return Aproxy{protocol, ip, port, 4}, nil
 }
