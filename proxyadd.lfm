@@ -1,0 +1,67 @@
+object Form2: TForm2
+  Left = 350
+  Height = 68
+  Top = 250
+  Width = 253
+  Caption = '添加代理'
+  ClientHeight = 68
+  ClientWidth = 253
+  Position = poMainFormCenter
+  object ComboBox1: TComboBox
+    Left = 32
+    Height = 25
+    Top = 8
+    Width = 53
+    ItemHeight = 17
+    ItemIndex = 0
+    Items.Strings = (
+      'http'
+      'https'
+    )
+    TabOrder = 0
+    Text = 'http'
+  end
+  object Edit1: TEdit
+    Left = 136
+    Height = 25
+    Top = 8
+    Width = 104
+    TabOrder = 1
+    Text = '127.0.0.1:80'
+    TextHint = 'IP:Port'
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 17
+    Top = 11
+    Width = 24
+    Caption = '协议'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 96
+    Height = 17
+    Top = 11
+    Width = 38
+    Caption = 'IP:Port'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 24
+    Height = 25
+    Top = 40
+    Width = 75
+    Caption = '确定'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 136
+    Height = 25
+    Top = 40
+    Width = 75
+    Caption = '取消'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+end

@@ -1,0 +1,151 @@
+object Form1: TForm1
+  Left = 350
+  Height = 424
+  Top = 250
+  Width = 718
+  Caption = 'Form1'
+  ClientHeight = 424
+  ClientWidth = 718
+  Menu = MainMenu1
+  object Panel1: TPanel
+    Left = 0
+    Height = 186
+    Top = 0
+    Width = 718
+    Align = alTop
+    Caption = 'Panel1'
+    ClientHeight = 186
+    ClientWidth = 718
+    TabOrder = 0
+    object Panel3: TPanel
+      Left = 1
+      Height = 184
+      Top = 1
+      Width = 170
+      Align = alLeft
+      Caption = '代理池配置'
+      ClientHeight = 184
+      ClientWidth = 170
+      TabOrder = 0
+      object GroupBox1: TGroupBox
+        Left = 8
+        Height = 57
+        Top = 24
+        Width = 152
+        Caption = '代理池IP'
+        ClientHeight = 35
+        ClientWidth = 148
+        TabOrder = 0
+        object Edit1: TEdit
+          Left = 20
+          Height = 25
+          Top = 8
+          Width = 80
+          TabOrder = 0
+          TextHint = '代理池IP'
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 16
+        Height = 57
+        Top = 104
+        Width = 129
+        Caption = '代理池端口'
+        ClientHeight = 35
+        ClientWidth = 125
+        TabOrder = 1
+        object Edit2: TEdit
+          Left = 15
+          Height = 25
+          Top = 3
+          Width = 80
+          TabOrder = 0
+          TextHint = '代理池端口'
+        end
+      end
+    end
+    object Panel4: TPanel
+      Left = 171
+      Height = 184
+      Top = 1
+      Width = 170
+      Align = alLeft
+      Caption = 'Panel4'
+      ClientHeight = 184
+      ClientWidth = 170
+      TabOrder = 1
+      object GroupBox3: TGroupBox
+        Left = 16
+        Height = 50
+        Top = 29
+        Width = 89
+        Caption = '监听端口'
+        ClientHeight = 28
+        ClientWidth = 85
+        TabOrder = 0
+        object Edit3: TEdit
+          Left = 8
+          Height = 25
+          Top = 3
+          Width = 64
+          TabOrder = 0
+          TextHint = '监听端口'
+        end
+      end
+    end
+    object Panel5: TPanel
+      Left = 341
+      Height = 184
+      Top = 1
+      Width = 376
+      Align = alClient
+      Caption = 'Panel5'
+      TabOrder = 2
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 238
+    Top = 186
+    Width = 718
+    Align = alClient
+    Caption = 'Panel2'
+    ClientHeight = 238
+    ClientWidth = 718
+    TabOrder = 1
+    object Panel6: TPanel
+      Left = 1
+      Height = 236
+      Top = 1
+      Width = 170
+      Align = alLeft
+      Caption = 'Panel6'
+      TabOrder = 0
+    end
+    object Panel7: TPanel
+      Left = 171
+      Height = 236
+      Top = 1
+      Width = 546
+      Align = alClient
+      Caption = 'Panel7'
+      TabOrder = 1
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 90
+    Top = 16
+    object MenuItem1: TMenuItem
+      Caption = '配置'
+      object MenuItem2: TMenuItem
+        Caption = '导入'
+      end
+      object MenuItem3: TMenuItem
+        Caption = '导出'
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = '说明'
+    end
+  end
+end
