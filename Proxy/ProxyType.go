@@ -69,8 +69,8 @@ func (spm *SafeProxymap) GetARandProxy() (Aproxy, bool) {
 		}
 		sort.Strings(keys)
 		randKey := rand.Intn(len(keys))
-		log.Println("randKey: ", randKey)
-		// log.Println("keys: ", keys)
+		// log.Println("randKey: ", randKey)
+		// log.Println("代理: ", spm.Map[keys[randKey]])
 		return spm.Map[keys[randKey]], true
 	}
 	return Aproxy{}, false

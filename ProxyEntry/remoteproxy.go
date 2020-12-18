@@ -1,7 +1,9 @@
 package ProxyEntry
 
 import (
+	"encoding/base64"
 	"net"
+	"strings"
 	"time"
 
 	log "github.com/chroblert/JCRandomProxy-GUI/Logs"
@@ -17,6 +19,20 @@ func Rproxy(client net.Conn, targetaddr string) {
 	n, err := client.Read(buffer)
 	if err != nil {
 		log.Printf("Unable to read from input, error: %s\n", err.Error())
+		return
+	}
+	log.Printf("JCDebug32: %s", string(buffer[:n]))
+	// 2020/12/18: 计划增加认证功能
+	strHttpReq := string(buffer[:n])
+	if strings.Contains(strHttpReq, "Proxy-Authorization") {
+		authString := Conf.ProxyUser + ":" + Conf.ProxyPasswd
+		encodeString := base64.StdEncoding.EncodeToString([]byte(authString))
+		if !(strings.Contains(strHttpReq, encodeString)) {
+			log.Printf("JCTest:认证失败\n")
+			client.Write([]byte("JCTest: Authorization Failure"))
+			return
+		}
+	} else {
 		return
 	}
 	// targetaddr = "223.82.106.253:3128"

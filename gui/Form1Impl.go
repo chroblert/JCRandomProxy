@@ -231,7 +231,7 @@ func RenderValidProxyPool(stop chan int) {
 			sort.Strings(keys)
 			for _, k := range keys {
 				tmp := Proxy.MSafeProxymap.ReadAproxy(k)
-				Form1.ListBox1.Items().Add(tmp.Protocol + "://" + tmp.Ip + ":" + tmp.Port + " " + string(tmp.FailLimit))
+				Form1.ListBox1.Items().Add(tmp.Protocol + "://" + tmp.Ip + ":" + tmp.Port + " " + strconv.Itoa(tmp.FailLimit))
 			}
 		}
 	}

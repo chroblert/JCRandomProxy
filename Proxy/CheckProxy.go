@@ -40,6 +40,8 @@ func CheckProxyC(proxyAddr, checkaddr string) bool {
 		return false
 	}
 	if (Conf.CustomSucFlag != "false" && strings.Contains(string(body), Conf.CustomSucFlag)) || strings.Contains(string(body), strings.Split(prox.Host, ":")[0]) {
+		log.Printf("Host: %s", prox.Host)
+		log.Printf("Body: %s", string(body))
 		log.Printf("代理%s有效\n", proxyAddr)
 		return true
 	}
