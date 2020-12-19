@@ -5,12 +5,12 @@ import (
 	"crypto/md5"
 	"fmt"
 
-	log "github.com/chroblert/JCRandomProxy/Logs"
+	log "github.com/chroblert/JCRandomProxy/v3/Logs"
 
 	"os"
 	"strings"
 
-	"github.com/chroblert/JCRandomProxy/Conf"
+	"github.com/chroblert/JCRandomProxy/v3/Conf"
 )
 
 // 从文件中读取代理到MetaSafeProxymap中【即元代理池】

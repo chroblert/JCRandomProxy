@@ -1,7 +1,7 @@
 package Proxy
 
 import (
-	"github.com/chroblert/JCRandomProxy/Conf"
+	"github.com/chroblert/JCRandomProxy/v3/Conf"
 )
 
 // 定义接收返回的代理的结构体

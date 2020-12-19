@@ -4,10 +4,10 @@ import (
 	"net"
 	"runtime/debug"
 
-	log "github.com/chroblert/JCRandomProxy/Logs"
+	log "github.com/chroblert/JCRandomProxy/v3/Logs"
 
-	"github.com/chroblert/JCRandomProxy/Conf"
-	"github.com/chroblert/JCRandomProxy/Proxy"
+	"github.com/chroblert/JCRandomProxy/v3/Conf"
+	"github.com/chroblert/JCRandomProxy/v3/Proxy"
 )
 
 /**

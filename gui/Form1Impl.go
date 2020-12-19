@@ -9,11 +9,11 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/chroblert/JCRandomProxy/Logs"
+	log "github.com/chroblert/JCRandomProxy/v3/Logs"
 
-	"github.com/chroblert/JCRandomProxy/Conf"
-	"github.com/chroblert/JCRandomProxy/Proxy"
-	"github.com/chroblert/JCRandomProxy/ProxyEntry"
+	"github.com/chroblert/JCRandomProxy/v3/Conf"
+	"github.com/chroblert/JCRandomProxy/v3/Proxy"
+	"github.com/chroblert/JCRandomProxy/v3/ProxyEntry"
 	"github.com/hpcloud/tail"
 	"github.com/ying32/govcl/vcl"
 	"github.com/ying32/govcl/vcl/types"

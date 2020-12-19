@@ -1,4 +1,4 @@
-module github.com/chroblert/JCRandomProxy
+module github.com/chroblert/JCRandomProxy/v3
 
 go 1.14
 

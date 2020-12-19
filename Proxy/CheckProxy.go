@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/chroblert/JCRandomProxy/Logs"
+	log "github.com/chroblert/JCRandomProxy/v3/Logs"
 
-	"github.com/chroblert/JCRandomProxy/Conf"
+	"github.com/chroblert/JCRandomProxy/v3/Conf"
 )
 
 func CheckProxyC(proxyAddr, checkaddr string) bool {

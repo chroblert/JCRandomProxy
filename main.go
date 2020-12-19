@@ -4,10 +4,10 @@ package main
 import (
 	// "io"
 
-	log "github.com/chroblert/JCRandomProxy/Logs"
+	log "github.com/chroblert/JCRandomProxy/v3/Logs"
 	// "os"
-	"github.com/chroblert/JCRandomProxy/Conf"
-	"github.com/chroblert/JCRandomProxy/gui"
+	"github.com/chroblert/JCRandomProxy/v3/Conf"
+	"github.com/chroblert/JCRandomProxy/v3/gui"
 	"github.com/ying32/govcl/vcl"
 )
 

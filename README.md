@@ -34,11 +34,11 @@ Wechat: JC_SecNotes
 
 1\. 从GitHub上clone Gui版本的代码
 ```shell
-git clone -b GUIVersion https://github.com/chroblert/JCRandomProxy.git
+git clone -b GUIVersion https://github.com/chroblert/JCRandomProxy/v3.git
 ```
 2\. 从release中下载最新版二进制程序
 ```shell
-https://github.com/chroblert/JCRandomProxy/releases
+https://github.com/chroblert/JCRandomProxy/v3/releases
 ```
 3\. 执行后，界面如下
 
