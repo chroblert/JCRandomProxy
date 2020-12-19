@@ -36,20 +36,24 @@ func Lproxy(client net.Conn) {
 		log.Println(err)
 		return
 	}
-	log.Printf("JCDebug32: %s", string(b[:n]))
-	// 2020/12/18: 计划增加认证功能
-	strHttpReq := string(b[:n])
-	if strings.Contains(strHttpReq, "Proxy-Authorization") {
-		authString := Conf.ProxyUser + ":" + Conf.ProxyPasswd
-		encodeString := base64.StdEncoding.EncodeToString([]byte(authString))
-		if !(strings.Contains(strHttpReq, encodeString)) {
-			log.Printf("JCTest:认证失败\n")
-			client.Write([]byte("JCTest: Authorization Failure"))
+	// 2020/12/19: 增加是否开启认证
+	if Conf.EnableAuth {
+		log.Printf("JCDebug32: %s", string(b[:n]))
+		// 2020/12/18: 计划增加认证功能
+		strHttpReq := string(b[:n])
+		if strings.Contains(strHttpReq, "Proxy-Authorization") {
+			authString := Conf.ProxyUser + ":" + Conf.ProxyPasswd
+			encodeString := base64.StdEncoding.EncodeToString([]byte(authString))
+			if !(strings.Contains(strHttpReq, encodeString)) {
+				log.Printf("JCTest:认证失败\n")
+				client.Write([]byte("JCTest: Authorization Failure"))
+				return
+			}
+		} else {
 			return
 		}
-	} else {
-		return
 	}
+
 	var method, host, address string
 	fmt.Sscanf(string(b[:bytes.IndexByte(b[:], '\n')]), "%s%s", &method, &host)
 	log.Println(method, host)

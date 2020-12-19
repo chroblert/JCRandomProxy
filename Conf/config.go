@@ -33,6 +33,7 @@ var (
 	MaxSize  int64  = 1024 * 1024 * 256
 	MaxAge   int    = 3
 	// 认证设置
+	EnableAuth  bool   = false
 	ProxyUser   string = "admin"
 	ProxyPasswd string = "admin"
 )
@@ -60,6 +61,7 @@ func InitConfigFromFile() {
 	Port = cfg.Section("main").Key("Port").String()
 	UseProxy, _ = cfg.Section("main").Key("UseProxy").Bool()
 	UseHttpsProxy, _ = cfg.Section("main").Key("UseHttpsProxy").Bool()
+	EnableAuth, _ = cfg.Section("main").Key("EnableAuth").Bool()
 	ProxyUser = cfg.Section("main").Key("ProxyUser").String()
 	ProxyPasswd = cfg.Section("main").Key("ProxyPasswd").String()
 	// proxypool设置
