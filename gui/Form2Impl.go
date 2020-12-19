@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/chroblert/JCRandomProxy-GUI/Proxy"
+	"github.com/chroblert/JCRandomProxy/Proxy"
 	"github.com/ying32/govcl/vcl"
 )
 

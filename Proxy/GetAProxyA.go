@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"strings"
 
-	log "github.com/chroblert/JCRandomProxy-GUI/Logs"
+	log "github.com/chroblert/JCRandomProxy/Logs"
 
-	"github.com/chroblert/JCRandomProxy-GUI/Conf"
+	"github.com/chroblert/JCRandomProxy/Conf"
 )
 
 // 从ProxyPool中获取代理

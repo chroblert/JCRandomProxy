@@ -1,6 +1,6 @@
 package Logs
 
-// "github.com/chroblert/JCRandomProxy-GUI/Conf"
+// "github.com/chroblert/JCRandomProxy/Conf"
 
 var applog = new(FishLogger)
 

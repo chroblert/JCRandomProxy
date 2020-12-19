@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	log "github.com/chroblert/JCRandomProxy-GUI/Logs"
+	log "github.com/chroblert/JCRandomProxy/Logs"
 
-	"github.com/chroblert/JCRandomProxy-GUI/Conf"
+	"github.com/chroblert/JCRandomProxy/Conf"
 )
 
 type SafeProxymap struct {
