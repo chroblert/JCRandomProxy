@@ -28,14 +28,19 @@ type
     Edit4: TEdit;
     Edit5: TEdit;
     Edit6: TEdit;
+    Edit7: TEdit;
+    Edit8: TEdit;
     GroupBox1: TGroupBox;
     GroupBox2: TGroupBox;
     GroupBox3: TGroupBox;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
     ListBox1: TListBox;
-    ListBox2: TListBox;
     ListView1: TListView;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
@@ -59,6 +64,8 @@ type
     StaticText3: TStaticText;
     StaticText4: TStaticText;
     StaticText5: TStaticText;
+    ToggleBox1: TToggleBox;
+    ToggleBox2: TToggleBox;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -68,10 +75,14 @@ type
     procedure Button7Click(Sender: TObject);
     procedure Button8Click(Sender: TObject);
     procedure Button9Click(Sender: TObject);
+    procedure Edit7Change(Sender: TObject);
+    procedure Label7Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
+    procedure ToggleBox1Change(Sender: TObject);
+    procedure ToggleBox2Change(Sender: TObject);
   private
 
   public
@@ -132,6 +143,7 @@ begin
 
 end;
 
+
 procedure TForm1.MenuItem2Click(Sender: TObject);
 begin
 
@@ -148,6 +160,16 @@ begin
 end;
 
 procedure TForm1.MenuItem5Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.ToggleBox1Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.ToggleBox2Change(Sender: TObject);
 begin
 
 end;

@@ -187,7 +187,7 @@ object Form1: TForm1
         Alignment = taCenter
         AutoSize = True
         BorderStyle = sbsSingle
-        Caption = '控制'
+        Caption = '控制台1'
         ParentFont = False
         TabOrder = 4
       end
@@ -467,19 +467,81 @@ object Form1: TForm1
         Alignment = taCenter
         AutoSize = True
         BorderStyle = sbsSingle
-        Caption = '日志'
+        Caption = '控制台2'
         ParentFont = False
         TabOrder = 0
       end
-      object ListBox2: TListBox
-        Left = 1
-        Height = 205
-        Top = 26
-        Width = 589
-        Align = alClient
-        ItemHeight = 0
-        ParentFont = False
+      object ToggleBox1: TToggleBox
+        Left = 104
+        Height = 23
+        Top = 40
+        Width = 64
+        Caption = '是'
+        Checked = True
+        OnChange = ToggleBox1Change
+        State = cbChecked
         TabOrder = 1
+      end
+      object Label4: TLabel
+        Left = 20
+        Height = 20
+        Top = 43
+        Width = 75
+        Caption = '校验代理：'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 20
+        Height = 20
+        Top = 89
+        Width = 75
+        Caption = '开启认证：'
+        ParentColor = False
+      end
+      object ToggleBox2: TToggleBox
+        Left = 104
+        Height = 20
+        Top = 89
+        Width = 64
+        Caption = '否'
+        OnChange = ToggleBox2Change
+        TabOrder = 2
+      end
+      object Label6: TLabel
+        Left = 24
+        Height = 20
+        Top = 133
+        Width = 60
+        Caption = '用户名：'
+        ParentColor = False
+      end
+      object Label7: TLabel
+        Left = 23
+        Height = 20
+        Top = 176
+        Width = 61
+        Caption = '密    码：'
+        ParentColor = False
+      end
+      object Edit7: TEdit
+        Left = 104
+        Height = 28
+        Top = 128
+        Width = 92
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+        Text = 'admin'
+      end
+      object Edit8: TEdit
+        Left = 104
+        Height = 28
+        Top = 176
+        Width = 96
+        EchoMode = emPassword
+        PasswordChar = '*'
+        TabOrder = 4
+        Text = 'admin'
       end
     end
   end
