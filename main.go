@@ -42,6 +42,7 @@ func main() {
 // 使用配置文件中的值更新窗口
 func UpdateForm() {
 	// log.Println("xxxx: ", Conf.PPIP)
+	gui.Form1.SetCaption("JCRP【随机代理】 v3.3.5 - by JC0o0l")
 	gui.Form1.Edit1.SetText(Conf.PPIP)
 	gui.Form1.Edit2.SetText(Conf.PPPort)
 	gui.Form1.Edit3.SetText(Conf.Port)
@@ -53,6 +54,18 @@ func UpdateForm() {
 	} else {
 		gui.Form1.RadioButton1.SetChecked(false)
 		gui.Form1.RadioButton2.SetChecked(true)
+	}
+
+	if Conf.EnableCheck {
+		gui.Form1.ToggleBox1.SetChecked(true)
+	} else {
+		gui.Form1.ToggleBox1.SetChecked(false)
+	}
+
+	if Conf.EnableAuth {
+		gui.Form1.ToggleBox2.SetChecked(true)
+	} else {
+		gui.Form1.ToggleBox2.SetChecked(false)
 	}
 
 }

@@ -14,7 +14,6 @@ import (
 	"github.com/chroblert/JCRandomProxy/v3/Conf"
 	"github.com/chroblert/JCRandomProxy/v3/Proxy"
 	"github.com/chroblert/JCRandomProxy/v3/ProxyEntry"
-	"github.com/hpcloud/tail"
 	"github.com/ying32/govcl/vcl"
 	"github.com/ying32/govcl/vcl/types"
 )
@@ -61,7 +60,7 @@ func (f *TForm1) OnButton1Click(sender vcl.IObject) {
 	log.InitLogs(Conf.LogPath, Conf.MaxSize, Conf.MaxAge, Conf.LogCount)
 	if !UseProxyPool && Proxy.MSafeMetaProxymap.Length() < 1 {
 		log.Println("自定义代理池中没有代理，启动失败")
-		f.ListBox2.Items().Add("自定义代理池中没有代理，启动失败")
+		// f.ListBox2.Items().Add("自定义代理池中没有代理，启动失败")
 		return
 	}
 	// 启动一个协程，获取可用代理
@@ -121,7 +120,7 @@ func (f *TForm1) OnButton3Click(sender vcl.IObject) {
 	dlgOpen.SetTitle("打开")
 	// 打开文件成功后
 	if dlgOpen.Execute() {
-		f.ListBox2.Items().Add(time.Now().Format(fmt.Sprintf("2006-01-02 15:04:05 : %s", "导入代理文件")))
+		// f.ListBox2.Items().Add(time.Now().Format(fmt.Sprintf("2006-01-02 15:04:05 : %s", "导入代理文件")))
 		log.Println("导入文件")
 		log.Println(dlgOpen.FileName())
 		tmp := Conf.CustomProxyFile
@@ -129,7 +128,7 @@ func (f *TForm1) OnButton3Click(sender vcl.IObject) {
 		err := Proxy.GetMetaproxyBFromFile()
 		if err != nil {
 			log.Println("导入文件失败")
-			f.ListBox2.Items().Add("导入文件失败")
+			// f.ListBox2.Items().Add("导入文件失败")
 			Conf.CustomProxyFile = tmp
 			return
 		}
@@ -185,7 +184,7 @@ func (f *TForm1) OnButton6Click(sender vcl.IObject) {
 
 	if f.ListView1.Items().Count() < 1 || f.ListView1.SelCount() < 1 {
 		log.Println("没有选中item，或代理池为空")
-		f.ListBox2.Items().Add("没有选中item，或代理池为空")
+		// f.ListBox2.Items().Add("没有选中item，或代理池为空")
 		return
 	}
 	protocol := f.ListView1.Selected().SubItems().ValueFromIndex(0)
@@ -200,14 +199,14 @@ func (f *TForm1) OnButton6Click(sender vcl.IObject) {
 
 // 日志实时输出
 func logRealTime() {
-	t, _ := tail.TailFile("log.txt", tail.Config{Follow: true})
-	for line := range t.Lines {
-		// fmt.Println(line.Text)
-		if Form1.ListBox2.Items().Count() > 30 {
-			Form1.ListBox2.Items().Delete(0)
-		}
-		Form1.ListBox2.Items().Add(line.Text)
-	}
+	// t, _ := tail.TailFile("log.txt", tail.Config{Follow: true})
+	// for line := range t.Lines {
+	// 	// fmt.Println(line.Text)
+	// 	if Form1.ListBox2.Items().Count() > 30 {
+	// 		Form1.ListBox2.Items().Delete(0)
+	// 	}
+	// 	Form1.ListBox2.Items().Add(line.Text)
+	// }
 }
 
 // 定时渲染可用代理池
@@ -311,5 +310,26 @@ func (f *TForm1) OnButton9Click(sender vcl.IObject) {
 				Proxy.MSafeProxymap.DeleteAproxy(fmt.Sprintf("%x", md5.Sum([]byte(tmpstring))))
 			}
 		}
+	}
+}
+
+// 是否开启校验代理
+func (f *TForm1) OnToggleBox1Change(sender vcl.IObject) {
+	if f.ToggleBox1.Checked() {
+		Conf.EnableCheck = true
+		f.ToggleBox1.SetCaption("是")
+	} else {
+		Conf.EnableCheck = false
+		f.ToggleBox1.SetCaption("否")
+	}
+}
+
+func (f *TForm1) OnToggleBox2Change(sender vcl.IObject) {
+	if f.ToggleBox2.Checked() {
+		Conf.EnableAuth = true
+		f.ToggleBox2.SetCaption("是")
+	} else {
+		Conf.EnableAuth = false
+		f.ToggleBox2.SetCaption("否")
 	}
 }
