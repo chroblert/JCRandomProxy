@@ -28,12 +28,12 @@ func init() {
 	log.InitLogs(Conf.LogPath, Conf.MaxSize, Conf.MaxAge, Conf.LogCount)
 }
 func main() {
-	vcl.Application.SetScaled(true)
-	vcl.Application.SetTitle("JCRP【随机代理】")
+    vcl.Application.SetScaled(true)
+    vcl.Application.SetTitle("JCRP【随机代理】")
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	vcl.Application.CreateForm(&gui.Form1)
-	vcl.Application.CreateForm(&gui.Form2)
+    vcl.Application.CreateForm(&gui.Form1)
+    vcl.Application.CreateForm(&gui.Form2)
 	UpdateForm()
 	vcl.Application.Run()
 
