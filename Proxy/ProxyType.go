@@ -70,7 +70,7 @@ func (spm *SafeProxymap) GetARandProxy() (Aproxy, bool) {
 		sort.Strings(keys)
 		randKey := rand.Intn(len(keys))
 		// log.Println("randKey: ", randKey)
-		// log.Println("代理: ", spm.Map[keys[randKey]])
+		log.Println("随机获取一个代理: ", spm.Map[keys[randKey]])
 		return spm.Map[keys[randKey]], true
 	}
 	return Aproxy{}, false
@@ -142,6 +142,7 @@ func (spm *SafeProxymap) GetProxysSche(stop chan int) {
 			return
 		case <-ticker.C:
 			if spm.Length() <= Conf.MinProxyNum {
+				log.Println("可用代理池中代理数量<=指定代理数量，开始获取：")
 				GetProxys(stop)
 			}
 		}

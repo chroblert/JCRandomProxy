@@ -4,6 +4,8 @@ package main
 import (
 	// "io"
 
+	"strconv"
+
 	log "github.com/chroblert/JCRandomProxy/v3/Logs"
 	// "os"
 	"github.com/chroblert/JCRandomProxy/v3/Conf"
@@ -32,5 +34,25 @@ func main() {
 	vcl.Application.SetMainFormOnTaskBar(true)
 	vcl.Application.CreateForm(&gui.Form1)
 	vcl.Application.CreateForm(&gui.Form2)
+	UpdateForm()
 	vcl.Application.Run()
+
+}
+
+// 使用配置文件中的值更新窗口
+func UpdateForm() {
+	// log.Println("xxxx: ", Conf.PPIP)
+	gui.Form1.Edit1.SetText(Conf.PPIP)
+	gui.Form1.Edit2.SetText(Conf.PPPort)
+	gui.Form1.Edit3.SetText(Conf.Port)
+	gui.Form1.Edit4.SetText(strconv.Itoa(Conf.MinProxyNum))
+	gui.Form1.Edit5.SetText(strconv.Itoa(Conf.MaxProxyNum))
+	gui.Form1.Edit6.SetText(strconv.Itoa(Conf.Timeout))
+	if Conf.UseProxyPool {
+		gui.Form1.RadioButton1.SetChecked(true)
+	} else {
+		gui.Form1.RadioButton1.SetChecked(false)
+		gui.Form1.RadioButton2.SetChecked(true)
+	}
+
 }
