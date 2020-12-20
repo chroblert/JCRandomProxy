@@ -26,6 +26,8 @@ type
     Edit2: TEdit;
     Edit3: TEdit;
     Edit4: TEdit;
+    Edit5: TEdit;
+    Edit6: TEdit;
     GroupBox1: TGroupBox;
     GroupBox2: TGroupBox;
     GroupBox3: TGroupBox;

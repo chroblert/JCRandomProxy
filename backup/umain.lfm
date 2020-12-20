@@ -1,64 +1,71 @@
 object Form1: TForm1
   Left = 350
-  Height = 357
+  Height = 446
   Top = 250
-  Width = 691
+  Width = 922
   Caption = 'JCRP【随机代理】 v3.0 - by JC0o0l'
-  ClientHeight = 357
-  ClientWidth = 691
+  ClientHeight = 446
+  ClientWidth = 922
+  DesignTimePPI = 120
   Menu = MainMenu1
   object Panel1: TPanel
     Left = 0
-    Height = 170
+    Height = 212
     Top = 0
-    Width = 691
+    Width = 922
     Align = alTop
-    ClientHeight = 170
-    ClientWidth = 691
+    ClientHeight = 212
+    ClientWidth = 922
+    ParentFont = False
     TabOrder = 0
     TabStop = True
     object Panel3: TPanel
       Left = 1
-      Height = 168
+      Height = 210
       Top = 1
-      Width = 146
+      Width = 239
       Align = alLeft
-      ClientHeight = 168
-      ClientWidth = 146
+      ClientHeight = 210
+      ClientWidth = 239
+      ParentFont = False
       TabOrder = 0
       object GroupBox1: TGroupBox
-        Left = 8
-        Height = 57
-        Top = 24
-        Width = 128
+        Left = 10
+        Height = 71
+        Top = 30
+        Width = 206
         Caption = '代理池IP'
-        ClientHeight = 35
-        ClientWidth = 124
+        ClientHeight = 46
+        ClientWidth = 202
+        ParentFont = False
         TabOrder = 0
         object Edit1: TEdit
-          Left = 8
-          Height = 25
-          Top = 8
-          Width = 111
+          Left = 10
+          Height = 28
+          Top = 10
+          Width = 198
+          ParentFont = False
           TabOrder = 0
           Text = 'http://10.103.91.179'
           TextHint = '代理池IP'
         end
       end
       object GroupBox2: TGroupBox
-        Left = 8
-        Height = 57
-        Top = 88
-        Width = 128
+        Left = 10
+        Height = 71
+        Top = 110
+        Width = 206
         Caption = '代理池端口'
-        ClientHeight = 35
-        ClientWidth = 124
+        ClientHeight = 46
+        ClientWidth = 202
+        ParentFont = False
         TabOrder = 1
         object Edit2: TEdit
-          Left = 8
-          Height = 25
-          Top = 3
-          Width = 80
+          Left = 10
+          Height = 28
+          Top = 4
+          Width = 100
+          ParentFont = False
           TabOrder = 0
           Text = '5010'
           TextHint = '代理池端口'
@@ -66,50 +73,54 @@ object Form1: TForm1
       end
       object StaticText1: TStaticText
         Left = 1
-        Height = 22
+        Height = 25
         Top = 1
-        Width = 144
+        Width = 237
         Align = alTop
         Alignment = taCenter
         AutoSize = True
         BorderStyle = sbsSingle
         Caption = '代理池'
+        ParentFont = False
         TabOrder = 2
       end
     end
     object Panel4: TPanel
-      Left = 147
-      Height = 168
+      Left = 240
+      Height = 210
       Top = 1
-      Width = 221
+      Width = 276
       Align = alLeft
-      ClientHeight = 168
-      ClientWidth = 221
+      ClientHeight = 210
+      ClientWidth = 276
+      ParentFont = False
       TabOrder = 1
       object GroupBox3: TGroupBox
-        Left = 5
-        Height = 50
-        Top = 29
-        Width = 73
+        Left = 6
+        Height = 62
+        Top = 36
+        Width = 91
         Caption = '监听端口'
-        ClientHeight = 28
-        ClientWidth = 69
+        ClientHeight = 37
+        ClientWidth = 87
+        ParentFont = False
         TabOrder = 0
         object Edit3: TEdit
-          Left = 6
-          Height = 25
-          Top = 3
-          Width = 48
+          Left = 8
+          Height = 28
+          Top = 4
+          Width = 60
+          ParentFont = False
           TabOrder = 0
           Text = '8081'
           TextHint = '监听端口'
         end
       end
       object RadioGroup1: TRadioGroup
-        Left = 5
-        Height = 77
-        Top = 88
-        Width = 73
+        Left = 6
+        Height = 96
+        Top = 110
+        Width = 91
         AutoFill = True
         Caption = '代理模式'
         ChildSizing.LeftRightSpacing = 6
@@ -119,192 +130,229 @@ object Form1: TForm1
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 55
-        ClientWidth = 69
+        ClientHeight = 71
+        ClientWidth = 87
+        ParentFont = False
         TabOrder = 1
         object RadioButton1: TRadioButton
           Left = 6
-          Height = 28
+          Height = 36
           Top = 0
-          Width = 57
+          Width = 75
           Caption = '代理池'
           Checked = True
+          ParentFont = False
           TabOrder = 1
           TabStop = True
         end
         object RadioButton2: TRadioButton
           Left = 6
-          Height = 27
-          Top = 28
-          Width = 57
+          Height = 35
+          Top = 36
+          Width = 75
           Caption = '自定义'
+          ParentFont = False
           TabOrder = 0
         end
       end
       object Button1: TButton
-        Left = 88
-        Height = 27
-        Top = 32
-        Width = 50
+        Left = 110
+        Height = 30
+        Top = 40
+        Width = 56
         AutoSize = True
         Caption = '启动'
         OnClick = Button1Click
+        ParentFont = False
         TabOrder = 2
       end
       object Button2: TButton
-        Left = 152
-        Height = 27
-        Top = 32
-        Width = 50
+        Left = 190
+        Height = 30
+        Top = 40
+        Width = 56
         AutoSize = True
         Caption = '停止'
         Enabled = False
         OnClick = Button2Click
+        ParentFont = False
         TabOrder = 3
       end
       object StaticText2: TStaticText
         Left = 1
-        Height = 22
+        Height = 25
         Top = 1
-        Width = 219
+        Width = 274
         Align = alTop
         Alignment = taCenter
         AutoSize = True
         BorderStyle = sbsSingle
         Caption = '控制'
+        ParentFont = False
         TabOrder = 4
       end
       object Edit4: TEdit
-        Left = 136
-        Height = 20
-        Top = 80
-        Width = 32
+        Left = 160
+        Height = 25
+        Top = 96
+        Width = 100
         Alignment = taCenter
         AutoSize = False
+        ParentFont = False
         TabOrder = 5
         Text = '0'
         TextHint = 'MinNum'
       end
       object Label1: TLabel
-        Left = 91
-        Height = 17
-        Top = 80
-        Width = 29
+        Left = 114
+        Height = 20
+        Top = 100
+        Width = 35
         Caption = 'MIN:'
         ParentColor = False
+        ParentFont = False
       end
       object Label2: TLabel
-        Left = 91
-        Height = 17
-        Top = 112
-        Width = 31
+        Left = 114
+        Height = 20
+        Top = 140
+        Width = 40
         Caption = 'MAX:'
         ParentColor = False
+        ParentFont = False
       end
       object Label3: TLabel
-        Left = 91
-        Height = 17
-        Top = 137
-        Width = 31
+        Left = 114
+        Height = 20
+        Top = 171
+        Width = 38
         Caption = '超 时:'
         ParentColor = False
+        ParentFont = False
+      end
+      object Edit5: TEdit
+        Left = 160
+        Height = 28
+        Top = 130
+        Width = 100
+        Alignment = taCenter
+        ParentFont = False
+        TabOrder = 6
+        Text = '5'
+      end
+      object Edit6: TEdit
+        Left = 160
+        Height = 28
+        Top = 171
+        Width = 100
+        Alignment = taCenter
+        ParentFont = False
+        TabOrder = 7
+        Text = '5'
       end
     end
     object Panel5: TPanel
-      Left = 368
-      Height = 168
+      Left = 516
+      Height = 210
       Top = 1
-      Width = 322
+      Width = 405
       Align = alClient
-      ClientHeight = 168
-      ClientWidth = 322
+      ClientHeight = 210
+      ClientWidth = 405
+      ParentFont = False
       TabOrder = 2
       object Button3: TButton
-        Left = 265
-        Height = 27
-        Top = 31
-        Width = 50
+        Left = 340
+        Height = 30
+        Top = 39
+        Width = 56
         Anchors = [akTop, akRight]
         AutoSize = True
         Caption = '导入'
         OnClick = Button3Click
+        ParentFont = False
         TabOrder = 0
       end
       object Button4: TButton
-        Left = 265
-        Height = 27
-        Top = 63
-        Width = 50
+        Left = 340
+        Height = 30
+        Top = 80
+        Width = 56
         Anchors = [akRight]
         AutoSize = True
         Caption = '保存'
         OnClick = Button4Click
+        ParentFont = False
         TabOrder = 1
       end
       object Button5: TButton
-        Left = 265
-        Height = 27
-        Top = 95
-        Width = 50
+        Left = 340
+        Height = 30
+        Top = 120
+        Width = 56
         Anchors = [akRight]
         AutoSize = True
         Caption = '添加'
         Enabled = False
         OnClick = Button5Click
+        ParentFont = False
         TabOrder = 2
       end
       object Button6: TButton
-        Left = 265
-        Height = 27
-        Top = 127
-        Width = 50
+        Left = 340
+        Height = 30
+        Top = 160
+        Width = 56
         Anchors = [akRight]
         AutoSize = True
         Caption = '删除'
         OnClick = Button6Click
+        ParentFont = False
         TabOrder = 3
       end
       object StaticText3: TStaticText
         Left = 1
-        Height = 22
+        Height = 25
         Top = 1
-        Width = 320
+        Width = 403
         Align = alTop
         Alignment = taCenter
         AutoSize = True
         BorderStyle = sbsSingle
         Caption = '自定义'
+        ParentFont = False
         TabOrder = 4
       end
       object ListView1: TListView
         Left = 1
-        Height = 144
-        Top = 23
-        Width = 263
+        Height = 183
+        Top = 26
+        Width = 329
         Align = alLeft
         AutoWidthLastColumn = True
         Columns = <        
           item
             Alignment = taCenter
             Caption = 'ID'
-            Width = 30
+            Width = 38
           end        
           item
             Alignment = taCenter
             Caption = '协议'
-            Width = 41
+            Width = 51
           end        
           item
             Alignment = taCenter
             Caption = 'IP'
-            Width = 131
+            Width = 164
           end        
           item
             Alignment = taCenter
             Caption = '端口'
-            Width = 57
+            Width = 72
           end>
         GridLines = True
+        ParentFont = False
         RowSelect = True
         TabOrder = 5
         ViewStyle = vsReport
@@ -313,120 +361,131 @@ object Form1: TForm1
   end
   object Panel2: TPanel
     Left = 0
-    Height = 187
-    Top = 170
-    Width = 691
+    Height = 234
+    Top = 212
+    Width = 922
     Align = alClient
     Caption = 'Panel2'
-    ClientHeight = 187
-    ClientWidth = 691
+    ClientHeight = 234
+    ClientWidth = 922
+    ParentFont = False
     TabOrder = 1
     object Panel6: TPanel
       Left = 1
-      Height = 185
+      Height = 232
       Top = 1
-      Width = 263
+      Width = 329
       Align = alLeft
-      ClientHeight = 185
-      ClientWidth = 263
+      ClientHeight = 232
+      ClientWidth = 329
+      ParentFont = False
       TabOrder = 0
       object StaticText4: TStaticText
         Left = 1
-        Height = 22
+        Height = 25
         Top = 1
-        Width = 261
+        Width = 327
         Align = alTop
         Alignment = taCenter
         AutoSize = True
         BorderStyle = sbsSingle
         Caption = '可用代理'
+        ParentFont = False
         TabOrder = 0
       end
       object ListBox1: TListBox
         Left = 1
-        Height = 129
-        Top = 23
-        Width = 261
+        Height = 165
+        Top = 26
+        Width = 327
         Align = alClient
         ItemHeight = 0
+        ParentFont = False
         TabOrder = 1
       end
       object Panel8: TPanel
         Left = 1
-        Height = 32
-        Top = 152
-        Width = 261
+        Height = 40
+        Top = 191
+        Width = 327
         Align = alBottom
-        ClientHeight = 32
-        ClientWidth = 261
+        ClientHeight = 40
+        ClientWidth = 327
+        ParentFont = False
         TabOrder = 2
         object Button7: TButton
           Left = 1
-          Height = 30
+          Height = 38
           Top = 1
-          Width = 75
+          Width = 94
           Align = alLeft
           Caption = '追加'
           OnClick = Button7Click
+          ParentFont = False
           TabOrder = 0
         end
         object Button8: TButton
-          Left = 96
-          Height = 30
+          Left = 120
+          Height = 38
           Top = 1
-          Width = 75
+          Width = 88
           Align = alCustom
           Caption = '覆盖'
           OnClick = Button8Click
+          ParentFont = False
           TabOrder = 1
         end
         object Button9: TButton
-          Left = 185
-          Height = 30
+          Left = 232
+          Height = 38
           Top = 1
-          Width = 75
+          Width = 94
           Align = alRight
           Caption = '删除'
           OnClick = Button9Click
+          ParentFont = False
           TabOrder = 2
         end
       end
     end
     object Panel7: TPanel
-      Left = 264
-      Height = 185
+      Left = 330
+      Height = 232
       Top = 1
-      Width = 426
+      Width = 591
       Align = alClient
-      ClientHeight = 185
-      ClientWidth = 426
+      ClientHeight = 232
+      ClientWidth = 591
+      ParentFont = False
       TabOrder = 1
       object StaticText5: TStaticText
         Left = 1
-        Height = 22
+        Height = 25
         Top = 1
-        Width = 424
+        Width = 589
         Align = alTop
         Alignment = taCenter
         AutoSize = True
         BorderStyle = sbsSingle
         Caption = '日志'
+        ParentFont = False
         TabOrder = 0
       end
       object ListBox2: TListBox
         Left = 1
-        Height = 161
-        Top = 23
-        Width = 424
+        Height = 205
+        Top = 26
+        Width = 589
         Align = alClient
         ItemHeight = 0
+        ParentFont = False
         TabOrder = 1
       end
     end
   end
   object MainMenu1: TMainMenu
-    Left = 90
-    Top = 16
+    Left = 113
+    Top = 20
     object MenuItem1: TMenuItem
       Caption = '配置'
       object MenuItem2: TMenuItem
