@@ -120,7 +120,7 @@ object Form1: TForm1
         Left = 6
         Height = 96
         Top = 110
-        Width = 91
+        Width = 98
         AutoFill = True
         Caption = '代理模式'
         ChildSizing.LeftRightSpacing = 6
@@ -131,14 +131,14 @@ object Form1: TForm1
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
         ClientHeight = 71
-        ClientWidth = 87
+        ClientWidth = 94
         ParentFont = False
         TabOrder = 1
         object RadioButton1: TRadioButton
           Left = 6
           Height = 36
           Top = 0
-          Width = 75
+          Width = 82
           Caption = '代理池'
           Checked = True
           ParentFont = False
@@ -149,7 +149,7 @@ object Form1: TForm1
           Left = 6
           Height = 35
           Top = 36
-          Width = 75
+          Width = 82
           Caption = '自定义'
           ParentFont = False
           TabOrder = 0
@@ -473,7 +473,7 @@ object Form1: TForm1
       end
       object ToggleBox1: TToggleBox
         Left = 104
-        Height = 23
+        Height = 32
         Top = 40
         Width = 64
         Caption = '是'
@@ -493,14 +493,14 @@ object Form1: TForm1
       object Label5: TLabel
         Left = 20
         Height = 20
-        Top = 89
+        Top = 96
         Width = 75
         Caption = '开启认证：'
         ParentColor = False
       end
       object ToggleBox2: TToggleBox
         Left = 104
-        Height = 20
+        Height = 31
         Top = 89
         Width = 64
         Caption = '否'
