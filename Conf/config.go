@@ -27,6 +27,7 @@ var (
 	CheckInterval  int    = 2
 	EnableCheck    bool   = true
 	CustomSucFlag  string = "false"
+	CheckFailLimit int    = 4
 	// 日志设置
 	LogPath  string = "logss/app.log"
 	LogCount int    = 5
@@ -77,6 +78,7 @@ func InitConfigFromFile() {
 	CheckInterval, _ = cfg.Section("checkproxy").Key("CheckInterval").Int()
 	EnableCheck, _ = cfg.Section("checkproxy").Key("EnableCheck").Bool()
 	CustomSucFlag = cfg.Section("checkproxy").Key("CustomSucFlag").String()
+	CheckFailLimit, _ = cfg.Section("checkproxy").Key("CheckFailLimit").Int()
 
 	// log设置
 	LogPath = cfg.Section("log").Key("LogPath").String()

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/chroblert/JCRandomProxy/v3/Conf"
 	"github.com/chroblert/JCRandomProxy/v3/Proxy"
 	"github.com/ying32/govcl/vcl"
 )
@@ -27,7 +28,7 @@ func (f *TForm2) OnButton1Click(sender vcl.IObject) {
 	item.MakeVisible(true)
 	f.Close()
 	// Proxy.MetaProxymap[fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port)))] = Proxy.Aproxy{protocol, ip, port}
-	Proxy.MSafeMetaProxymap.WriteAproxy(fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port))), Proxy.Aproxy{protocol, ip, port, 4})
+	Proxy.MSafeMetaProxymap.WriteAproxy(fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port))), Proxy.Aproxy{protocol, ip, port, Conf.CheckFailLimit})
 	// Form1.ListView1.Items().EndUpdate()
 }
 

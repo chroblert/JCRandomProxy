@@ -35,7 +35,7 @@ func GetMetaproxyBFromFile() error {
 		ip := strings.Split(proxy, ":")[0]
 		port := strings.Split(proxy, ":")[1]
 		tmpmd5 := fmt.Sprintf("%x", md5.Sum([]byte(protocol+"://"+ip+":"+port)))
-		tmpaproxy := Aproxy{protocol, ip, port, 4}
+		tmpaproxy := Aproxy{protocol, ip, port, Conf.CheckFailLimit}
 		MSafeMetaProxymap.WriteAproxy(tmpmd5, tmpaproxy)
 	}
 	if err := scanner.Err(); err != nil {

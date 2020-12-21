@@ -42,7 +42,7 @@ func main() {
 // 使用配置文件中的值更新窗口
 func UpdateForm() {
 	// log.Println("xxxx: ", Conf.PPIP)
-	gui.Form1.SetCaption("JCRP【随机代理】 v3.3.6 - by JC0o0l")
+	gui.Form1.SetCaption("JCRP【随机代理】 v3.3.7 - by JC0o0l")
 	gui.Form1.Edit1.SetText(Conf.PPIP)
 	gui.Form1.Edit2.SetText(Conf.PPPort)
 	gui.Form1.Edit3.SetText(Conf.Port)
