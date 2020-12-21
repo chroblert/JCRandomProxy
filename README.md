@@ -37,15 +37,15 @@ Wechat: JC_SecNotes
 
 1\. 从GitHub上clone Gui版本的代码
 ```shell
-git clone -b GUIVersion https://github.com/chroblert/JCRandomProxy/v3.git
+git clone -b GUIVersion https://github.com/chroblert/JCRandomProxy.git
 ```
 2\. 从release中下载最新版二进制程序
 ```shell
-https://github.com/chroblert/JCRandomProxy/v3/releases
+https://github.com/chroblert/JCRandomProxy/releases
 ```
 3\. 执行后，界面如下
 
-![1601305000116.png](img/1601305000116.png)
+![1608514430446.png](img/1608514430446.png)
 
 > 执行后会发现出现一个cmd框，这个是故意这样的，方面出错时调试用的。若要不弹框，则需要使用如下命令重新进行编译
 > ```shell
@@ -85,7 +85,8 @@ https://github.com/chroblert/JCRandomProxy/v3/releases
 
 点击启动后，JCRP会收集MAX数量的可用代理,从左下框中可以看到
 
-![1601304925725.png](img/1601304925725.png)
+![1608514430446.png](img/1608514430446.png)
+
 
 6\. 可用代理操作说明
 

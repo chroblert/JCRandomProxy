@@ -28,12 +28,12 @@ func init() {
 	log.InitLogs(Conf.LogPath, Conf.MaxSize, Conf.MaxAge, Conf.LogCount)
 }
 func main() {
-    vcl.Application.SetScaled(true)
-    vcl.Application.SetTitle("JCRP【随机代理】")
+	vcl.Application.SetScaled(true)
+	vcl.Application.SetTitle("JCRP【随机代理】")
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-    vcl.Application.CreateForm(&gui.Form1)
-    vcl.Application.CreateForm(&gui.Form2)
+	vcl.Application.CreateForm(&gui.Form1)
+	vcl.Application.CreateForm(&gui.Form2)
 	UpdateForm()
 	vcl.Application.Run()
 
@@ -42,7 +42,7 @@ func main() {
 // 使用配置文件中的值更新窗口
 func UpdateForm() {
 	// log.Println("xxxx: ", Conf.PPIP)
-	gui.Form1.SetCaption("JCRP【随机代理】 v3.3.5 - by JC0o0l")
+	gui.Form1.SetCaption("JCRP【随机代理】 v3.3.6 - by JC0o0l")
 	gui.Form1.Edit1.SetText(Conf.PPIP)
 	gui.Form1.Edit2.SetText(Conf.PPPort)
 	gui.Form1.Edit3.SetText(Conf.Port)
