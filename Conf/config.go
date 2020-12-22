@@ -21,7 +21,7 @@ var (
 	// 校验代理设置
 	MinProxyNum    int    = 0
 	MaxProxyNum    int    = 5
-	ProxyCheckAddr string = "https://myip.ipip.net"
+	ProxyCheckAddr string = "https://httpbin.org/ip"
 	Timeout        int    = 5
 	StopUrl        string = "http://myip.ipip.net"
 	CheckInterval  int    = 2

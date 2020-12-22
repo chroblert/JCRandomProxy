@@ -106,7 +106,7 @@ func (spm *SafeProxymap) ProxyCheck(stop chan int) {
 				ip := tmpaproxy.Ip
 				port := tmpaproxy.Port
 				proxyadd := protocol + "://" + ip + ":" + port
-				res := CheckProxyC(proxyadd, "https://myip.ipip.net")
+				res := CheckProxyC(proxyadd, Conf.ProxyCheckAddr)
 				// 20201214计划：最少连续四次校验失败再删除
 				// 初始值delFlag为4：
 				// 若res为true：+1
