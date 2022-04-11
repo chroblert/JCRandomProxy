@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  JCRandomProxy:
+    image: jc-random-proxy
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: JCRandomProxy
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - 8081:8081
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./Conf/config.ini:/JCRandomProxy/Conf/config.ini
+      - ./Conf/metaproxy.lst:/JCRandomProxy/Conf/metaproxy.lst
+      - ./Conf/proxy.lst:/JCRandomProxy/Conf/proxy.lst
+      - ./log.txt:/JCRandomProxy/log.txt

@@ -7,13 +7,19 @@ import (
 
 // 定义接收返回的代理的结构体
 type (
+	PPCountItem struct {
+		Https int64 `json:"https"`
+		Total int64 `json:"total"`
+	}
 	PPCount struct {
-		Count int64 `json:"count"`
+		Count PPCountItem `json:"count"`
 	}
 	PP struct {
+		Anonymous   string `json:"anonymous"`
 		Check_count int64  `json:"check_count"`
 		Fail_count  int64  `json:"Fail_count"`
-		Last_status int64  `json:"Last_status"`
+		Https       bool   `json:"https"`
+		Last_status bool   `json:"Last_status"`
 		Last_time   string `json:"last_time"`
 		Proxy       string `json:"proxy"`
 		Region      string `json:"region"`
